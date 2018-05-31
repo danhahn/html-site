@@ -1,0 +1,8 @@
+.bgcolor {
+  background-color: #bdc3c7;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

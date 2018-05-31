@@ -1,0 +1,44 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+.TagList {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 0.5em;
+  font-size: 0.7rem;
+  line-height: 1.1em;
+}
+
+.html {
+  color: #e44d26;
+}
+
+.css {
+  color: #1572b6;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.type {
+  text-transform: uppercase;
+}
+.type::after {
+  content: ":";
+}
+
+.item {
+  margin-right: 0.5em;
+}
+
+.item::after {
+  content: ",";
+}
+
+.item:last-of-type::after {
+  content: "";
+}

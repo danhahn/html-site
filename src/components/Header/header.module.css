@@ -1,0 +1,22 @@
+.bgcolor {
+  background-color: #20232a;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.item {
+  margin-left: 1em;
+}
