@@ -4,6 +4,7 @@ lesson: HTML Editors
 date: 1/24/2018 15:00
 template: article.jade
 lessonId: 1
+order: 2
 
 nav:
   Introduction: index.html

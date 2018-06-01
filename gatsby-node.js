@@ -33,6 +33,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 slug,
                 slugIndex
               }
+              frontmatter {
+                title
+              }
             }
           }
         }
@@ -44,7 +47,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/blog-post.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            slug: node.fields.slug
+            slug: node.fields.slug,
+            title: node.frontmatter.title
           }
         });
         if(node.fields.slugIndex) {
@@ -53,7 +57,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             component: path.resolve(`./src/templates/blog-post.js`),
             context: {
               // Data passed to context is available in page queries as GraphQL variables.
-              slug: node.fields.slug
+              slug: node.fields.slug,
+              title: node.frontmatter.title
             }
           });
         }

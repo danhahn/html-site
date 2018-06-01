@@ -1,7 +1,7 @@
 ---
 title: Lesson 1
 lessonId: 1
-order: 3
+order: 4
 lesson: Block Elements
 author: the-wintersmith
 date: 1/24/2018 15:00

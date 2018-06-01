@@ -27,6 +27,7 @@ downloads:
     file: week1-notes.zip
 badges: [html]
 lessonId: 1
+order: 1
 ---
 
 This week we will have an introduction to HTML, the HTML template and what block elements are and how to use them.

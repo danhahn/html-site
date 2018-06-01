@@ -4,6 +4,7 @@ lesson: Homework – Lesson 1
 date: 1/24/2018 15:00
 template: article.jade
 lessonId: 1
+order: 6
 
 nav:
   Introduction: index.html

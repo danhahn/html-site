@@ -1,0 +1,77 @@
+@import "../../scss/vars";
+
+.sideNav {
+  @media all and (max-width: 768px) and (min-width: 576px) {
+    grid-row: 1;
+  }
+}
+
+.inner {
+  @media all and (min-width: 769px) {
+    padding-top: 2rem;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  @media all and (max-width: 768px) and (min-width: 576px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // align-items: center;
+  }
+  @media all and (max-width: 768px) and (min-width: 576px) {
+    background-color: lighten($color, 50%);
+    padding: 0.2em;
+  }
+}
+
+.item {
+  margin: 0;
+  @media all and (min-width: 769px) {
+    margin-bottom: 0.2em;
+    line-height: 1em;
+  }
+}
+
+.link {
+  color: $color;
+  display: block;
+  @media all and (max-width: 768px) and (min-width: 576px) {
+    padding: 0 0.8em;
+  }
+  @media all and (min-width: 769px) {
+    padding: 0.6em 1em;
+    padding-left: calc(1em - 2px);
+    border-left: 2px solid transparent;
+    &:hover {
+      border-color: $color;
+      text-decoration: none;
+    }
+  }
+}
+
+.active {
+  @media all and (max-width: 768px) and (min-width: 576px) {
+    background-color: $color;
+    color: white;
+  }
+  @media all and (min-width: 769px) {
+    border-color: $color;
+  }
+}
+
+@media all and (max-width: 1199px) {
+}
+@media all and (max-width: 991px) {
+}
+@media all and (max-width: 768px) {
+}
+@media all and (max-width: 575px) {
+}

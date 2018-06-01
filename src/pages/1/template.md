@@ -17,6 +17,7 @@ nav:
   Classwork: classwork.html
   Homework: homework.html
 lessonId: 1
+order: 3
 ---
 
 We want to build a template to once so we do not have to write it every time.
