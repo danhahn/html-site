@@ -1,0 +1,14 @@
+.gatsby-highlight {
+  overflow: auto;
+  max-width: 100%;
+}
+
+.text-content {
+  background-color: #f4f5f6;
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
+/* .gatsby-highlight pre {
+  border-radius: 50%;
+} */

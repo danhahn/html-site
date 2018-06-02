@@ -1,20 +1,14 @@
 import React from "react";
 import moment from "moment";
 import ExtendLayout from "../ExtendLayout";
-import styles from "./banner.module.css";
+import styles from "./banner.module.scss";
 
-const Banner = ({ startDate, semester, count, noClass }) => {
-  const year = moment(startDate).format("YYYY");
-  const start = moment(startDate).format("MMMM D, YYYY");
-  const end = moment(startDate)
-    .add(count, "weeks")
-    .format("MMMM D, YYYY");
-
+const Banner = ({ title = "title", date = "date" }) => {
   return (
     <ExtendLayout passedClassName={styles.bgcolor}>
       <div className={styles.banner}>
-        <h1>{`${semester} ${year}`}</h1>
-        <p>{`${start} – ${end}`}</p>
+        <div className={styles.title}>{title}</div>
+        <p className={styles.date}>{date}</p>
       </div>
     </ExtendLayout>
   );

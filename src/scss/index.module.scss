@@ -1,0 +1,15 @@
+@import "./vars";
+
+a {
+  color: $color;
+}
+
+.gatsby-highlight {
+  border-radius: 50px;
+}
+
+.index {
+  @media all and (max-width: 1199px) {
+    padding: 0 1em;
+  }
+}

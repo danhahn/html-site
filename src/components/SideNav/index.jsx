@@ -7,15 +7,15 @@ class SideNav extends Component {
     super(props);
     this.checkOffset = this.checkOffset.bind(this);
     this.updateOffSetLeft = this.updateOffSetLeft.bind(this);
+    this.toggleSideNav = this.toggleSideNav.bind(this);
     this.state = {
-      left: null
+      left: null,
+      sideopen: false,
+      windowWidth: 0
     };
   }
   componentDidMount() {
-    setTimeout(() => {
-      const { left } = this.outter.getBoundingClientRect();
-      this.setState({ left });
-    }, 1);
+    setTimeout(this.updateOffSetLeft, 1);
 
     window.addEventListener("scroll", this.checkOffset);
     window.addEventListener("resize", this.updateOffSetLeft);
@@ -25,9 +25,15 @@ class SideNav extends Component {
     window.removeEventListener("resize", this.updateOffSetLeft);
   }
 
+  toggleSideNav() {
+    this.setState({ sideopen: !this.state.sideopen });
+  }
+
   updateOffSetLeft() {
     const { left } = this.outter.getBoundingClientRect();
-    this.setState({ left });
+    const windowWidth = window.innerWidth;
+    console.log({ left, windowWidth });
+    this.setState({ left, windowWidth });
   }
 
   checkOffset() {
@@ -40,15 +46,28 @@ class SideNav extends Component {
   }
 
   render() {
-    const { nav } = this.props;
-    const { left } = this.state;
+    const { nav, passedClassName } = this.props;
+    const { left, sideopen, windowWidth } = this.state;
+    const doOffset =
+      windowWidth <= 575
+        ? {
+            transform: `translateX(${sideopen ? `0` : `-100%`})`
+          }
+        : null;
     return (
-      <aside className={styles.sideNav} ref={el => (this.outter = el)}>
+      <aside
+        className={`${styles.sideNav} ${passedClassName}`}
+        ref={el => (this.outter = el)}
+        style={doOffset}
+      >
         <div
           className={styles.inner}
           ref={el => (this.inner = el)}
           style={{ left }}
         >
+          <div className={styles.trigger} onClick={this.toggleSideNav}>
+            »
+          </div>
           <ul className={styles.nav}>
             {nav.map(({ node }) => (
               <li className={styles.item} key={node.id}>

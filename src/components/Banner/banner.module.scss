@@ -1,0 +1,24 @@
+@import "../../scss/vars";
+
+.bgcolor {
+  background-color: #bdc3c7;
+}
+
+.banner {
+  @media all and (max-width: 1199px) {
+    padding: 0 1em;
+  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.date {
+  margin: 0;
+  align-self: center;
+  justify-self: end;
+}
