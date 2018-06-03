@@ -24,7 +24,7 @@ class Header extends Component {
     this.setState({ active: !this.state.active });
   };
   render() {
-    const { classFiles, paths } = this.props;
+    const { classFiles, paths, lessonList } = this.props;
     const { active } = this.state;
     return (
       <ExtendLayout passedClassName={styles.bgcolor}>
@@ -35,7 +35,13 @@ class Header extends Component {
             </Link>
             <Burger active={active} toggleAtive={this.toggleAtive} />
           </div>
-          <Nav paths={paths} classFiles={classFiles} active={active} />
+          <Nav
+            paths={paths}
+            classFiles={classFiles}
+            active={active}
+            toggleAtive={this.toggleAtive}
+            lessonList={lessonList}
+          />
         </header>
       </ExtendLayout>
     );

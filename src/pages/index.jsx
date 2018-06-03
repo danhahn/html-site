@@ -36,7 +36,7 @@ export default ({ data }) => {
               .format("MMMM D, YYYY");
             return (
               <div key={node.id}>
-                <Link to={node.fields.slugIndex}>
+                <Link to={node.fields.slug}>
                   <h3>
                     {node.frontmatter.title} <span>— {currentWeek}</span>
                   </h3>
@@ -72,7 +72,7 @@ export const query = graphql`
         node {
           id
           fields {
-            slugIndex
+            slug
           }
           frontmatter {
             title

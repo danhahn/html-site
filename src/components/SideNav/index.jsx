@@ -26,14 +26,12 @@ class SideNav extends Component {
   }
 
   toggleSideNav() {
-    console.log("click");
     this.setState({ sideopen: !this.state.sideopen });
   }
 
   updateOffSetLeft() {
     const { left } = this.outter.getBoundingClientRect();
     const windowWidth = window.innerWidth;
-    console.log({ left, windowWidth });
     this.setState({ left, windowWidth });
   }
 
@@ -65,7 +63,7 @@ class SideNav extends Component {
                 <Link
                   className={styles.link}
                   activeClassName={styles.active}
-                  to={node.fields.slugIndex || node.fields.slug}
+                  to={node.fields.slug}
                 >
                   {node.frontmatter.lesson}
                 </Link>

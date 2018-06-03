@@ -1,7 +1,10 @@
 @import "../../scss/vars";
 
-.footer {
+.bgcolor {
   background-color: $dark;
+}
+
+.footer {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 0.5em;
