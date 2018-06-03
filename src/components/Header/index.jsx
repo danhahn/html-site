@@ -2,7 +2,7 @@ import React from "react";
 import ExtendLayout from "../ExtendLayout";
 import Logo from "../Logo";
 import Link from "gatsby-link";
-import styles from "./header.module.css";
+import styles from "./header.module.scss";
 
 const Header = ({ classFiles = null, paths = [] }) => {
   return (
@@ -22,7 +22,9 @@ const Header = ({ classFiles = null, paths = [] }) => {
           {paths.length
             ? paths.map(({ node: path }) => (
                 <li className={styles.item} key={path.id}>
-                  <Link to={`/${path.name}/`}>{path.name}</Link>
+                  <Link className={styles.link} to={`/${path.name}/`}>
+                    {path.name.replace("-", " ")}
+                  </Link>
                 </li>
               ))
             : null}

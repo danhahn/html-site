@@ -1,5 +1,9 @@
 module.exports = {
   siteMetadata: {
+    contact: {
+      name: 'Dan Hahn',
+      email: 'dan@svahtml.com'
+    },
     title: `SVA HTML`,
     semester: `Summer`,
     startDate: `2018-06-06`,

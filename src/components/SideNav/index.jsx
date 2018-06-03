@@ -58,7 +58,7 @@ class SideNav extends Component {
       <aside
         className={`${styles.sideNav} ${passedClassName}`}
         ref={el => (this.outter = el)}
-        style={doOffset}
+        // style={doOffset}
       >
         <div
           className={styles.inner}

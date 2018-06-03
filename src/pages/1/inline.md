@@ -1,6 +1,6 @@
 ---
-title: Lesson 1a
-lesson: Inline Elements
+title: null
+lesson: null
 date: 1/24/2018 15:00
 template: article.jade
 

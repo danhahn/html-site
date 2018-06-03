@@ -39,7 +39,7 @@ export const query = graphql`
         classFiles
       }
     }
-    allFile(filter: { extension: { eq: "js" } }) {
+    allFile(filter: { extension: { eq: "jsx" } }) {
       edges {
         node {
           extension

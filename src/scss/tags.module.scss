@@ -1,0 +1,15 @@
+.tags {
+  @media all and (max-width: 1199px) {
+    padding: 0 1em;
+  }
+}
+
+.isHTML5 {
+  color: #e44d26;
+}
+
+.overflow {
+  @media all and (max-width: 575px) {
+    overflow: auto;
+  }
+}
