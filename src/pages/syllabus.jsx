@@ -38,8 +38,6 @@ const Syllabus = ({ data }) => {
     }
   }
 
-  console.log(lessonMap);
-
   return (
     <div>
       <Banner title={`${semester} ${year}`} date={null} />

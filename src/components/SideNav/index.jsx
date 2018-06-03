@@ -26,6 +26,7 @@ class SideNav extends Component {
   }
 
   toggleSideNav() {
+    console.log("click");
     this.setState({ sideopen: !this.state.sideopen });
   }
 
@@ -48,26 +49,16 @@ class SideNav extends Component {
   render() {
     const { nav, passedClassName } = this.props;
     const { left, sideopen, windowWidth } = this.state;
-    const doOffset =
-      windowWidth <= 575
-        ? {
-            transform: `translateX(${sideopen ? `0` : `-100%`})`
-          }
-        : null;
     return (
       <aside
         className={`${styles.sideNav} ${passedClassName}`}
         ref={el => (this.outter = el)}
-        // style={doOffset}
       >
         <div
           className={styles.inner}
           ref={el => (this.inner = el)}
           style={{ left }}
         >
-          <div className={styles.trigger} onClick={this.toggleSideNav}>
-            »
-          </div>
           <ul className={styles.nav}>
             {nav.map(({ node }) => (
               <li className={styles.item} key={node.id}>
