@@ -1,37 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
+import Link from "gatsby-link";
+
 import ExtendLayout from "../ExtendLayout";
 import Logo from "../Logo";
-import Link from "gatsby-link";
+import Burger from "../Burger";
+import Nav from "../Nav";
 import styles from "./header.module.scss";
 
-const Header = ({ classFiles = null, paths = [] }) => {
-  return (
-    <ExtendLayout passedClassName={styles.bgcolor}>
-      <header className={styles.header}>
-        <Link to="/" style={{ display: "block", lineHeight: 1 }}>
-          <Logo width={115} height={35} color="white" />
-        </Link>
-        <ul className={styles.nav}>
-          {classFiles ? (
-            <li>
-              <a href={classFiles} target="_blank">
-                Class Files
-              </a>
-            </li>
-          ) : null}
-          {paths.length
-            ? paths.map(({ node: path }) => (
-                <li className={styles.item} key={path.id}>
-                  <Link className={styles.link} to={`/${path.name}/`}>
-                    {path.name.replace("-", " ")}
-                  </Link>
-                </li>
-              ))
-            : null}
-        </ul>
-      </header>
-    </ExtendLayout>
-  );
-};
+// fa - google - drive
+
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false
+    };
+  }
+  static defaultProps = {
+    classFiles: null,
+    paths: []
+  };
+  toggleAtive = () => {
+    this.setState({ active: !this.state.active });
+  };
+  render() {
+    const { classFiles, paths } = this.props;
+    const { active } = this.state;
+    return (
+      <ExtendLayout passedClassName={styles.bgcolor}>
+        <header className={styles.header}>
+          <div className={styles.headerMobile}>
+            <Link to="/" style={{ display: "block", lineHeight: 1 }}>
+              <Logo width={115} height={35} color="white" />
+            </Link>
+            <Burger active={active} toggleAtive={this.toggleAtive} />
+          </div>
+          <Nav paths={paths} classFiles={classFiles} active={active} />
+        </header>
+      </ExtendLayout>
+    );
+  }
+}
 
 export default Header;

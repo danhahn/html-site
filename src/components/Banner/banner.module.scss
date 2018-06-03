@@ -8,17 +8,38 @@
   @media all and (max-width: 1199px) {
     padding: 0 1em;
   }
+  @media all and (max-width: 575px) {
+    padding: 0.5em 1em;
+  }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media all and (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .title {
   margin: 0;
   font-size: 2.2rem;
+  @media all and (max-width: 575px) {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
 }
 
 .date {
   margin: 0;
   align-self: center;
-  justify-self: end;
+  @media all and (min-width: 576px) {
+    justify-self: end;
+  }
+}
+
+@media all and (max-width: 1199px) {
+}
+@media all and (max-width: 991px) {
+}
+@media all and (max-width: 768px) {
+}
+@media all and (max-width: 575px) {
 }
