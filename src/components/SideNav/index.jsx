@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
+import Button from "../Button";
 import styles from "./side-nav.module.scss";
 
 class SideNav extends Component {
@@ -45,7 +46,7 @@ class SideNav extends Component {
   }
 
   render() {
-    const { nav, passedClassName } = this.props;
+    const { nav, passedClassName, buttons } = this.props;
     const { left, sideopen, windowWidth } = this.state;
     return (
       <aside
@@ -70,6 +71,20 @@ class SideNav extends Component {
               </li>
             ))}
           </ul>
+          {buttons ? (
+            <div>
+              <h3>Downloads</h3>
+              <ul className={styles.btnList}>
+                {Object.entries(buttons).map(([title, data]) => (
+                  <li key={title}>
+                    <Button kind={data.btn}>
+                      <a href={data.file}>{title.replace(/\_/g, " ")}</a>
+                    </Button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
       </aside>
     );

@@ -12,13 +12,6 @@ tags:
     label: html
     icon: fa fa-html5
     data : [html,head,title,body,p,h1,h2,h3,h4,h5,h6, br, blockquote, ol, ul, li, div, section, article, header, footer]
-nav:
-  Introduction: index.html
-  Editors: editors.html
-  HTML Template: template.html
-  Block Elements: block.html
-  Classwork: classwork.html
-  Homework: homework.html
 downloads:
   Download Stater File:
     file: HTML-[YOUR_NAME].zip
@@ -62,7 +55,7 @@ There are over 80 different HTML tags that can be used. They all have the same b
 <tag>content</tag>
 ```
 
-All tags have brackets around them < and > that are used by the browser to know what is a tag and what is content. Right after the opening bracket `<` is the tag name like h1 or p then the closing bracket `>`.
+All tags have brackets around them `<` and `>` that are used by the browser to know what is a tag and what is content. Right after the opening bracket `<` is the tag name like h1 or p then the closing bracket `>`.
 
 ```html
 <tag>

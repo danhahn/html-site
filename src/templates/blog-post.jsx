@@ -31,7 +31,11 @@ export default ({ data }) => {
             <h1>{post.frontmatter.lesson}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </article>
-          <SideNav nav={nav.edges} passedClassName={styles.sidebar} />
+          <SideNav
+            nav={nav.edges}
+            passedClassName={styles.sidebar}
+            buttons={post.frontmatter.downloads}
+          />
         </div>
       </ExtendLayout>
     </div>
@@ -53,6 +57,15 @@ export const query = graphql`
         lesson
         title
         lessonId
+        downloads {
+          Download_Stater_File {
+            file
+            btn
+          }
+          Download_Notes {
+            file
+          }
+        }
       }
     }
     allMarkdownRemark(
