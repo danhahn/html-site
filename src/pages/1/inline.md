@@ -1,5 +1,5 @@
 ---
-title: null
+title: Lesson 1
 lesson: null
 date: 1/24/2018 15:00
 template: article.jade
