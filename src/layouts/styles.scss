@@ -1,5 +1,10 @@
 @import "../scss/vars";
 
+html,
+body {
+  min-height: 100%;
+}
+
 h1 {
   color: $color;
 }

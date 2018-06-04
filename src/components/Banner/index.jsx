@@ -3,12 +3,12 @@ import moment from "moment";
 import ExtendLayout from "../ExtendLayout";
 import styles from "./banner.module.scss";
 
-const Banner = ({ title = "title", date = "date" }) => {
+const Banner = ({ title = "title", date }) => {
   return (
     <ExtendLayout passedClassName={styles.bgcolor}>
       <div className={styles.banner}>
         <div className={styles.title}>{title}</div>
-        <p className={styles.date}>{date}</p>
+        {date ? <p className={styles.date}>{date}</p> : null}
       </div>
     </ExtendLayout>
   );

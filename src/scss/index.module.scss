@@ -9,7 +9,31 @@ a {
 }
 
 .index {
+  padding: 1em 0;
   @media all and (max-width: 1199px) {
-    padding: 0 1em;
+    padding: 1em;
   }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  @media all and (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  border: 1px solid $light;
+  background-color: lighten($light, 20%);
+  padding: 1em;
+}
+
+.heading {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  color: $light;
+  font-size: 0.8rem;
 }

@@ -23,7 +23,7 @@ export default ({ children, data }) => {
   const lessons = lessonsData.slice(0, data.site.siteMetadata.lessons);
 
   return (
-    <div className={styles.layout}>
+    <div className={styles.layoutWrapper}>
       <Helmet defaultTitle={`SVA HTML`} titleTemplate={`%s | SVA HTML`}>
         <meta name="twitter:site" content="@svahtml" />
         <meta name="og:type" content="website" />

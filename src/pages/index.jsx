@@ -35,10 +35,11 @@ export default ({ data }) => {
               .add(weeks[index], "week")
               .format("MMMM D, YYYY");
             return (
-              <div key={node.id}>
+              <div className={styles.item} key={node.id}>
                 <Link to={node.fields.slug}>
-                  <h3>
-                    {node.frontmatter.title} <span>— {currentWeek}</span>
+                  <h3 className={styles.heading}>
+                    {node.frontmatter.title}{" "}
+                    <span className={styles.date}>— {currentWeek}</span>
                   </h3>
                 </Link>
                 <p>{node.htmlAst.children[0].children[0].value}</p>

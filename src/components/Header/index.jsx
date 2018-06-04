@@ -10,19 +10,34 @@ import styles from "./header.module.scss";
 // fa - google - drive
 
 class Header extends Component {
+  static defaultProps = {
+    classFiles: null,
+    paths: []
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       active: false
     };
   }
-  static defaultProps = {
-    classFiles: null,
-    paths: []
-  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.closeNav);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.closeNav);
+  }
+
   toggleAtive = () => {
     this.setState({ active: !this.state.active });
   };
+
+  closeNav = () => {
+    this.setState({ active: false });
+  };
+
   render() {
     const { classFiles, paths, lessonList } = this.props;
     const { active } = this.state;
