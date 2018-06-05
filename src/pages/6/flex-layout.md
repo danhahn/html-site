@@ -5,6 +5,7 @@ author: Dan Hahn
 date: 2/28/2018 15:00
 template: article.jade
 lessonId: 6
+order: 4
 
 nav:
   Float Layout: index.html

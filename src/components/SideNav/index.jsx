@@ -48,6 +48,7 @@ class SideNav extends Component {
   render() {
     const { nav, passedClassName, buttons } = this.props;
     const { left, sideopen, windowWidth } = this.state;
+    console.log(buttons);
     return (
       <aside
         className={`${styles.sideNav} ${passedClassName}`}
@@ -75,13 +76,19 @@ class SideNav extends Component {
             <div>
               <h3>Downloads</h3>
               <ul className={styles.btnList}>
-                {Object.entries(buttons).map(([title, data]) => (
-                  <li key={title}>
-                    <Button kind={data.btn}>
-                      <a href={data.file}>{title.replace(/\_/g, " ")}</a>
-                    </Button>
-                  </li>
-                ))}
+                {Object.entries(buttons).map(([title, data]) => {
+                  {
+                    return data ? (
+                      <li key={title}>
+                        <Button>
+                          <a href={data.file.publicURL}>
+                            {title.replace(/\_/g, " ")}
+                          </a>
+                        </Button>
+                      </li>
+                    ) : null;
+                  }
+                })}
               </ul>
             </div>
           ) : null}

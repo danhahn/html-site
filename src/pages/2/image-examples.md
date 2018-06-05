@@ -1,6 +1,6 @@
 ---
 title: Lesson 2
-lesson: Image Examples
+lesson: null
 author: Dan Hahn
 date: 1/31/2018 15:00
 template: article.jade

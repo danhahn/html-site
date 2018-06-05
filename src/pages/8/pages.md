@@ -1,6 +1,6 @@
 ---
 title: Lesson 8
-lesson: View All pages
+lesson: null
 author: Dan Hahn
 date: 7/26/2017 15:00
 template: single.jade

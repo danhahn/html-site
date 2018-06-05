@@ -4,7 +4,7 @@ import styles from "./button.module.scss";
 
 const cx = classNames.bind(styles);
 
-const Button = ({ children, kind }) => {
+const Button = ({ children, kind = "primary" }) => {
   const btnClassNames = cx({
     btn: true,
     primary: kind === "primary"

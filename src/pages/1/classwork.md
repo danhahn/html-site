@@ -1,6 +1,6 @@
 ---
 title: Lesson 1
-lesson: Classwork for week 1
+lesson: Classwork
 author: the-wintersmith
 date: 1/24/2018 15:00
 template: article.jade
@@ -20,7 +20,7 @@ downloads:
     btn: primary
 ---
 
-## When we are done it will look like this
+The class work will look like this!
 
 ![](images/classwork.png)
 

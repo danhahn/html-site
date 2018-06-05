@@ -5,6 +5,7 @@ author: Dan Hahn
 date: 2/7/2018 15:00
 template: article.jade
 lessonId: 3
+order: 2
 
 nav:
   Intro to CSS: index.html

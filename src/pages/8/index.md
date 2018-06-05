@@ -6,6 +6,7 @@ author: Dan Hahn
 date: 3/28/2018 15:00
 template: article.jade
 lessonId: 8
+order: 1
 
 nav:
   Web Fonts: index.html

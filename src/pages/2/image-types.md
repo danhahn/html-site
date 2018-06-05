@@ -6,6 +6,7 @@ date: 1/31/2018 15:00
 template: article.jade
 localjs: ['resize.js']
 lessonId: 2
+order: 5
 
 nav:
   Link Tag: index.html

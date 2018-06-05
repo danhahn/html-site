@@ -1,6 +1,6 @@
 ---
 title: Lesson 1
-lesson: Homework – Lesson 1
+lesson: Homework
 date: 1/24/2018 15:00
 template: article.jade
 lessonId: 1
@@ -13,10 +13,6 @@ nav:
   Block Elements: block.html
   Classwork: classwork.html
   Homework: homework.html
-downloads:
-  Text for Homework:
-    file: homework-text.txt
-    btn: primary
 homework:
   lesson: lesson1
 ---

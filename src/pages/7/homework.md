@@ -5,11 +5,12 @@ author: Dan Hahn
 date: 3/14/2018 15:00
 template: article.jade
 lessonId: 7
+order: 4
 
 homework:
   lesson: lesson7
 downloads:
-  Starter File:
+  Homework Files:
     file: homework7_yourname.zip
     btn: primary
 

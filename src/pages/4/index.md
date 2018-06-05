@@ -6,6 +6,7 @@ author: Dan Hahn
 date: 2/14/2018 15:00
 template: article.jade
 lessonId: 4
+order: 1
 
 nav:
   Font Properties: index.html
@@ -19,9 +20,6 @@ downloads:
   Download Stater File:
     file: week4.zip
     btn: primary
-  Download Notes:
-    file: week4-notes.zip
-    btn: null
 badges: [css]
 ---
 

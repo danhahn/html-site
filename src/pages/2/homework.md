@@ -1,10 +1,11 @@
 ---
 title: Lesson 2
-lesson: Homework – Lesson 2
+lesson: Homework
 author: Dan Hahn
 date: 1/31/2018 15:00
 template: article.jade
 lessonId: 2
+order: 7
 
 nav:
   Link Tag: index.html
@@ -17,9 +18,8 @@ nav:
 homework:
   lesson: lesson2
 downloads:
-  Lesson 2 Images:
+  Homework Files:
     file: lesson2-images.zip
-    btn: primary
 ---
 
 ## Goals of this homework

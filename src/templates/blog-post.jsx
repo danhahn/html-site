@@ -59,11 +59,14 @@ export const query = graphql`
         lessonId
         downloads {
           Download_Stater_File {
-            file
-            btn
+            file {
+              publicURL
+            }
           }
-          Download_Notes {
-            file
+          Homework_Files {
+            file {
+              publicURL
+            }
           }
         }
       }

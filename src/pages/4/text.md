@@ -5,6 +5,7 @@ author: Dan Hahn
 date: 2/14/2018 15:00
 template: article.jade
 lessonId: 4
+order: 2
 nav:
   Font Properties: index.html
   Text Properties: text.html

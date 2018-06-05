@@ -5,6 +5,7 @@ author: Dan Hahn
 date: 2/28/2018 15:00
 template: article.jade
 lessonId: 6
+order: 5
 
 nav:
   Float Layout: index.html
@@ -15,7 +16,7 @@ nav:
 homework:
   lesson: lesson6
 downloads:
-  Starter File:
+  Homework Files:
     file: homework6_yourname.zip
     btn: primary
 ---

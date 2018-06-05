@@ -6,6 +6,7 @@ author: Dan Hahn
 date: 2/21/2018 15:00
 template: article.jade
 lessonId: 5
+order: 1
 
 tags:
   'css':

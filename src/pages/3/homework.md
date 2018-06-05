@@ -1,10 +1,11 @@
 ---
 title: Lesson 3
-lesson: Homework 3 – Intro to css
+lesson: Homework 3
 author: Dan Hahn
 date: 2/7/2018 15:00
 template: article.jade
 lessonId: 3
+order: 4
 
 nav:
   Intro to CSS: index.html
@@ -14,9 +15,8 @@ nav:
 homework:
   lesson: lesson3
 downloads:
-  Homework Content:
+  Homework Files:
     file: homework3-text.txt
-    btn: primary
 ---
 
 ## Goals of this homework

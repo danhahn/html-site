@@ -5,6 +5,7 @@ author: Dan Hahn
 date: 2/14/2018 15:00
 template: article.jade
 lessonId: 4
+order: 6
 
 nav:
   Font Properties: index.html
@@ -16,7 +17,7 @@ nav:
 homework:
   lesson: lesson4
 downloads:
-  Stater File:
+  Homework Files:
     file: homework-week4.zip
     btn: primary
 ---
@@ -31,27 +32,27 @@ When a value has a `?` you will need to figure out what the value should be.
 
 **Note:** Be sure to send all HTML, CSS and images in a zip file.
 
-## body
+### body
 
 <pre class="text-content">
 background-color: #c0c0c0;
 font: 16px arial;
 </pre>
 
-## .container
+### .container
 
 <pre class="text-content">
 width: 800px;
 background-color: white;
 </pre>
 
-## article
+### article
 
 <pre class="text-content">
 padding: ?em;
 </pre>
 
-## h1
+### h1
 
 <pre class="text-content">
 font-size: ?em;
@@ -60,13 +61,13 @@ margin: 0;
 color: #1e336a;
 </pre>
 
-## .byline
+### .byline
 
 <pre class="text-content">
 font-size: 11px;
 </pre>
 
-## .main-image
+### .main-image
 
 <pre class="text-content">
 background-color: #a0b3f7;
@@ -75,13 +76,13 @@ padding: ?;
 text-align: center;
 </pre>
 
-## .content-area p
+### .content-area p
 
 <pre class="text-content">
 line-height: 1.5?;
 </pre>
 
-## blockquote
+### blockquote
 
 <pre class="text-content">
 color: #2c478b;
@@ -91,7 +92,7 @@ font-weight: bold;
 border-left: ? ? #2c478b;
 </pre>
 
-## blockquote p
+### blockquote p
 
 <pre class="text-content">
 line-height: 1em;
@@ -99,13 +100,13 @@ letter-spacing: -1px;
 margin: 0;
 </pre>
 
-## h2
+### h2
 
 <pre class="text-content">
 color: #2c47b8;
 </pre>
 
-## .note
+### .note
 
 <pre class="text-content">
 font-size: 10px;
@@ -113,7 +114,7 @@ font-style: italic;
 margin: ?;
 </pre>
 
-## .global-footer
+### .global-footer
 
 <pre class="text-content">
 background-color: black;
@@ -121,7 +122,7 @@ color: white;
 padding: ?px;
 </pre>
 
-## .global-footer a
+### .global-footer a
 
 <pre class="text-content">
 color: white;

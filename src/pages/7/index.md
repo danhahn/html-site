@@ -6,6 +6,7 @@ author: Dan Hahn
 date: 3/14/2018 15:00
 template: article.jade
 lessonId: 7
+order: 1
 
 downloads:
   Download Stater File:

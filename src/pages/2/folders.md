@@ -5,6 +5,7 @@ author: Dan Hahn
 date: 1/31/2018 15:00
 template: article.jade
 lessonId: 2
+order: 3
 
 nav:
   Link Tag: index.html
@@ -20,7 +21,7 @@ nav:
 
 If the two files are in the same folder than file 1 can call file 2 by the file name only.
 
-<img src="images/image01.png">
+![](images/image01.png)
 
 ### Example
 
@@ -31,7 +32,7 @@ If the two files are in the same folder than file 1 can call file 2 by the file 
 
 If the file you wish to link to is a sub folder you can not link to the file directly. Instead you need declare the folder name and the file name.
 
-<img src="images/image00.png">
+![](images/image00.png)
 
 When linking to a file in a sub folder you need to know the folder name. Because it possible to have more than one sub folder it is necessary to know the folder name.
 
@@ -44,7 +45,7 @@ When linking to a file in a sub folder you need to know the folder name. Because
 
 When linking to a file that is in a parent folder (up a directory) you need to indecate that you are going up a directory. This is done by adding a `../` for every folder that you want to go up.
 
-<img src="images/image02.png">
+![](images/image02.png)
 
 ### Example
 
