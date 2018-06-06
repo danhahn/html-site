@@ -44,6 +44,13 @@ export default ({ data }) => {
 
 export const query = graphql`
   query BlogPostQuery($slug: String!, $title: String!) {
+    allFile {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
     site {
       siteMetadata {
         startDate
