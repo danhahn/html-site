@@ -16,8 +16,10 @@ downloads:
   Download Stater File:
     file: HTML-[YOUR_NAME].zip
     btn: primary
-  Download Notes:
-    file: week1-notes.zip
+
+url: https://drive.google.com/file/d/1s8sx4qcXwugZrJUkI33Xx4Li6wj_Vwa6/view?usp=sharing
+
+
 badges: [html]
 lessonId: 1
 order: 1
@@ -43,9 +45,9 @@ Modern web development uses the three bucket approach. Each bucket adds another 
   <li>JavaScript</li>
 </ul>
 
-* HTML is the building blocks or scaffolding of the page.
-* CSS or Cascading Style Sheets is the presentation or the look and feel of the page.
-* JavaScript is the action layer of the page. We will not cover any JavaScript in this class.
+- HTML is the building blocks or scaffolding of the page.
+- CSS or Cascading Style Sheets is the presentation or the look and feel of the page.
+- JavaScript is the action layer of the page. We will not cover any JavaScript in this class.
 
 ## The Tag
 
@@ -73,12 +75,12 @@ There are a few number of tags that do not have a closing tag because they do no
 
 Sometimes a tag will need additional information to perform correctly. Adding an attribute to the tag allows the developer to set the correct information on each tag.
 
-* Attributes will always go on the opening tag after the tag name. There must be space between the tag name and the attribute name.
-* Attributes do not need to be closed. In other words when you close a tag you close its entire attribute.
-* If an attribute has a value the value must be quoted and you should use the double quote "
-* If an attribute has a value there must be an equal sign = between the attribute name and the value.
-* The order of the attribute does not matter.
-* The number of attributes that are used has decreased with newer versions of HTML.
+- Attributes will always go on the opening tag after the tag name. There must be space between the tag name and the attribute name.
+- Attributes do not need to be closed. In other words when you close a tag you close its entire attribute.
+- If an attribute has a value the value must be quoted and you should use the double quote "
+- If an attribute has a value there must be an equal sign = between the attribute name and the value.
+- The order of the attribute does not matter.
+- The number of attributes that are used has decreased with newer versions of HTML.
 
 ### One Attribute
 
@@ -98,9 +100,9 @@ Most all tags fall in to one of two types of tags, inline or block. Understandin
 
 Block-level elements will
 
-* Fill the full width of the parent element
-* Force the content to its own line
-* Allows for padding and margin to be set on the top and bottom.
+- Fill the full width of the parent element
+- Force the content to its own line
+- Allows for padding and margin to be set on the top and bottom.
 
 ### Examples
 
@@ -108,10 +110,10 @@ Block-level elements will
 
 Inline will
 
-* Only take up the space of the content
-* Wont force the content two its own line i.e. stay "inline"
-* Can't have padding on the top and bottom
-* Can't have a width or height set
+- Only take up the space of the content
+- Wont force the content two its own line i.e. stay "inline"
+- Can't have padding on the top and bottom
+- Can't have a width or height set
   Examples
   `<a>`, `<span>`, `<strong>`, `<em>` and `<code>`.
 

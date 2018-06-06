@@ -7,14 +7,6 @@ template: article.jade
 lessonId: 2
 order: 6
 
-nav:
-  Link Tag: index.html
-  Inline: inline.html
-  Folder: folders.html
-  Images: images.html
-  Image Types: image-types.html
-  Embed: embed.html
-  Homework: homework.html
 ---
 
 One of the great things about the internet is how it display it is to share content from 3rd party on your web site.
