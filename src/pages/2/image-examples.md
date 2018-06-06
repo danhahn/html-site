@@ -1,19 +1,9 @@
 ---
-title: Lesson 2
+title: null
 lesson: null
 author: Dan Hahn
 date: 1/31/2018 15:00
 template: article.jade
-lessonId: 2
-
-nav:
-  Link Tag: index.html
-  Inline: inline.html
-  Folder: folders.html
-  Images: images.html
-  Image Types: image-types.html
-  Embed: embed.html
-  Homework: homework.html
 ---
 
 There are three image types used on the web today

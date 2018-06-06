@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     contact: {
-      name: 'Dan Hahn',
-      email: 'dan@svahtml.com'
+      name: "Dan Hahn",
+      email: "dan@svahtml.com"
     },
     title: `SVA HTML`,
     semester: `Summer`,
@@ -10,7 +10,9 @@ module.exports = {
     lessons: 8,
     noClass: [4],
     classFiles:
-      "https://drive.google.com/drive/folders/1DkcIlszobtg-b2JgCEkxxPfDYY-0Vcri?usp=sharing"
+      "https://drive.google.com/drive/folders/1uf3MIQgjbWCtj2GHcjcF0sEITRvOpAt1?usp=sharing",
+    siteTitle: `Coding HTML and CSS - Basic`,
+    signUpLink: `https://goo.gl/forms/0k3MOnQa8McOr1kF2`
   },
   plugins: [
     {
@@ -59,6 +61,20 @@ module.exports = {
               // the language "sh" which will highlight using the
               // bash highlighter.
               aliases: {}
+            }
+          },
+          {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: "UA-187360-2",
+              // Puts tracking script in the head instead of the body
+              head: false,
+              // Setting this parameter is optional
+              anonymize: true,
+              // Setting this parameter is also optional
+              respectDNT: true,
+              // Avoids sending pageview hits from custom paths
+              exclude: ["/files/**"]
             }
           }
         ]

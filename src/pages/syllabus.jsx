@@ -5,6 +5,11 @@ import Banner from "../components/Banner";
 import ExtendLayout from "../components/ExtendLayout";
 import { getWeekFormat } from "../utils";
 import styles from "../scss/syllabus.module.scss";
+import entries from "object.entries";
+
+if (!Object.entries) {
+  entries.shim();
+}
 
 const Syllabus = ({ data }) => {
   const {
@@ -12,7 +17,8 @@ const Syllabus = ({ data }) => {
     lessons: count,
     noClass,
     semester,
-    contact
+    contact,
+    siteTitle
   } = data.site.siteMetadata;
   const { edges } = data.allMarkdownRemark;
   const lesson = edges.slice(0, count);
@@ -43,7 +49,7 @@ const Syllabus = ({ data }) => {
       <Banner title={`${semester} ${year}`} date={null} />
       <ExtendLayout>
         <div className={styles.syllabus}>
-          <h1>Coding HTML and CSS - Basic</h1>
+          <h1>{siteTitle}</h1>
           <p>
             {count} weeks<br />
             Wednesday 6:30-9:30 pm<br />
@@ -58,44 +64,10 @@ const Syllabus = ({ data }) => {
               <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </strong>
           </p>
-          <h2 id="class-web-site">Class web site</h2>
-          <p>
-            <a href="http://html.svahtml.com">http://html.svahtml.com</a>
-          </p>
-          <p>
-            All class work, materials, and assignments will be given though the
-            class web site. In addition any announcement may be made on the
-            site. The site will also provide back lesson and class presentations
-            will be found there for you toreview.
-          </p>
-          <h2 id="login-for-lab-computers">Login for labcomputers</h2>
-          <pre className=" language-html">
-            <code className=" language-html">
-              Username : svanyc Password : svanyc
-            </code>
-          </pre>
-          <h2 id="attendance-">Attendance:</h2>
-          <p>
-            Every class is very important and will build off of the class
-            before; therefore you must attend class every week. If you do miss a
-            class, you are expected to make up the work before the next class.
-            If you know in advance that you will miss a class, please contact me
-            24 hours before theclass.
-          </p>
-          <h2 id="purpose-of-class">Purpose of class</h2>
-          <p>
-            This is a hands-on course that will use{" "}
-            <span className="caps">HTML</span> in new and complex ways. The
-            course will begin with an overview of the Internet and how it
-            functions creatively and as a utility. Students will write{" "}
-            <span className="caps">HTML</span> and learn how to format text,
-            incorporate images, build tables, create links, host and upload a
-            Web site and utilize JavaScript. Students will design and implement
-            their own websites or enhance an existing one, as well as
-            participate in design discussions and critiques of student and
-            professionalwork.
-          </p>
-          <h2 id="syllabus-">Syllabus:</h2>
+          <div
+            className={styles.css}
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          />
           {Object.entries(lessonMap)
             .map(([title, lessons]) => (
               <div key={title}>
@@ -107,7 +79,7 @@ const Syllabus = ({ data }) => {
                         a.node.frontmatter.order - b.node.frontmatter.order
                     )
                     .map(({ node }) => (
-                      <li>
+                      <li key={node.fields.slug}>
                         <Link to={node.fields.slug}>
                           {node.frontmatter.lesson}
                         </Link>
@@ -133,11 +105,15 @@ export const query = graphql`
         lessons
         noClass
         semester
+        siteTitle
         contact {
           name
           email
         }
       }
+    }
+    markdownRemark(fields: { slug: { eq: "/files/syllabus.html" } }) {
+      html
     }
     allMarkdownRemark(
       filter: { frontmatter: { lesson: { ne: null } } }

@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import moment from "moment";
 import Link from "gatsby-link";
 import Tags from "../components/Tags";
+import Alert from "../components/Alert";
 import ExtendLayout from "../components/ExtendLayout";
 
 import { getWeekFormat } from "../utils";
@@ -14,7 +15,8 @@ export default ({ data }) => {
     startDate,
     lessons: count,
     noClass,
-    semester
+    semester,
+    signUpLink
   } = data.site.siteMetadata;
   const { edges } = data.allMarkdownRemark;
   const lesson = edges.slice(0, count);
@@ -28,6 +30,14 @@ export default ({ data }) => {
   return (
     <div>
       <Banner title={`${semester} ${year}`} date={`${start} – ${end}`} />
+      {signUpLink ? (
+        <Alert
+          title="Getting Started"
+          message="Before you get started please fill out this form.  I need will collect your contact info to beable to keep in touch."
+          url={signUpLink}
+          urlMessage="Click Fere and Fill Out Form"
+        />
+      ) : null}
       <ExtendLayout>
         <div className={styles.index}>
           {lesson.map(({ node }, index) => {
@@ -63,6 +73,7 @@ export const query = graphql`
         lessons
         noClass
         semester
+        signUpLink
       }
     }
     allMarkdownRemark(
@@ -77,7 +88,6 @@ export const query = graphql`
           }
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
             tags {
               html {
                 icon

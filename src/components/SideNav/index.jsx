@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
-import Button from "../Button";
 import styles from "./side-nav.module.scss";
+import Downloads from "../Downloads";
+
+import entries from "object.entries";
+
+if (!Object.entries) {
+  entries.shim();
+}
 
 class SideNav extends Component {
   constructor(props) {
@@ -48,7 +54,6 @@ class SideNav extends Component {
   render() {
     const { nav, passedClassName, buttons } = this.props;
     const { left, sideopen, windowWidth } = this.state;
-    console.log(buttons);
     return (
       <aside
         className={`${styles.sideNav} ${passedClassName}`}
@@ -72,26 +77,7 @@ class SideNav extends Component {
               </li>
             ))}
           </ul>
-          {buttons ? (
-            <div>
-              <h3>Downloads</h3>
-              <ul className={styles.btnList}>
-                {Object.entries(buttons).map(([title, data]) => {
-                  {
-                    return data ? (
-                      <li key={title}>
-                        <Button>
-                          <a href={data.file.publicURL}>
-                            {title.replace(/\_/g, " ")}
-                          </a>
-                        </Button>
-                      </li>
-                    ) : null;
-                  }
-                })}
-              </ul>
-            </div>
-          ) : null}
+          {buttons ? <Downloads buttons={buttons} /> : null}
         </div>
       </aside>
     );
