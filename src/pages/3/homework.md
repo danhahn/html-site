@@ -14,9 +14,10 @@ nav:
   Homework: homework.html
 homework:
   lesson: lesson3
+
 downloads:
-  Homework Files:
-    file: homework3-text.txt
+  labels: [Homework Files]
+  files: ['./homework3-texst.txt']
 ---
 
 ## Goals of this homework

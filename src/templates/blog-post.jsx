@@ -34,8 +34,7 @@ export default ({ data }) => {
           <SideNav
             nav={nav.edges}
             passedClassName={styles.sidebar}
-            buttons={post.frontmatter.downloads}
-            url={post.frontmatter.url}
+            downloads={post.frontmatter.downloads}
           />
         </div>
       </ExtendLayout>
@@ -58,12 +57,10 @@ export const query = graphql`
         lesson
         title
         lessonId
-        url
         downloads {
-          Download_Stater_File {
-            file {
-              publicURL
-            }
+          labels
+          files {
+            publicURL
           }
         }
       }

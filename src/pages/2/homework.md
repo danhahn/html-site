@@ -17,9 +17,10 @@ nav:
   Homework: homework.html
 homework:
   lesson: lesson2
+
 downloads:
-  Homework Files:
-    file: lesson2-images.zip
+  labels: [Homework Files]
+  files: ['./lesson2-images.zip']
 ---
 
 ## Goals of this homework
@@ -30,13 +31,13 @@ downloads:
 
 ## Coding the page
 
-* Create a new folder **homework_2_yourname**
-* Create a new _.html_ file and name it **hw_2_yourname.html**
-* Download and save **.zip** file of images
-* Save images in an _images_ folder in the same folder as your **.html** file
-* Write all **html** and place content to match the final design (view link at bottom of the page)
-* Remember to use the same format at in lesson 1
-* When complete **zip** file and send it to me `dan@svahtml.com`
+- Create a new folder **homework_2_yourname**
+- Create a new _.html_ file and name it **hw_2_yourname.html**
+- Download and save **.zip** file of images
+- Save images in an _images_ folder in the same folder as your **.html** file
+- Write all **html** and place content to match the final design (view link at bottom of the page)
+- Remember to use the same format at in lesson 1
+- When complete **zip** file and send it to me `dan@svahtml.com`
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/4eRy8eeq0og" frameborder="0" allowfullscreen></iframe>
 

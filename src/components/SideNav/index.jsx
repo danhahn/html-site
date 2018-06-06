@@ -52,7 +52,7 @@ class SideNav extends Component {
   }
 
   render() {
-    const { nav, passedClassName, buttons, url } = this.props;
+    const { nav, passedClassName, downloads } = this.props;
     const { left, sideopen, windowWidth } = this.state;
     return (
       <aside
@@ -77,7 +77,7 @@ class SideNav extends Component {
               </li>
             ))}
           </ul>
-          {buttons ? <Downloads buttons={buttons} url={url} /> : null}
+          {downloads ? <Downloads downloads={downloads} /> : null}
         </div>
       </aside>
     );

@@ -15,13 +15,8 @@ tags:
     'data' : ['float', 'clear', 'box-sizing']
 
 downloads:
-  Download Stater File:
-    file: week5.zip
-    btn: primary
-  Download Notes:
-    file: week5-notes.zip
-    btn: null
-
+  labels: [Download Stater File]
+  files: ['./week5.zip']
 nav:
   Box Model: index.html
   Pseudo Class: pseudo.html
@@ -67,8 +62,8 @@ The `box-sizing`property can be used to adjust this behavior:
 }
 ```
 
-* `content-box` is the default, and gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.
-* `border-box` tells the browser to account for any border and padding in the value you specify for width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
+- `content-box` is the default, and gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.
+- `border-box` tells the browser to account for any border and padding in the value you specify for width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
 
 ## Apply to all elements
 

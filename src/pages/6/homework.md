@@ -16,9 +16,8 @@ nav:
 homework:
   lesson: lesson6
 downloads:
-  Homework Files:
-    file: homework6_yourname.zip
-    btn: primary
+  labels: [Homework Files]
+  files: ['./homework6_yourname.zip']
 ---
 
 The point of this homework is to work with flexbox and how to layout columns using it.
@@ -27,9 +26,9 @@ The point of this homework is to work with flexbox and how to layout columns usi
 
 Download the starter file. In the zipfile you will find
 
-* 1 html file
-* 1 css file
-* images folder with all the images needed for the design.
+- 1 html file
+- 1 css file
+- images folder with all the images needed for the design.
 
 After unzipping the file please rename the folder and files with your name. In the `html` file also update the `title` tag with your name.
 

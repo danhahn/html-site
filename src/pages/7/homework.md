@@ -9,11 +9,10 @@ order: 4
 
 homework:
   lesson: lesson7
-downloads:
-  Homework Files:
-    file: homework7_yourname.zip
-    btn: primary
 
+downloads:
+  labels: [Homework Files]
+  files: ['./homework7_yourname.zip']
 nav:
   Background: index.html
   Tables: tables.html
@@ -26,9 +25,9 @@ The point of this homework is to work on add background images and adding and st
 
 Download the starter file that contains
 
-* 1 html file
-* 1 css file
-* 1 images folder with 3 images in it.
+- 1 html file
+- 1 css file
+- 1 images folder with 3 images in it.
 
 You will need to link the CSS to the HTML using the `<link>` tag. Once you connect the CSS you will notice that some of the styles have been pre written for you.
 

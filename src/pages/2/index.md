@@ -15,12 +15,8 @@ tags:
     data : [strong, em, a, img]
 
 downloads:
-  Download Stater File:
-    file: week2.zip
-    btn: primary
-  Download Notes:
-    file: week1-notes.zip
-    btn: null
+  labels: [Download Stater File]
+  files: ['./week2.zip']
 
 nav:
   Link Tag: index.html

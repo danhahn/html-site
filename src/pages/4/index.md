@@ -15,11 +15,9 @@ nav:
   Borders: borders.html
   Padding and Margin: padding-margin.html
   Homework: homework.html
-
 downloads:
-  Download Stater File:
-    file: week4.zip
-    btn: primary
+  labels: [Download Stater File]
+  files: ['./week4.zip']
 badges: [css]
 ---
 

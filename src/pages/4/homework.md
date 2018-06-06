@@ -17,9 +17,8 @@ nav:
 homework:
   lesson: lesson4
 downloads:
-  Homework Files:
-    file: homework-week4.zip
-    btn: primary
+  labels: [Homework Files]
+  files: ['./homework-week4.zip']
 ---
 
 Download the starter file that contains the HTML and images for this homework.

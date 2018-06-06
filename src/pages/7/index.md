@@ -9,10 +9,8 @@ lessonId: 7
 order: 1
 
 downloads:
-  Download Stater File:
-    file: week7.zip
-    btn: primary
-
+  labels: [Download Stater File]
+  files: ['./week7.zip']
 nav:
   Background: index.html
   Tables: tables.html

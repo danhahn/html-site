@@ -23,8 +23,8 @@ tags:
       'data' : ['href', 'class', 'id']
 
 downloads:
-  Download Stater File:
-    file: week3.zip
+  labels: [Download Stater File]
+  files: ['./week3.zip']
 
 nav:
   Intro to CSS: index.html
@@ -42,12 +42,12 @@ This week we start to talk about CSS.
 
 ## What is CSS
 
-* CSS stands for _Cascading Style Sheets_
-* Styles define how to display HTML elements
-* Styles are normally stored in Style Sheets
-* External Style Sheets can save you a lot of work
-* External Style Sheets are stored in CSS files
-* Multiple style definitions will cascade into one
+- CSS stands for _Cascading Style Sheets_
+- Styles define how to display HTML elements
+- Styles are normally stored in Style Sheets
+- External Style Sheets can save you a lot of work
+- External Style Sheets are stored in CSS files
+- Multiple style definitions will cascade into one
 
 ## Locations of Styles
 
@@ -90,19 +90,19 @@ For example if a html page use the paragraph tag CSS can style all P tags on the
 
 Often times a style will need to be applied to one or more elements on a page but not all elements. To allow of a style to be applied to one more more elements on a page a class is created and added to the HTML element.
 
-* A class selectors must have a name given to it.
-* A class name can be applied to one or more elements with in a document.
-* A class attribute must be added to an HTML element. `class=”className”`
-* Class names are case sensitive
+- A class selectors must have a name given to it.
+- A class name can be applied to one or more elements with in a document.
+- A class attribute must be added to an HTML element. `class=”className”`
+- Class names are case sensitive
 
 ## ID Name Selectors
 
 Like the class selectors ID selector are applied to an element within the document but unlike a class an ID name can only be used once.
 
-* An ID selector must have a name given to it.
-* An ID name can be used only once per document.
-* An ID attribute must be added to an HTML element `id=”idName”`
-* ID names are case sensitive
+- An ID selector must have a name given to it.
+- An ID name can be used only once per document.
+- An ID attribute must be added to an HTML element `id=”idName”`
+- ID names are case sensitive
 
 ## Weight of selectors
 
@@ -179,12 +179,12 @@ The syntax for css is very different than HTML syntax.
 
 ### Basic format
 
-* Declaration - The whole style including the selector and properties and values.
-* Selector - How the HTML and CSS are connected
-* Property - predefined options used to change the look and feel of an element.
-* Value - predefined value based on selected property.
-* Colon `:` - indicates the end of the property.
-* Semicolon `;` - indicates the end of a value. Semicolons are required.
+- Declaration - The whole style including the selector and properties and values.
+- Selector - How the HTML and CSS are connected
+- Property - predefined options used to change the look and feel of an element.
+- Value - predefined value based on selected property.
+- Colon `:` - indicates the end of the property.
+- Semicolon `;` - indicates the end of a value. Semicolons are required.
 
 **Note:** Inline style - when using an inline style you will only use the property and value.
 

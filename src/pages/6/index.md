@@ -9,13 +9,8 @@ lessonId: 6
 order: 1
 
 downloads:
-  Download Stater File:
-    file: week6.zip
-    btn: primary
-  Download Notes:
-    file: week6-notes.zip
-    btn: null
-
+  labels: [Download Stater File]
+  files: ['./week6.zip']
 nav:
   Float Layout: index.html
   Clear Fix: clear-fix.html

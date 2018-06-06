@@ -16,9 +16,8 @@ nav:
   Classwork: classwork.html
 
 downloads:
-  Download Stater File:
-    file: week8.zip
-    btn: primary
+  labels: [Download Stater File]
+  files: ['./week8.zip']
 
 tags:
   html:
@@ -71,8 +70,8 @@ html {
 
 **There are two important things to bear in mind about web fonts:**
 
-* Browsers support different font formats, so you'll need multiple font formats for decent cross browser support. For example, most modern browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2), the most efficient format around, but older versions of IE only support EOT (Embedded Open Type) fonts, and you might need to include an SVG version of the font to support older versions of iPhone and Android browsers. We'll show you below how to generate the required code.
-* Fonts generally aren't free to use. You have to pay for them, and/or follow other license conditions such as crediting the font creator in the code (or on your site.) You shouldn't steal fonts and use them without giving proper credit.
+- Browsers support different font formats, so you'll need multiple font formats for decent cross browser support. For example, most modern browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2), the most efficient format around, but older versions of IE only support EOT (Embedded Open Type) fonts, and you might need to include an SVG version of the font to support older versions of iPhone and Android browsers. We'll show you below how to generate the required code.
+- Fonts generally aren't free to use. You have to pay for them, and/or follow other license conditions such as crediting the font creator in the code (or on your site.) You shouldn't steal fonts and use them without giving proper credit.
 
 Below are all the supported non web fonts. If the font you want to use is not listed below you will need to use a web font. While you can set up your own hosted fonts there are [services that will host and serve your fonts for you](https://www.smashingmagazine.com/2010/10/review-of-popular-web-font-embedding-services/). Many of them are free. In our next section we we will talk about how to use [Google Fonts](google-fonts.html).
 

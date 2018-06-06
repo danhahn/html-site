@@ -7,13 +7,8 @@ template: article.jade
 lessonId: 10
 
 downloads:
-  Download Stater File:
-    file: week10.zip
-    btn: primary
-  Download Notes:
-    file: week10-notes.zip
-    btn: null
-
+  labels: [Download Stater File]
+  files: ['./week9.zip']
 nav:
   Understanding index: index.html
   Setting up your site: hosting.html
@@ -40,8 +35,8 @@ So far we have two files in two folders each named **index.html**. For every fol
 
 Because of this we need to be very careful about the file we are working on. One way to help keep track of the file that you are editing it is very useful to update the for each page on your site. It might be something like this.
 
-* For you homepage - Site Name | Home
-* A sub folder for your gallery might be - Site Name | Gallery
+- For you homepage - Site Name | Home
+- A sub folder for your gallery might be - Site Name | Gallery
 
 This way you can look at the markup to know what page you are on.
 

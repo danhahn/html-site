@@ -13,13 +13,9 @@ tags:
     icon: fa fa-html5
     data : [html,head,title,body,p,h1,h2,h3,h4,h5,h6, br, blockquote, ol, ul, li, div, section, article, header, footer]
 downloads:
-  Download Stater File:
-    file: HTML-[YOUR_NAME].zip
-    btn: primary
-
-url: https://drive.google.com/file/d/1s8sx4qcXwugZrJUkI33Xx4Li6wj_Vwa6/view?usp=sharing
-
-
+  labels: [Download Stater File]
+  files: ['./HTML-[YOUR_NAME].zip']
+url: null
 badges: [html]
 lessonId: 1
 order: 1

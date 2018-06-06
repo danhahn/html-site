@@ -7,11 +7,9 @@ date: 4/04/2018 15:00
 template: article.jade
 lessonId: 9
 
-nloads:
-  Download Stater File:
-    file: week9.zip
-    btn: primary
-
+downloads:
+  labels: [Download Stater File]
+  files: ['./week9.zip']
 nav:
   Forms: index.html
   Javascript: javascript.html
