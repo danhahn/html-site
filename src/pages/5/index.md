@@ -14,9 +14,9 @@ tags:
     'icon': 'fa fa-css3'
     'data' : ['float', 'clear', 'box-sizing']
 
-downloads:
-  labels: [Download Stater File]
-  files: ['./week5.zip']
+labels: [Download Stater File]
+attachments:
+  - "./week5.zip"
 nav:
   Box Model: index.html
   Pseudo Class: pseudo.html

@@ -15,9 +15,9 @@ nav:
   Picture Tag: picture.html
   Classwork: classwork.html
 
-downloads:
-  labels: [Download Stater File]
-  files: ['./week8.zip']
+labels: [Download Stater File]
+attachments:
+  - "./week8.zip"
 
 tags:
   html:

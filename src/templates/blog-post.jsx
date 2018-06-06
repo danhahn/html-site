@@ -17,6 +17,14 @@ export default ({ data }) => {
   const date = moment(startDate)
     .add(post.frontmatter.lessonId - 1, "weeks")
     .format("MMMM D, YYYY");
+
+  let downloads = null;
+  if (data.markdownRemark.frontmatter.attachments) {
+    downloads = {
+      files: data.markdownRemark.frontmatter.attachments,
+      labels: data.markdownRemark.frontmatter.labels
+    };
+  }
   return (
     <div>
       <Helmet>
@@ -34,7 +42,7 @@ export default ({ data }) => {
           <SideNav
             nav={nav.edges}
             passedClassName={styles.sidebar}
-            downloads={post.frontmatter.downloads}
+            downloads={downloads || post.frontmatter.downloads}
           />
         </div>
       </ExtendLayout>
@@ -64,11 +72,9 @@ export const query = graphql`
         lesson
         title
         lessonId
-        downloads {
-          labels
-          files {
-            publicURL
-          }
+        labels
+        attachments {
+          publicURL
         }
       }
     }

@@ -8,9 +8,9 @@ template: article.jade
 lessonId: 7
 order: 1
 
-downloads:
-  labels: [Download Stater File]
-  files: ['./week7.zip']
+labels: [Download Stater File]
+attachments:
+  - "./week7.zip"
 nav:
   Background: index.html
   Tables: tables.html

@@ -12,9 +12,10 @@ tags:
     label: html
     icon: fa fa-html5
     data : [html,head,title,body,p,h1,h2,h3,h4,h5,h6, br, blockquote, ol, ul, li, div, section, article, header, footer]
-downloads:
-  labels: [Download Stater File]
-  files: ['./HTML-[YOUR_NAME].zip']
+
+labels: [Download Stater File]
+attachments:
+  - "./HTML-[YOUR_NAME].zip"
 url: null
 badges: [html]
 lessonId: 1

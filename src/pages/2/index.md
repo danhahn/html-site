@@ -14,9 +14,9 @@ tags:
     icon: fa fa-html5
     data : [strong, em, a, img]
 
-downloads:
-  labels: [Download Stater File]
-  files: ['./week2.zip']
+labels: [Download Stater File]
+attachments:
+  - "./week2.zip"
 
 nav:
   Link Tag: index.html

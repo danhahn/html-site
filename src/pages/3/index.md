@@ -22,9 +22,9 @@ tags:
       'icon': 'fa fa-quote-right'
       'data' : ['href', 'class', 'id']
 
-downloads:
-  labels: [Download Stater File]
-  files: ['./week3.zip']
+labels: [Download Stater File]
+attachments:
+  - "./week3.zip"
 
 nav:
   Intro to CSS: index.html
