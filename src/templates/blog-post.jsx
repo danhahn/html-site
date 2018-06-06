@@ -43,7 +43,6 @@ export default ({ data }) => {
             nav={nav.edges}
             passedClassName={styles.sidebar}
             downloads={downloads || post.frontmatter.downloads}
-            tags={post.frontmatter.tags}
           />
         </div>
       </ExtendLayout>
