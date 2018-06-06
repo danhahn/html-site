@@ -4,6 +4,7 @@ import moment from "moment";
 import Link from "gatsby-link";
 import Tags from "../components/Tags";
 import Alert from "../components/Alert";
+import Box from "../components/Box";
 import ExtendLayout from "../components/ExtendLayout";
 
 import { getWeekFormat } from "../utils";
@@ -45,18 +46,14 @@ export default ({ data }) => {
               .add(weeks[index], "week")
               .format("MMMM D, YYYY");
             return (
-              <div className={styles.item} key={node.id}>
-                <Link to={node.fields.slug}>
-                  <h3 className={styles.heading}>
-                    {node.frontmatter.title}{" "}
-                    <span className={styles.date}>— {currentWeek}</span>
-                  </h3>
-                </Link>
-                <p>{node.htmlAst.children[0].children[0].value}</p>
-                {node.frontmatter.tags ? (
-                  <Tags tags={node.frontmatter.tags} />
-                ) : null}
-              </div>
+              <Box
+                key={node.fields.slug}
+                title={node.frontmatter.title}
+                href={node.fields.slug}
+                date={currentWeek}
+                intro={node.htmlAst.children[0].children[0].value}
+                badges={node.frontmatter.badges}
+              />
             );
           })}
         </div>
@@ -88,23 +85,7 @@ export const query = graphql`
           }
           frontmatter {
             title
-            tags {
-              html {
-                icon
-                data
-                label
-              }
-              css {
-                data
-                label
-                icon
-              }
-              attribute {
-                data
-                label
-                icon
-              }
-            }
+            badges
           }
           htmlAst
         }

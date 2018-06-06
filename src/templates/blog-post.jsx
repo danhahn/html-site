@@ -43,6 +43,7 @@ export default ({ data }) => {
             nav={nav.edges}
             passedClassName={styles.sidebar}
             downloads={downloads || post.frontmatter.downloads}
+            tags={post.frontmatter.tags}
           />
         </div>
       </ExtendLayout>
@@ -75,6 +76,23 @@ export const query = graphql`
         labels
         attachments {
           publicURL
+        }
+        tags {
+          html {
+            icon
+            data
+            label
+          }
+          css {
+            data
+            label
+            icon
+          }
+          attribute {
+            data
+            label
+            icon
+          }
         }
       }
     }

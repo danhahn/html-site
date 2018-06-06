@@ -1,0 +1,36 @@
+@import "../../scss/vars";
+
+.box {
+  padding: 1em;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f5f6;
+  border: 1px solid #d9dcde;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5em;
+  color: $primary;
+  border: none;
+}
+
+.intro {
+  flex: 1;
+}
+
+.date {
+  color: $primary;
+  margin: 0;
+}
+
+.badges {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  & > * {
+    margin-right: 0.5em;
+  }
+}

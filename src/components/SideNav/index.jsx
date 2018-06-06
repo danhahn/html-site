@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
+import Tags from "../Tags";
+
 import styles from "./side-nav.module.scss";
 import Downloads from "../Downloads";
 
@@ -52,7 +54,7 @@ class SideNav extends Component {
   }
 
   render() {
-    const { nav, passedClassName, downloads } = this.props;
+    const { nav, passedClassName, downloads, tags } = this.props;
     const { left, sideopen, windowWidth } = this.state;
     return (
       <aside
@@ -78,6 +80,7 @@ class SideNav extends Component {
             ))}
           </ul>
           {downloads ? <Downloads downloads={downloads} /> : null}
+          {tags ? <Tags tags={tags} /> : null}
         </div>
       </aside>
     );

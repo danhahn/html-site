@@ -1,0 +1,28 @@
+.badge {
+  display: inline;
+  padding: 0.2em 0.5em 0.2em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  background-color: #df7c72;
+  text-transform: uppercase;
+  display: inline-block;
+  align-items: baseline;
+}
+
+.html {
+  background-color: #e44d26;
+}
+
+.css {
+  background-color: #1572b6;
+}
+
+.js {
+  background-color: #1572b6;
+  color: #f7df1e;
+}
