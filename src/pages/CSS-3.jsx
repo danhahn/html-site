@@ -12,7 +12,11 @@ class Css3 extends Component {
     const { html: raw } = this.props.data.markdownRemark;
     const html = raw
       .replace(/\`\&/g, "<code>&amp;")
-      .replace(/\;\`/g, ";</code>");
+      .replace(/\;\`/g, ";</code>")
+      .replace(
+        /<td><code>\n*([\|\r\w -:\n;]+)<\/code><\/td>\n*(<td><\/td>\n){2}/g,
+        '<td colspan="3"><code>$1</code></td>'
+      );
     return (
       <div>
         <Banner title="CSS 3" />
