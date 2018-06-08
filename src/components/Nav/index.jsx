@@ -11,14 +11,18 @@ const Nav = ({
   lessonList
 }) => {
   return (
-    <nav className={styles.headerNav} style={active ? { maxHeight: 300 } : {}}>
+    <nav className={styles.headerNav} style={active ? { maxHeight: 500 } : {}}>
       <ul className={styles.nav}>
         <li className={styles.link}>
           Lessons
           <ul className={styles.drop}>
             {lessonList.map(({ node }) => (
               <li className={styles.dropItem} key={node.id}>
-                <Link className={styles.dropLink} to={node.fields.slug}>
+                <Link
+                  className={styles.dropLink}
+                  to={node.fields.slug}
+                  onClick={toggleAtive}
+                >
                   {node.frontmatter.title}
                 </Link>
               </li>

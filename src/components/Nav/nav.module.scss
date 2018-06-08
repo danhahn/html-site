@@ -17,12 +17,14 @@
   border-bottom: 3px solid transparent;
   border-top: 3px solid transparent;
   margin: 0;
-  &:hover {
-    background-color: #363b47;
-    border-bottom-color: $color;
-    text-decoration: none;
-    .drop {
-      display: block;
+  @media all and (min-width: 576px) {
+    &:hover {
+      background-color: #363b47;
+      border-bottom-color: $color;
+      text-decoration: none;
+      .drop {
+        display: block;
+      }
     }
   }
 }
@@ -60,27 +62,60 @@
     border-bottom: 1px solid darken($color, 20%);
   }
 }
-
-.drop {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  margin-top: 13px;
-  background-color: #f4f5f6;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-left: -1em;
-  display: none;
-  &Item {
+@media all and (min-width: 576px) {
+  .drop {
+    position: absolute;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 13px;
+    background-color: #f4f5f6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: -1em;
+    display: none;
+    &Item {
+      margin: 0;
+    }
+    &Link {
+      display: block;
+      padding: 0.5em 1em;
+      &:hover {
+        background-color: lighten($color, 20%);
+        text-decoration: none;
+        color: $white;
+      }
+    }
   }
-  &Link {
-    display: block;
-    padding: 0.5em 1em;
-    &:hover {
-      background-color: lighten($color, 20%);
-      text-decoration: none;
-      color: $white;
+}
+
+@media all and (max-width: 575px) {
+  .headerNav {
+    .link {
+      border-top: none;
+      padding: 0.5em 1em;
+      border-bottom: 1px solid darken($color, 20%);
+    }
+  }
+  .drop {
+    margin: 0 -1em;
+    position: relative;
+    top: 0.5em;
+    padding: 0;
+    list-style-type: none;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &Item {
+      margin: 0;
+    }
+    &Link {
+      display: block;
+      padding: 0.5em 1em;
+      &:hover {
+        background-color: lighten($color, 20%);
+        text-decoration: none;
+        color: $white;
+      }
     }
   }
 }

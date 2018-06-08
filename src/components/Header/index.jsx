@@ -45,7 +45,11 @@ class Header extends Component {
       <ExtendLayout passedClassName={styles.bgcolor}>
         <header className={styles.header}>
           <div className={styles.headerMobile}>
-            <Link to="/" style={{ display: "block", lineHeight: 1 }}>
+            <Link
+              to="/"
+              style={{ display: "block", lineHeight: 1 }}
+              onClick={this.toggleAtive}
+            >
               <Logo width={115} height={35} color="white" />
             </Link>
             <Burger active={active} toggleAtive={this.toggleAtive} />
