@@ -1,5 +1,4 @@
 .badge {
-  display: inline;
   padding: 0.2em 0.5em 0.2em;
   font-weight: 700;
   line-height: 1;
@@ -10,8 +9,12 @@
   border-radius: 0.25em;
   background-color: #df7c72;
   text-transform: uppercase;
-  display: inline-block;
+  display: inline-flex;
   align-items: baseline;
+  align-items: center;
+  & > svg:first-of-type {
+    margin-right: 5px;
+  }
 }
 
 .html {
@@ -22,7 +25,8 @@
   background-color: #1572b6;
 }
 
-.js {
-  background-color: #1572b6;
-  color: #f7df1e;
+.javascript {
+  background-color: #f7df1e;
+  color: black;
+  text-transform: capitalize;
 }

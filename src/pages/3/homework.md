@@ -1,6 +1,6 @@
 ---
 title: Lesson 3
-lesson: Homework 3
+lesson: Homework
 author: Dan Hahn
 date: 2/7/2018 15:00
 template: article.jade
@@ -15,9 +15,9 @@ nav:
 homework:
   lesson: lesson3
 
-downloads:
-  labels: [Homework Files]
-  files: ['./homework3-texst.txt']
+labels: [Homework Files]
+attachments:
+  - "./homework3-text.txt"
 ---
 
 ## Goals of this homework

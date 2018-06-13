@@ -18,9 +18,10 @@ nav:
 homework:
   lesson: lesson2
 
-downloads:
-  labels: [Homework Files]
-  files: ['./lesson2-images.zip']
+labels: [Homework Files]
+attachments:
+  - "./lesson2-images.zip"
+
 ---
 
 ## Goals of this homework

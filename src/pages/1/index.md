@@ -5,8 +5,6 @@ lesson: Introduction
 author: the-wintersmith
 date: 1/24/2018 15:00
 template: article.jade
-localcss: buckets.css
-localjs: ['buckets.js']
 tags:
   html:
     label: html

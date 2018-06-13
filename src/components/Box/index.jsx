@@ -16,7 +16,7 @@ const Box = ({ title, date, intro, tags, href, badges }) => {
       {
         <ul className={styles.badges}>
           {badges.map(badge => (
-            <li>
+            <li key={badge}>
               <Badge kind={badge} />
             </li>
           ))}

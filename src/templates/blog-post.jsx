@@ -4,6 +4,7 @@ import moment from "moment";
 import Banner from "../components/Banner";
 import SideNav from "../components/SideNav";
 import ExtendLayout from "../components/ExtendLayout";
+import Homework from "../components/Homework";
 
 import { getWeekFormat } from "../utils";
 
@@ -25,19 +26,20 @@ export default ({ data }) => {
       labels: data.markdownRemark.frontmatter.labels
     };
   }
+  const { localcss, title, lesson, homework } = post.frontmatter;
   return (
     <div>
       <Helmet>
-        <title>
-          {`${post.frontmatter.lesson} - ${post.frontmatter.title}`}
-        </title>
+        <title>{`${lesson} - ${title}`}</title>
+        {localcss ? <link rel="stylesheet" href={`./${localcss}`} /> : null}
       </Helmet>
-      <Banner title={post.frontmatter.title} date={date} />
+      <Banner title={title} date={date} />
       <ExtendLayout>
         <div className={styles.blogPost}>
           <article className={styles.article}>
-            <h1>{post.frontmatter.lesson}</h1>
+            <h1>{lesson}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            {homework ? <Homework lesson={homework.lesson} /> : null}
           </article>
           <SideNav
             nav={nav.edges}
@@ -76,22 +78,8 @@ export const query = graphql`
         attachments {
           publicURL
         }
-        tags {
-          html {
-            icon
-            data
-            label
-          }
-          css {
-            data
-            label
-            icon
-          }
-          attribute {
-            data
-            label
-            icon
-          }
+        homework {
+          lesson
         }
       }
     }
