@@ -22,6 +22,7 @@ const StyledButton = styled.button`
   color: red;
   border: 1px solid ${c.primary};
   transition: all 0.1s;
+  background: ${c.white};
   &:hover {
     background-color: ${c.primary};
     color: ${c.white};

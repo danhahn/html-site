@@ -5,9 +5,32 @@ import ExtendLayout from "../ExtendLayout";
 import Logo from "../Logo";
 import Burger from "../Burger";
 import Nav from "../Nav";
-import styles from "./header.module.scss";
 
-// fa - google - drive
+import styled from "styled-components";
+import { colors as c } from "../../scss/colors";
+
+const StyledHeader = styled.header`
+  display: grid;
+  align-items: center;
+  @media all and (max-width: 1199px) {
+    padding: 0 1em;
+  }
+  @media all and (min-width: 769px) {
+    grid-template-columns: auto 1fr;
+    grid-gap: 1em;
+  }
+  @media all and (max-width: 768px) {
+  }
+`;
+
+const Mobile = styled.div`
+  @media all and (max-width: 768px) {
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+`;
 
 class Header extends Component {
   static defaultProps = {
@@ -42,18 +65,18 @@ class Header extends Component {
     const { classFiles, paths, lessonList } = this.props;
     const { active } = this.state;
     return (
-      <ExtendLayout passedClassName={styles.bgcolor}>
-        <header className={styles.header}>
-          <div className={styles.headerMobile}>
+      <ExtendLayout bgcolor={c.darker}>
+        <StyledHeader>
+          <Mobile>
             <Link
               to="/"
               style={{ display: "block", lineHeight: 1 }}
               onClick={this.toggleAtive}
             >
-              <Logo width={115} height={35} color="white" />
+              <Logo width={115} height={35} color={c.white} />
             </Link>
             <Burger active={active} toggleAtive={this.toggleAtive} />
-          </div>
+          </Mobile>
           <Nav
             paths={paths}
             classFiles={classFiles}
@@ -61,7 +84,7 @@ class Header extends Component {
             toggleAtive={this.toggleAtive}
             lessonList={lessonList}
           />
-        </header>
+        </StyledHeader>
       </ExtendLayout>
     );
   }

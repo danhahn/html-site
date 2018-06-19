@@ -1,10 +1,15 @@
 import React from "react";
-import styles from "./extend-layout.module.css";
+import styled from "styled-components";
 
-const ExtendLayout = ({ children, passedClassName = null }) => {
+const Div = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const ExtendLayout = ({ children, passedClassName = null, bgcolor }) => {
   return (
-    <div className={passedClassName}>
-      <div className={styles.layout}>{children}</div>
+    <div className={passedClassName} style={{ backgroundColor: bgcolor }}>
+      <Div>{children}</Div>
     </div>
   );
 };

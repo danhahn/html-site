@@ -1,9 +1,15 @@
 import React from "react";
 import Button from "../Button";
 
+import styled from "styled-components";
+
+const StyledHomework = styled.div`
+  margin-bottom: 2rem;
+`;
+
 const Homework = ({ lesson }) => {
   return (
-    <div style={{ marginBottom: "2em" }}>
+    <StyledHomework>
       <h2>View Homework</h2>
       <Button>
         <a
@@ -15,7 +21,7 @@ const Homework = ({ lesson }) => {
           View Final Example
         </a>
       </Button>
-    </div>
+    </StyledHomework>
   );
 };
 
