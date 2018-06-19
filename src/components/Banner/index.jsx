@@ -2,6 +2,7 @@ import React from "react";
 import ExtendLayout from "../ExtendLayout";
 import styles from "./banner.module.scss";
 import styled from "styled-components";
+import { formatHeader } from "../../utils";
 
 const StyleBanner = styled.div`
   @media all and (max-width: 1199px) {
@@ -38,7 +39,7 @@ const Banner = ({ title = "title", date }) => {
   return (
     <ExtendLayout passedClassName={styles.bgcolor}>
       <StyleBanner>
-        <Title>{title}</Title>
+        <Title>{formatHeader(title)}</Title>
         {date ? <Date>{date}</Date> : null}
       </StyleBanner>
     </ExtendLayout>

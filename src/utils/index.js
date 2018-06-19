@@ -12,3 +12,8 @@ export function getWeekFormat(count = 8, noClass = []) {
   }
   return weeks;
 }
+
+export function formatHeader(str) {
+  const [first, ...rest] = str.split(' ');
+  return (<span><strong>{first}</strong>{' '}{rest.join(' ')}</span>);
+}
