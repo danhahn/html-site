@@ -1,11 +1,11 @@
 ---
-title: Lesson 6
+title: Lesson 5
 lesson: Intro to Flex box
 author: Dan Hahn
 date: 2/28/2018 15:00
 template: article.jade
-lessonId: 6
-order: 3
+lessonId: 5
+order: 4
 
 nav:
   Float Layout: index.html
@@ -52,10 +52,10 @@ This establishes the main-axis, thus defining the direction flex items are place
 }
 ```
 
-* row (default): left to right in ltr; right to left in rtl
-* row-reverse: right to left in ltr; left to right in rtl
-* column: same as row but top to bottom
-* column-reverse: same as row-reverse but bottom to top
+- row (default): left to right in ltr; right to left in rtl
+- row-reverse: right to left in ltr; left to right in rtl
+- column: same as row but top to bottom
+- column-reverse: same as row-reverse but bottom to top
 
 <iframe height='400' scrolling='no' title='Flex Intro- flex-direction' src='//codepen.io/danhahn/embed/rOzJNX/?height=300&theme-id=16874&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/danhahn/pen/rOzJNX/'>Flex Intro- flex-direction</a> by Dan Hahn (<a href='http://codepen.io/danhahn'>@danhahn</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -70,11 +70,11 @@ By default, flex items will all try to fit onto one line. You can change that an
 }
 ```
 
-* nowrap (default): single-line / left to right in ltr; right to left in rtl
-* wrap: multi-line / left to right in ltr; right to left in rtl
-* wrap-reverse: multi-line / right to left in ltr; left to right in rtl
-* flex-flow (Applies to: parent flex container element)
-* This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.
+- nowrap (default): single-line / left to right in ltr; right to left in rtl
+- wrap: multi-line / left to right in ltr; right to left in rtl
+- wrap-reverse: multi-line / right to left in ltr; left to right in rtl
+- flex-flow (Applies to: parent flex container element)
+- This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.
 
 <iframe height='400' scrolling='no' title='Flex Intro - flex-wrap' src='//codepen.io/danhahn/embed/YyxePZ/?height=300&theme-id=16874&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/danhahn/pen/YyxePZ/'>Flex Intro - flex-wrap</a> by Dan Hahn (<a href='http://codepen.io/danhahn'>@danhahn</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -93,11 +93,11 @@ This defines the alignment along the main axis. It helps distribute extra free s
 }
 ```
 
-* flex-start (default): items are packed toward the start line
-* flex-end: items are packed toward to end line
-* center: items are centered along the line
-* space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
-* space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
+- flex-start (default): items are packed toward the start line
+- flex-end: items are packed toward to end line
+- center: items are centered along the line
+- space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+- space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
 
 <iframe height='400' scrolling='no' title='Flex Intro - justify-content' src='//codepen.io/danhahn/embed/vNJdOZ/?height=300&theme-id=16874&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/danhahn/pen/vNJdOZ/'>Flex Intro - justify-content</a> by Dan Hahn (<a href='http://codepen.io/danhahn'>@danhahn</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -112,11 +112,11 @@ This defines the default behaviour for how flex items are laid out along the cro
 }
 ```
 
-* flex-start: cross-start margin edge of the items is placed on the cross-start line
-* flex-end: cross-end margin edge of the items is placed on the cross-end line
-* center: items are centered in the cross-axis
-* baseline: items are aligned such as their baselines align
-* stretch (default): stretch to fill the container (still respect min-width/max-width)
+- flex-start: cross-start margin edge of the items is placed on the cross-start line
+- flex-end: cross-end margin edge of the items is placed on the cross-end line
+- center: items are centered in the cross-axis
+- baseline: items are aligned such as their baselines align
+- stretch (default): stretch to fill the container (still respect min-width/max-width)
 
 <iframe height='400' scrolling='no' title='Flex Intro - align-items' src='//codepen.io/danhahn/embed/MavQwd/?height=300&theme-id=16874&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/danhahn/pen/MavQwd/'>Flex Intro - align-items</a> by Dan Hahn (<a href='http://codepen.io/danhahn'>@danhahn</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -133,12 +133,12 @@ This aligns a flex container's lines within when there is extra space in the cro
 }
 ```
 
-* flex-start: lines packed to the start of the container
-* flex-end: lines packed to the end of the container
-* center: lines packed to the center of the container
-* space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
-* space-around: lines evenly distributed with equal space around each line
-* stretch (default): lines stretch to take up the remaining space
+- flex-start: lines packed to the start of the container
+- flex-end: lines packed to the end of the container
+- center: lines packed to the center of the container
+- space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+- space-around: lines evenly distributed with equal space around each line
+- stretch (default): lines stretch to take up the remaining space
 
 ## Properties for the Children (flex items)
 

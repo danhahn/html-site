@@ -1,155 +1,155 @@
 ---
 title: Lesson 8
+
 index: true
-lesson: Web Fonts
 author: Dan Hahn
-date: 3/28/2018 15:00
-template: article.jade
+lesson: Final Project
+date: 4/18/2018 15:00
+template: final.jade
+localcss: http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat
 lessonId: 8
-order: 1
 
 nav:
-  Web Fonts: index.html
-  Google Fonts: google-fonts.html
-  Responsive: responsive.html
-  Picture Tag: picture.html
-  Classwork: classwork.html
-
-labels: [Download Stater File]
-attachments:
-  - "./week8.zip"
-
-tags:
-  html:
-    label: html
-    icon: fa fa-html5
-    data : [picture, source, img]
-  css:
-      label: css
-      icon: fa fa-css3
-      data : [font-family, font-face, media]
+  Final Project: index.html
+  Pages: pages.html
 badges: [html,css]
 ---
 
-This week we will talk about adding Google Fonts, responsive and the `<picture>` tag.
+This week we work on the in class final.
 
 <span class="more"></span>
 
-## Font families recap
+## Getting Started
 
-As we looked at in Fundamental text and font styling, the fonts applied to your HTML can be controlled using the font-family property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:
+The final project is open book, meaning you can use any resource you need to finish the project including asking any questions you have. The final is a multipage microsite.
+
+The final is due at 9:30 on December 13. Please email a zip file to dan@svahtml.com.
+
+**You are required to only code the desktop version** however if you have time or want a challenge you the is a mobile version.
+
+### PSD
+
+- [![](desktop-sm.png)](desktop.psd)
+- [![](mobile-sm.png)](mobile.psd)
+
+## Colors
+
+There are a limited number of colors that are used in the design you can copy the **Hex** color below and use in your css.
+
+### COLOR
+
+- \#c0c0c0
+- \#333333
+- \#004358
+- \#50b7f1
+- \#ffe11a
+- \#ff951a
+- \#ffffff
+- \#b7b7b7
+- \#7fcaf5
+
+## Header Content
+
+<pre class="text-content">
+New York State
+The Empire State
+</pre>
+
+## Nav Content
+
+<pre class="text-content">
+Home => index.html
+History => history/index.html
+Geography => geography/index.html
+Major cities => cities/index.html
+Demographics => demographics/index.html
+Transportation => transportation/index.html
+Sports => sports/index.html
+</pre>
+
+## Sizes
+
+While I will not give you the sizes for the padding or margin they will always we defined in `em` and be a whole number value like `1em`;
+
+### Font Sizes
+
+For the body use
 
 ```css
-p {
-  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
-}
+font: 16px arial;
 ```
 
-This system works well, but traditionally web developers font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called Web-safe fonts. You can use the font stack to specify preferrable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font, etc.
+### Headline Sizes
 
-## Web fonts
-
-But there is an alternative, which works very well, right back to IE version 6. Web fonts are a CSS feature that allows you to specify font files to be downloaded along with your website as it is accessed, meaning that any browser that supports web fonts can have exactly the fonts you specify available to it. Amazing! The syntax required looks something like this:
-
-First of all, you have a `@font-face` block at the start of the CSS, which specifies the font file(s) to download:
+Header Title
 
 ```css
-@font-face {
-  font-family: "myFont";
-  src: url("myFont.ttf");
-}
+font-size: 60px;
 ```
 
-Below this you can then use the font family name specified inside `@font-face` to apply your custom font to anything you like, as normal:
+Header tagline
+
+```css
+font-size: 20px;
+```
+
+article h2
+
+```css
+font-size: 3em;
+```
+
+article h3
+
+```css
+font-size: 2em;
+```
+
+sidebar headline
+
+```css
+font-size: 1.5em;
+```
+
+sidebar box
+
+```css
+font-size: 14px;
+```
+
+## Copy
+
+The copy for the final project can be found in the PDF. Note the copy in the PDF may not match the PSD in this case the PDF is correct.
+
+### PDF
+
+- [Copy for final](final-content.pdf)
+
+## Images
+
+All the images for the project can be found in the zip file
+
+### ZIP
+
+- [Images](images.zip)
+
+## Google Fonts
+
+The project uses a few Google Fonts. Add this code to your HTML file.
 
 ```html
-html {
-  font-family: "myFont", "Bitstream Vera Serif", serif;
-}
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat">
 ```
 
-**There are two important things to bear in mind about web fonts:**
+### Font-family
 
-- Browsers support different font formats, so you'll need multiple font formats for decent cross browser support. For example, most modern browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2), the most efficient format around, but older versions of IE only support EOT (Embedded Open Type) fonts, and you might need to include an SVG version of the font to support older versions of iPhone and Android browsers. We'll show you below how to generate the required code.
-- Fonts generally aren't free to use. You have to pay for them, and/or follow other license conditions such as crediting the font creator in the code (or on your site.) You shouldn't steal fonts and use them without giving proper credit.
+```css
+font-family: "Montserrat", sans-serif;
+font-family: "Homemade Apple", cursive;
+```
 
-Below are all the supported non web fonts. If the font you want to use is not listed below you will need to use a web font. While you can set up your own hosted fonts there are [services that will host and serve your fonts for you](https://www.smashingmagazine.com/2010/10/review-of-popular-web-font-embedding-services/). Many of them are free. In our next section we we will talk about how to use [Google Fonts](google-fonts.html).
+### Example
 
-### Serif Fonts
+<h2 style="font-family: 'Montserrat', sans-serif">font-family: 'Montserrat', sans-serif;</h2>
 
-<table class="w3-table-all notranslate">
-<tbody><tr>
-<th style="width:55%">font-family</th>
-<th>Example text</th>
-</tr>
-<tr>
-<td>Georgia, serif</td>
-<td><h2 style="margin-top:0px;font-family: Georgia, serif">This is a heading</h2><p style="margin-bottom:0px;font-family: Georgia, serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Palatino Linotype", "Book Antiqua", Palatino, serif</td>
-<td><h2 style="margin-top:0px;font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Times New Roman", Times, serif</td>
-<td><h2 style="margin-top:0px;font-family: 'Times New Roman', Times, serif">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Times New Roman', Times, serif">This is a paragraph</p></td>
-</tr>
-</tbody></table>
-
-### Sans-Serif Fonts
-
-<table class="w3-table-all notranslate">
-<tbody><tr>
-<th style="width:55%">font-family</th>
-<th>Example text</th>
-</tr>
-<tr>
-<td>Arial, Helvetica, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: Arial, Helvetica, sans-serif;">This is a heading</h2><p style="margin-bottom:0px;font-family: Arial, Helvetica, sans-serif;">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Arial Black", Gadget, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: Arial Black, Gadget, sans-serif;font-weight:normal;">This is a heading</h2><p style="margin-bottom:0px;font-family: Arial Black, Gadget, sans-serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Comic Sans MS", cursive, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: 'Comic Sans MS', cursive, sans-serif">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Comic Sans MS', cursive, sans-serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>Impact, Charcoal, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: Impact, Charcoal, sans-serif;font-weight:normal">This is a heading</h2><p style="margin-bottom:0px;font-family: Impact, Charcoal, sans-serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Lucida Sans Unicode", "Lucida Grande", sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>Tahoma, Geneva, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: Tahoma, Geneva, sans-serif">This is a heading</h2><p style="margin-bottom:0px;font-family: Tahoma, Geneva, sans-serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Trebuchet MS", Helvetica, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: 'Trebuchet MS', Helvetica, sans-serif">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Trebuchet MS', Helvetica, sans-serif">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>Verdana, Geneva, sans-serif</td>
-<td><h2 style="margin-top:0px;font-family: Verdana, Geneva, sans-serif">This is a heading</h2><p style="margin-bottom:0px;font-family: Verdana, Geneva, sans-serif">This is a paragraph</p></td>
-</tr>
-</tbody></table>
-
-### Monospace Fonts
-
-<table class="w3-table-all notranslate">
-<tbody><tr>
-<th style="width:55%">font-family</th>
-<th>Example text</th>
-</tr>
-<tr>
-<td>"Courier New", Courier, monospace</td>
-<td><h2 style="margin-top:0px;font-family: 'Courier New', Courier, monospace">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Courier New', Courier, monospace">This is a paragraph</p></td>
-</tr>
-<tr>
-<td>"Lucida Console", Monaco, monospace</td>
-<td><h2 style="margin-top:0px;font-family: 'Lucida Console', Monaco, monospace">This is a heading</h2><p style="margin-bottom:0px;font-family: 'Lucida Console', Monaco, monospace">This is a paragraph</p></td>
-</tr>
-</tbody></table>
+<h2 style="font-family: 'Homemade Apple', cursive">font-family: 'Homemade Apple', cursive;</h2>

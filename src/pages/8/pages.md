@@ -1,23 +1,22 @@
 ---
-title: Lesson 8
-lesson: null
+title: Lesson 11
+lesson: View All Pages
 author: Dan Hahn
-date: 7/26/2017 15:00
-template: single.jade
-lessonId: 8
+date: 4/18/2018 15:00
+template: final.jade
+lessonId: 11
 
 nav:
   Final Project: index.html
   Pages: pages.html
-  Copy for pages: final-content.pdf
 ---
 
-<div style="display:flex;flex-wrap: wrap;">
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/Home - SVA - Spring 2016 HTML.png)](examples/home.html)</div>
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/History - SVA - Spring 2016 HTML.png)](examples/history.html)</div>
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/Geography - SVA - Spring 2016 HTML.png)](examples/geo.html)</div>
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/Major cities - SVA - Spring 2016 HTML.png)](examples/city.html)</div>
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/Demographics - SVA - Spring 2016 HTML.png)](examples/demo.html)</div>
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/Transportation - SVA - Spring 2016 HTML.png)](examples/transportation.html)</div>
-	<div style="margin-right: 10px;margin-bottom: 10px;">[![](pages/sm/Sports - SVA - Spring 2016 HTML.png)](examples/sports.html)</div>
-</div>
+## PAGES
+
+* [![](pages/Fall-2017-site1.png)](pages/Fall-2017-site1.png)
+* [![](pages/Fall-2017-site2.png)](pages/Fall-2017-site2.png)
+* [![](pages/Fall-2017-site3.png)](pages/Fall-2017-site3.png)
+* [![](pages/Fall-2017-site4.png)](pages/Fall-2017-site4.png)
+* [![](pages/Fall-2017-site5.png)](pages/Fall-2017-site5.png)
+* [![](pages/Fall-2017-site6.png)](pages/Fall-2017-site6.png)
+* [![](pages/Fall-2017-site7.png)](pages/Fall-2017-site7.png)

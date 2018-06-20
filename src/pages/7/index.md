@@ -1,130 +1,115 @@
 ---
 title: Lesson 7
 index: true
-lesson: CSS Backgrounds
+lesson: Responsive Layouts
 author: Dan Hahn
-date: 3/14/2018 15:00
+date: 2/28/2018 15:00
 template: article.jade
 lessonId: 7
 order: 1
 
-labels: [Download Stater File]
-attachments:
-  - "./week7.zip"
 nav:
-  Background: index.html
-  Tables: tables.html
+  Float Layout: index.html
+  Clear Fix: clear-fix.html
+  Flex Box: flex.html
+  Flex Layout: flex-layout.html
   Homework: homework.html
-
-badges: [html, css]
+badges: [css]
 ---
 
-This week we will talk about CSS backgrounds and how to build and style an HTML table.
+This week we will be talking about resonsive layouts includeing media queries and picture element.
 
 <span class="more"></span>
 
-## Building a full site
+## CSS3 Media Queries
 
-Backgrounds are a way to add colors and images to elements on the page.
+Let us look at some more examples of using media queries.
 
-## Background Color
+We will start with a list of names which function as email links. The HTML is:
 
-```css
-background-color: color name | RGB Value | Hex Value;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  ul {
+    list-style-type: none;
+  }
+
+  ul li a {
+    color: green;
+    text-decoration: none;
+    padding: 3px;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a data-email="johndoe@example.com" href="mailto:johndoe@example.com">John Doe</a></li>
+  <li><a data-email="marymoe@example.com" href="mailto:marymoe@example.com">Mary Moe</a></li>
+  <li><a data-email="amandapanda@example.com" href="mailto:amandapanda@example.com">Amanda Panda</a></li>
+</ul>
+
+</body>
+</html>
 ```
 
-Background color can be added any element on the page including both block and inline elements. Block level elements will display the full width of the element where inline will only display in the space the content needs. You can use padding to expose more of the background.
+Notice the data-email attribute. In HTML5, we can use attributes prefixed with data- to store information. We will use the data- attribute later.
 
-<p data-height="200" data-theme-id="light" data-slug-hash="YWaZzb" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/YWaZzb/">background-color</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+### Width from 520 to 699px
 
-## Background Image
-
-```css
-background-image: url(<imagepath>);
-```
-
-Background images can be applied to any element on the page including both block and inline elements. If a background color and image are applied at the same time to the same element the image will overlay the color. By default a background image will tile in all directions starting in the top left corner.
-
-<p data-height="400" data-theme-id="light" data-slug-hash="yJKvov" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/yJKvov/">yJKvov</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-## Background Repeat
+When the browser's width is between 520 and 699px.
 
 ```css
-background-repeat: repeat | no-repeat | repeat-x | repeat-y;
+@media screen and (max-width: 699px) and (min-width: 520px) {
+  ul li a {
+    padding-left: 30px;
+    background: url(email-icon.png) left center no-repeat;
+  }
+}
 ```
 
-When applying a background image it will tile in all directions by default.
+### Width from 700 to 1000px
 
-You can control the way the image will tile by using `background-repeat`.
-
-| Repeat           | Direction                       |
-| ---------------- | ------------------------------- |
-| repeat (default) | tiles in all directions         |
-| no-repeat        | the image will appear one time. |
-| repeat-x         | repeat along the x axis         |
-| repeat-y         | repeat along the x axis         |
-
-<p data-height="400" data-theme-id="light" data-slug-hash="bZvLoq" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/bZvLoq/">background-repeat</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-##Background Attachment
+When the browser's width is between from 700 to 1000px.
 
 ```css
-background-attachment: scroll | fixed;
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+  ul li a {
+    font-style: italic;
+    color: #666666;
+  }
+}
 ```
 
-When a background image is applied to an element by default it will move with that element then the page scrolls. An image can be locked to one location by setting the value of background-attachment to fixed. When fixed is applied the element will no longer have its location set by the element but the body instead. The most common use of the is property is when applying a background to the BODY tag and that background image should not move when the page is scrolled.
+### Width above 1001px
 
-## Background Position
+When the browser's width is above 1001px.
 
 ```css
-background-position: (left, right or center) (top, center or bottom);
+@media screen and (min-width: 1001px) {
+  ul li a {
+    font-size: 12px;
+    font-style: italic;
+    color: #666666;
+  }
+}
 ```
 
-The position of the background image can be sent by using background-position. When a value is set the image will move to the location set background-position and if a tile is applied tile out from that point.
+### Width above 1151px
 
-If you want the image to be position the center both vertical and horizontal than you need only define the value of center.
+For browser widths above 1151px.
+
+Here, we do not have to write an additional media query block, we can just append an additional media query to our already existing one using a comma (this will behave like an OR operator):
 
 ```css
-background-position: center;
+@media screen and (max-width: 699px) and (min-width: 520px),
+  (min-width: 1151px) {
+  ul li a {
+    padding-left: 30px;
+    background: url(email-icon.png) left center no-repeat;
+  }
+}
 ```
-
-Position can also be set by adding a number value, two values must be set with the first value how far from the left and the second value how far from the top. Number can be in pixels or percentages.
-
-```css
-background-position: 100px 300px;
-background-position: 50% 80%;
-```
-
-<p data-height="400" data-theme-id="light" data-slug-hash="mExXpV" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/mExXpV/">background-position</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-## Background Shorthand
-
-```css
-background: image repeat attachment position color;
-```
-
-Like many CSS properties there is a shorthand way to define a background. Like with other shorthand options not all values are required and values not set will be set to the default value.
-
-```css
-background: #fff url(images/side-bar.png) repeat-y right top;
-```
-
-<p data-height="400" data-theme-id="light" data-slug-hash="ZOxAxr" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/ZOxAxr/">background</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-In this example attachment is not defined so it will be set to the default which in this case is scroll.
-
-In a case where you need to override a value set elsewhere and remove all background values it can be done by setting the background value to none.
-
-```css
-background: none;
-```
-
-You are setting the `background-image` to none and by default setting the `background-color` to transparent.
-
-<p data-height="265" data-theme-id="light" data-slug-hash="jAzkjx" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/jAzkjx/">background: none</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

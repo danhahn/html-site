@@ -1,11 +1,11 @@
 ---
-title: Lesson 8
+title: Lesson 7
 lesson: Picture Tag
 author: Dan Hahn
 date: 3/28/2018 15:00
 template: article.jade
-lessonId: 8
-order: 4
+lessonId: 7
+order: 2
 
 nav:
   Web Fonts: index.html
@@ -37,10 +37,10 @@ The `<picture>` element holds two different tags: one or more `<source>` tags an
 
 The `<source>` element has the following attributes:
 
-* `srcset` (required) - defines the URL of the image to show
-* `media` - accepts any valid media query that would normally be defined in a CSS
-* `sizes` - defines a single width descriptor, a single media query with width descriptor, or a comma-delimited list of media queries with a width descriptor
-* `type` - defines the MIME type
+- `srcset` (required) - defines the URL of the image to show
+- `media` - accepts any valid media query that would normally be defined in a CSS
+- `sizes` - defines a single width descriptor, a single media query with width descriptor, or a comma-delimited list of media queries with a width descriptor
+- `type` - defines the MIME type
 
 The browser will use the attribute values to load the most appropriate image. The browser will use the first `<source>` element with a matching hint and ignore any following `<source>` tags.
 

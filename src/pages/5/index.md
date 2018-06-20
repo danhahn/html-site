@@ -2,32 +2,17 @@
 title: Lesson 5
 index: true
 lesson: CSS Box Model
-author: Dan Hahn
-date: 2/21/2018 15:00
-template: article.jade
 lessonId: 5
 order: 1
-
-tags:
-  'css':
-    'label': 'css'
-    'icon': 'fa fa-css3'
-    'data' : ['float', 'clear', 'box-sizing']
 
 labels: [Download Stater File]
 attachments:
   - "./week5.zip"
-nav:
-  Box Model: index.html
-  Pseudo Class: pseudo.html
-  Floats: floats.html
-  Clear Fix: clear-fix.html
-  Homework: homework.html
 
 badges: [css]
 ---
 
-This week we will be talking about floating. How to align images, build gallery and simple navigation.
+This week we will be talking about the CSS Box Model, Psedudo Classes, Google Fonts and Flex Box.
 
 <span class="more"></span>
 

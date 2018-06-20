@@ -1,12 +1,12 @@
 ---
-title: Lesson 8
+title: Lesson 5
 lesson: Google Fonts
 author: Dan Hahn
 date: 3/28/2018 15:00
 template: article.jade
 localcss: google-fonts.css
-lessonId: 8
-order: 2
+lessonId: 5
+order: 3
 
 nav:
   Web Fonts: index.html
@@ -54,25 +54,25 @@ Since each case of a font is its own file the more variations of the file you us
 
 ### Load site
 
-![](images/gf6.png)
+![](./images/gf6.png)
 
 ### Select Font Family
 
 You can select as many as your want but make sure what ever font you select you use. You don't want to download a file that is not used.
 
-![](images/gf1.png)
+![](./images/gf1.png)
 
 ### Click the Family Selected Black Bar at the bottom
 
 This will bring up a dialog that you can use to customize your fonts.
 
-![](images/gf5.png)
+![](./images/gf5.png)
 
-![](images/gf4.png)
+![](./images/gf4.png)
 
 Notice the "Load Time Fast/Slow" in the top right of the dialog. It warns you if you changes will take a long time to load. You want this to be green. Remove any font that you will not use.
 
-![](images/gf3.png)
+![](./images/gf3.png)
 
 ### Add font to your project
 
@@ -81,7 +81,7 @@ Once you have it customize the way you want you will now need to add the code to
 1.  Add the CSS to your site. (`<link>` or `@import`)
 2.  Add the `font-family` to your selector
 
-![](images/gf2.png)
+![](./images/gf2.png)
 
 #### Link Tag
 
