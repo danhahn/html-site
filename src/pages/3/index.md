@@ -38,7 +38,7 @@ This week we start to talk about CSS.
 
 <span class="more"></span>
 
-<a href="https://docs.google.com/presentation/d/1-MQF8n1KYU6z8FbyMoQgLzBXVZafoVpTp80BLztdBbU/edit?usp=sharing" class="btn">View Presentation</a>
+<a href="https://docs.google.com/presentation/d/1-MQF8n1KYU6z8FbyMoQgLzBXVZafoVpTp80BLztdBbU/edit?usp=sharing" class="btn" target="_blank">View Presentation</a>
 
 ## What is CSS
 
