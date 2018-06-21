@@ -5,10 +5,17 @@ import Banner from "../components/Banner";
 import SideNav from "../components/SideNav";
 import ExtendLayout from "../components/ExtendLayout";
 import Homework from "../components/Homework";
+import styled from "styled-components";
 
 import { getWeekFormat } from "../utils";
 
 import styles from "./blog-post.module.scss";
+
+const H1 = styled.h1`
+  @media all and (min-width: 575px) and (max-width: 768px) {
+    margin-top: 0;
+  }
+`;
 
 export default ({ data }) => {
   const { lessons, startDate, noClass } = data.site.siteMetadata;
@@ -37,7 +44,7 @@ export default ({ data }) => {
       <ExtendLayout>
         <div className={styles.blogPost}>
           <article className={styles.article}>
-            <h1>{lesson}</h1>
+            <H1>{lesson}</H1>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             {homework ? <Homework lesson={homework.lesson} /> : null}
           </article>
