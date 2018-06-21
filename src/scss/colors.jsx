@@ -3,6 +3,7 @@ export const colors = {
   primary: "#c0392b",
   primaryDark: darken(0.05, "#c0392b"),
   primary5: lighten(0.05, "#c0392b"),
+  primary20: lighten(0.2, "#c0392b"),
   white: "#fff",
   darker: "#20232a",
   light: "#bdc3c7",

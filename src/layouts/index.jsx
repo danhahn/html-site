@@ -3,12 +3,24 @@ import Helmet from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./layout.module.css";
+import { getWeekFormat } from "../utils";
+
 import "./styles.scss";
 
 require("prismjs/themes/prism-tomorrow.css");
 
 export default ({ children, data }) => {
-  const { classFiles } = data.site.siteMetadata;
+  const {
+    classFiles,
+    startDate,
+    lessons: count,
+    noClass
+  } = data.site.siteMetadata;
+  const weeks = getWeekFormat(count, noClass);
+  const dateInfo = {
+    weeks,
+    startDate
+  };
   const { edges } = data.allFile;
   const { edges: lessonsData } = data.allMarkdownRemark;
   const paths = edges
@@ -28,7 +40,12 @@ export default ({ children, data }) => {
         <meta name="og:site_name" content="SVA HTML" />
         <html lang="en" />
       </Helmet>
-      <Header classFiles={classFiles} paths={paths} lessonList={lessons} />
+      <Header
+        classFiles={classFiles}
+        paths={paths}
+        lessonList={lessons}
+        dateInfo={dateInfo}
+      />
       {children()}
       <Footer />
     </div>
@@ -41,6 +58,8 @@ export const query = graphql`
       siteMetadata {
         classFiles
         lessons
+        startDate
+        noClass
       }
     }
     allFile(filter: { extension: { eq: "jsx" } }) {

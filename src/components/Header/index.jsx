@@ -62,7 +62,7 @@ class Header extends Component {
   };
 
   render() {
-    const { classFiles, paths, lessonList } = this.props;
+    const { classFiles, paths, lessonList, dateInfo } = this.props;
     const { active } = this.state;
     return (
       <ExtendLayout bgcolor={c.darker}>
@@ -83,6 +83,7 @@ class Header extends Component {
             active={active}
             toggleAtive={this.toggleAtive}
             lessonList={lessonList}
+            dateInfo={dateInfo}
           />
         </StyledHeader>
       </ExtendLayout>

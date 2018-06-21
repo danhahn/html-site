@@ -22,8 +22,9 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   const nav = data.allMarkdownRemark;
   const weeks = getWeekFormat(lessons, noClass);
+
   const date = moment(startDate)
-    .add(post.frontmatter.lessonId - 1, "weeks")
+    .add(weeks[post.frontmatter.lessonId - 1], "week")
     .format("MMMM D, YYYY");
 
   let downloads = null;
