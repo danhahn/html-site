@@ -9,6 +9,9 @@ const Date = styled.span`
   font-size: 0.7em;
   margin-left: 1em;
   color: #20232a;
+  @media all and (max-width: 575px) {
+    display: none;
+  }
 `;
 
 const StyledLink = styled(Link)`
