@@ -1,0 +1,14 @@
+body {
+  font: 16px arial;
+  background-color: #c0c0c0;
+}
+
+code {
+  color: lightgoldenrodyellow;
+  background-color: goldenrod;
+}
+
+.wrapper {
+  width: 800px;
+  background-color: #ffffff;
+}
