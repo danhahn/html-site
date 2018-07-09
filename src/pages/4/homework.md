@@ -55,7 +55,7 @@ padding: ?em;
 
 <pre class="text-content">
 font-size: ?em;
-text-transform: uppercase;
+text-transform: uppercase;x
 margin: 0;
 color: #1e336a;
 </pre>

@@ -1,9 +1,6 @@
 ---
 title: Lesson 5
-lesson: Pseudo class
-author: Dan Hahn
-date: 2/21/2018 15:00
-template: article.jade
+lesson: Pseudo Class
 lessonId: 5
 order: 2
 
@@ -12,12 +9,6 @@ tags:
     'label': 'css'
     'icon': 'fa fa-css3'
     'data' : [':link', ':visited', ':hover', ':active', ':focus']
-nav:
-  Box Model: index.html
-  Pseudo Class: pseudo.html
-  Floats: floats.html
-  Clear Fix: clear-fix.html
-  Homework: homework.html
 ---
 
 Pseudo class selectors are CSS selectors with a colon preceding them.

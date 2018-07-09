@@ -1,18 +1,8 @@
 ---
 title: Lesson 5
-lesson: Intro to Flex box
-author: Dan Hahn
-date: 2/28/2018 15:00
-template: article.jade
+lesson: Flex Box
 lessonId: 5
 order: 4
-
-nav:
-  Float Layout: index.html
-  Clear Fix: clear-fix.html
-  Flex Box: flex.html
-  Flex Layout: flex-layout.html
-  Homework: homework.html
 ---
 
 ## History of Flex Box

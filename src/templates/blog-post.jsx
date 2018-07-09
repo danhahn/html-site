@@ -17,6 +17,30 @@ const H1 = styled.h1`
   }
 `;
 
+const BlogPost = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2em;
+  @media all and (min-width: 575px) and (max-width: 768px) {
+    grid-gap: 1em;
+  }
+`;
+
+const Article = styled.article`
+  padding-bottom: 3em;
+  grid-column: 1 / 10;
+  @media all and (max-width: 991px) {
+    grid-column: 1 / 9;
+  }
+  @media all and (max-width: 768px) {
+    grid-column: 1 / -1;
+  }
+  @media all and (max-width: 1199px) {
+    padding: 0 1em;
+    padding-bottom: 3em;
+  }
+`;
+
 export default ({ data }) => {
   const { lessons, startDate, noClass } = data.site.siteMetadata;
   const post = data.markdownRemark;
@@ -35,29 +59,23 @@ export default ({ data }) => {
     };
   }
   const { localcss, title, lesson, homework } = post.frontmatter;
-  return (
-    <div>
+  return <div>
       <Helmet>
         <title>{`${lesson} - ${title}`}</title>
         {localcss ? <link rel="stylesheet" href={`./${localcss}`} /> : null}
       </Helmet>
       <Banner title={title} date={date} />
       <ExtendLayout>
-        <div className={styles.blogPost}>
-          <article className={styles.article}>
+        <BlogPost>
+          <Article>
             <H1>{lesson}</H1>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             {homework ? <Homework lesson={homework.lesson} /> : null}
-          </article>
-          <SideNav
-            nav={nav.edges}
-            passedClassName={styles.sidebar}
-            downloads={downloads || post.frontmatter.downloads}
-          />
-        </div>
+          </Article>
+          <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />
+        </BlogPost>
       </ExtendLayout>
-    </div>
-  );
+    </div>;
 };
 
 export const query = graphql`

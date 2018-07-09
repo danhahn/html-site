@@ -1,19 +1,8 @@
 ---
 title: Lesson 5
 lesson: Google Fonts
-author: Dan Hahn
-date: 3/28/2018 15:00
-template: article.jade
-localcss: google-fonts.css
 lessonId: 5
 order: 3
-
-nav:
-  Web Fonts: index.html
-  Google Fonts: google-fonts.html
-  Responsive: responsive.html
-  Picture Tag: picture.html
-  Classwork: classwork.html
 ---
 
 ## Introduction
