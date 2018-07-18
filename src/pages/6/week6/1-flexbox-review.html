@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex Box Review</title>
+  <link rel="stylesheet" href="1-flexbox-review.css">
+</head>
+<body>
+
+<main>
+  <h1>Flex Box Review</h1>
+  <h2>Flex Parent</h2>
+  <h3>flex-direction</h3>
+<pre><code>.flex-direction {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+</code></pre>
+
+  <div class="flex flex-direction">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <h3>flex-wrap</h3>
+<pre><code>.flex-wrap {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+</code></pre>
+
+  <div class="flex flex-wrap">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child">6</div>
+    <div class="child">7</div>
+    <div class="child">8</div>
+    <div class="child">9</div>
+    <div class="child">10</div>
+    <div class="child">11</div>
+    <div class="child">12</div>
+    <div class="child">13</div>
+    <div class="child">14</div>
+    <div class="child">15</div>
+    <div class="child">16</div>
+    <div class="child">17</div>
+    <div class="child">18</div>
+    <div class="child">19</div>
+    <div class="child">20</div>
+  </div>
+
+  <h3>justify-content</h3>
+  <pre><code>.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}
+</code></pre>
+
+  <h3>align-items</h3>
+  <pre><code>.align-items {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+</code></pre>
+
+  <div class="flex align-items">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <h3>align-content</h3>
+  <pre><code>.align-content {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+</code></pre>
+
+  <div class="flex align-content">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <h2>flex child</h2>
+  <h3>order</h3>
+  <pre><code>.order {
+  order: &gt;integer&lt;; /* default is 0 */
+}
+</code></pre>
+
+  <div class="flex set-flex">
+    <div class="child">1</div>
+    <div class="child order">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <h3>flex-grow</h3>
+  <pre><code>.flex-grow {
+  flex-grow: &gt;number&lt;; /* default 0 */
+}
+</code></pre>
+
+  <h3>flex-shrink</h3>
+
+  <div class="flex set-flex">
+    <div class="child">1</div>
+    <div class="child flex-shrink">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <pre><code>.flex-shrink {
+  flex-shrink: &gt;number&lt;; /* default 1 */
+}
+</code></pre>
+
+  <h3>flex-basis</h3>
+  <pre><code>.flex-basis {
+  flex-basis: &gt;length&lt; | auto; /* default auto */
+}
+</code></pre>
+
+  <div class="flex set-flex">
+    <div class="child">1</div>
+    <div class="child flex-basis">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <h3>flex</h3>
+<pre><code>.flex {
+  flex: none | [ &gt;'flex-grow'&lt; &gt;'flex-shrink'&lt;? || &gt;'flex-basis'&lt; ]
+}
+</code></pre>
+
+  <div class="flex set-flex">
+    <div class="child">1</div>
+    <div class="child flex-child">2</div>
+    <div class="child">3</div>
+  </div>
+
+  <h3>align-self</h3>
+<pre><code>.align-self {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+</code></pre>
+
+<div class="flex set-flex">
+  <div class="child">1</div>
+  <div class="child align-self">2</div>
+  <div class="child">3</div>
+</div>
+
+</main>
+
+</body>
+</html>

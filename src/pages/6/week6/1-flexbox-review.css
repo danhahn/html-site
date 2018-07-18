@@ -1,0 +1,74 @@
+body {
+  font: 16px arial;
+}
+
+main {
+  width: 800px;
+  margin: 0 auto;
+}
+
+pre {
+  font-size: 1em;
+  padding: 1em;
+  background-color: #2D2D2D;
+  color: #BDC3C7;
+  white-space: pre-wrap;
+}
+code {
+  font-size: 1em;
+}
+
+.flex {
+  background-color: #C0392B;
+  padding: 1em;
+}
+
+.child {
+  background-color: #F8C555;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+/* Parent */
+
+.flex-direction {
+
+}
+
+.flex-wrap {
+
+}
+
+.align-items {
+
+}
+
+.align-content {
+
+}
+
+/* Child */
+
+.set-flex {
+  display: flex;
+}
+
+.order {
+
+}
+
+.flex-shrink {
+
+}
+
+.flex-basis {
+
+}
+
+.flex-child {
+
+}
+
+.align-self {
+
+}
