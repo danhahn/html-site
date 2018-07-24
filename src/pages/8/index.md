@@ -6,8 +6,9 @@ author: Dan Hahn
 lesson: Final Project
 date: 4/18/2018 15:00
 template: final.jade
-localcss: http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat
+localcssEx: http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat
 lessonId: 8
+order: 1
 
 nav:
   Final Project: index.html
@@ -23,14 +24,13 @@ This week we work on the in class final.
 
 The final project is open book, meaning you can use any resource you need to finish the project including asking any questions you have. The final is a multipage microsite.
 
-The final is due at 9:30 on December 13. Please email a zip file to dan@svahtml.com.
+The final is due at 9:30 on August 1, 2018. Please email a zip file to dan@svahtml.com.
 
 **You are required to only code the desktop version** however if you have time or want a challenge you the is a mobile version.
 
 ### PSD
 
-- [![](desktop-sm.png)](desktop.psd)
-- [![](mobile-sm.png)](mobile.psd)
+[![](summer.png)](summer.psd)
 
 ## Colors
 
@@ -60,11 +60,11 @@ The Empire State
 <pre class="text-content">
 Home => index.html
 History => history/index.html
-Geography => geography/index.html
-Major cities => cities/index.html
-Demographics => demographics/index.html
-Transportation => transportation/index.html
-Sports => sports/index.html
+Geography => #
+Major cities => #
+Demographics => #
+Transportation => #
+Sports => #
 </pre>
 
 ## Sizes
@@ -123,7 +123,7 @@ The copy for the final project can be found in the PDF. Note the copy in the PDF
 
 ### PDF
 
-- [Copy for final](final-content.pdf)
+- [Copy for final](./final/final-content.pdf)
 
 ## Images
 
@@ -131,7 +131,7 @@ All the images for the project can be found in the zip file
 
 ### ZIP
 
-- [Images](images.zip)
+- [Images](./final/images.zip)
 
 ## Google Fonts
 

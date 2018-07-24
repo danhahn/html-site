@@ -58,11 +58,12 @@ export default ({ data }) => {
       labels: data.markdownRemark.frontmatter.labels
     };
   }
-  const { localcss, title, lesson, homework } = post.frontmatter;
+  const { localcss, title, lesson, homework, localcssEx } = post.frontmatter;
   return <div>
       <Helmet>
         <title>{`${lesson} - ${title}`}</title>
         {localcss ? <link rel="stylesheet" href={`./${localcss}`} /> : null}
+        {localcssEx ? <link rel="stylesheet" href={`${localcssEx}`} /> : null}
       </Helmet>
       <Banner title={title} date={date} />
       <ExtendLayout>
@@ -101,6 +102,7 @@ export const query = graphql`
         title
         lessonId
         labels
+        localcssEx
         attachments {
           publicURL
         }
