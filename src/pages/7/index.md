@@ -9,7 +9,7 @@ order: 1
 
 labels: [Download Stater File]
 attachments:
-  - "./week7g.zip"
+  - "./week7.zip"
 
 downloads:
   labels: [Download Stater File]
