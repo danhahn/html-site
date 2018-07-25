@@ -5,7 +5,7 @@ author: Dan Hahn
 date: 3/28/2018 15:00
 template: article.jade
 lessonId: 7
-order: 2
+order: 3
 
 nav:
   Web Fonts: index.html

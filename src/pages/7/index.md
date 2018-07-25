@@ -1,115 +1,111 @@
 ---
 title: Lesson 7
 index: true
-lesson: Responsive Layouts
-author: Dan Hahn
-date: 2/28/2018 15:00
+lesson: Understanding the Index.html
+date: 4/11/2018 15:00
 template: article.jade
 lessonId: 7
 order: 1
 
+labels: [Download Stater File]
+attachments:
+  - "./week7g.zip"
+
+downloads:
+  labels: [Download Stater File]
+  files: ['./week9.zip']
 nav:
-  Float Layout: index.html
-  Clear Fix: clear-fix.html
-  Flex Box: flex.html
-  Flex Layout: flex-layout.html
-  Homework: homework.html
-badges: [css]
+  Understanding index: index.html
+  Setting up your site: hosting.html
+badges: [html, css]
 ---
 
-This week we will be talking about resonsive layouts includeing media queries and picture element.
+How to set up your own HTML website including how to choose where to host and how to upload.
 
 <span class="more"></span>
 
-## CSS3 Media Queries
+## Building a full site
 
-Let us look at some more examples of using media queries.
+**The magic of the index.html**
 
-We will start with a list of names which function as email links. The HTML is:
+When building a site that is hosted on a web server there needs to be a default file to serve. In most cases this is **index.html**. When you have a folder and put only one file in that folder it should be index.html since it will be served by just requesting the site or any subfolder of that site.
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-  ul {
-    list-style-type: none;
-  }
+For example you may go to a site named http://www.svahtml.com but you just ask for the site you never say what file you want. The server knows to give you the default file, index.html. to make life easy it just gives you it and the file is never displayed in the URL. But what happens when you go to a sub folder like? Again you are not saying what file you want so the server needs to give you the default file which is index.html.
 
-  ul li a {
-    color: green;
-    text-decoration: none;
-    padding: 3px;
-    display: block;
-  }
-</style>
-</head>
-<body>
+![](./images/image04.png)
 
-<ul>
-  <li><a data-email="johndoe@example.com" href="mailto:johndoe@example.com">John Doe</a></li>
-  <li><a data-email="marymoe@example.com" href="mailto:marymoe@example.com">Mary Moe</a></li>
-  <li><a data-email="amandapanda@example.com" href="mailto:amandapanda@example.com">Amanda Panda</a></li>
-</ul>
+So far we have two files in two folders each named **index.html**. For every folder that we have on the site it will have it&#39;s own index.html. As you might imagine there could be a lot of index.htmls.
 
-</body>
-</html>
-```
+Because of this we need to be very careful about the file we are working on. One way to help keep track of the file that you are editing it is very useful to update the for each page on your site. It might be something like this.
 
-Notice the data-email attribute. In HTML5, we can use attributes prefixed with data- to store information. We will use the data- attribute later.
+- For you homepage - Site Name | Home
+- A sub folder for your gallery might be - Site Name | Gallery
 
-### Width from 520 to 699px
+This way you can look at the markup to know what page you are on.
 
-When the browser's width is between 520 and 699px.
+It should also be noted that you can not replace one index with an other since all the links where set for that page and the content would be wrong.
 
-```css
-@media screen and (max-width: 699px) and (min-width: 520px) {
-  ul li a {
-    padding-left: 30px;
-    background: url(email-icon.png) left center no-repeat;
-  }
-}
-```
+## Your site might be something like this
 
-### Width from 700 to 1000px
+    Homepage
+    - News
+    - Sport
+    - Weather
+    - Gallery
 
-When the browser's width is between from 700 to 1000px.
+Every subsection on your site should be broken into its own folder.
 
-```css
-@media screen and (max-width: 1000px) and (min-width: 700px) {
-  ul li a {
-    font-style: italic;
-    color: #666666;
-  }
-}
-```
+    /index.html
+    /news/index.html
+    /sports/index.html
+    /weather/index.html
+    /gallery/index.html
 
-### Width above 1001px
+We have 5 index.html files.
 
-When the browser's width is above 1001px.
+## But what if we have to have more than one file In a folder?
 
-```css
-@media screen and (min-width: 1001px) {
-  ul li a {
-    font-size: 12px;
-    font-style: italic;
-    color: #666666;
-  }
-}
-```
+In that case any other file can be named whatever you want. It would be linked to from the index.html using the link tag **(href=&rdquo;filename.html&rdquo;)**.
 
-### Width above 1151px
+## For example
 
-For browser widths above 1151px.
+    /news/index.html
+    /news/yesterday.html
+    /news/breakingnews.html
+    /news/fun-stories.html
 
-Here, we do not have to write an additional media query block, we can just append an additional media query to our already existing one using a comma (this will behave like an OR operator):
+In this example we have four files all in the **/news/** folder.
+![](./images/image00.png)
 
-```css
-@media screen and (max-width: 699px) and (min-width: 520px),
-  (min-width: 1151px) {
-  ul li a {
-    padding-left: 30px;
-    background: url(email-icon.png) left center no-repeat;
-  }
-}
-```
+When you have your files on a web server you are able to use absolute paths to make the paths from one section or folder to another.
+
+If you wanted to link from the news page to the weather page there are two ways to do this.
+
+1.  Use a relative path. **../weather/**
+2.  Use an absolute path **/weather/**
+
+The reason option 2 is better is because it will be the same path for all files on the site regardless of where you are.
+
+## Dev Local
+
+The big problem with this way is it will not work when viewing your files from a local directory.
+
+If you want to still develop locally you will need to set up a local server. One great one is MAMP. it is very easy to setup and use and will allow you to have the same setup as your web server.
+
+![](./images/image01.png)
+
+You just need to set the &ldquo;Document Root&rdquo; by clicking the Preferences button then clicking Apache.
+
+![](./images/image05.png)
+
+Then set the folder of your project and click OK.
+
+Once that is done you need to click Start Servers. It may ask you to enter your username and password. In almost all cases this will be the same as when you logged in to the computer.
+
+if everything works your app will have two green lights
+
+![](./images/image03.png)
+
+Then you need to go to http://localhost:8888/
+
+This will act as a real web server but you can continue to develop locally.
