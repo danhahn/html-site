@@ -8,38 +8,9 @@ import Homework from "../components/Homework";
 import styled from "styled-components";
 
 import { getWeekFormat } from "../utils";
+import { H1, BlogPost, Article } from './components'
 
 import styles from "./blog-post.module.scss";
-
-const H1 = styled.h1`
-  @media all and (min-width: 575px) and (max-width: 768px) {
-    margin-top: 0;
-  }
-`;
-
-const BlogPost = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2em;
-  @media all and (min-width: 575px) and (max-width: 768px) {
-    grid-gap: 1em;
-  }
-`;
-
-const Article = styled.article`
-  padding-bottom: 3em;
-  grid-column: 1 / 10;
-  @media all and (max-width: 991px) {
-    grid-column: 1 / 9;
-  }
-  @media all and (max-width: 768px) {
-    grid-column: 1 / -1;
-  }
-  @media all and (max-width: 1199px) {
-    padding: 0 1em;
-    padding-bottom: 3em;
-  }
-`;
 
 export default ({ data }) => {
   const { lessons, startDate, noClass } = data.site.siteMetadata;

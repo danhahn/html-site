@@ -1,4 +1,5 @@
 import React from 'react';
+import Color from "color";
 
 export function getWeekFormat(count = 8, noClass = []) {
   let weeks = [0];
@@ -18,4 +19,18 @@ export function getWeekFormat(count = 8, noClass = []) {
 export function formatHeader(str) {
   const [first, ...rest] = str.split(' ');
   return (<span><strong>{first}</strong>{' '}{rest.join(' ')}</span>);
+}
+
+export function testColor(str, p1, c) {
+  const color = Color(c);
+  return `
+    <li style='
+        background-color: ${c};
+        ${color.isDark() ? ` color: #ffffff;` : ""}
+        ${color.luminosity() > 0.9 ? ` border-color: #c0c0c0` : ""}
+      ' class='icon'>${c.toLowerCase()}</li>\n`;
+}
+
+export function testUl(str, c) {
+  return `<ul class='icon-list'>\n${testColor(undefined, undefined, c)}\n`;
 }
