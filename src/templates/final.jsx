@@ -112,7 +112,6 @@ export default ({ data }) => {
         <BlogPost>
           <Article>
             <H1>{lesson}</H1>
-            <h2>FINAL LAYOUT</h2>
             <div dangerouslySetInnerHTML={{ __html: formattedHtml }} />
             {homework ? <Homework lesson={homework.lesson} /> : null}
           </Article>
