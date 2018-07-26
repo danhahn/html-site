@@ -35,6 +35,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
               frontmatter {
                 title
+                template
               }
             }
           }
@@ -42,9 +43,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const template = node.frontmatter.template === "final.jade" ? `final` : `blog-post`;
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/blog-post.jsx`),
+          component: path.resolve(`./src/templates/${template}.jsx`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
@@ -54,7 +56,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         if(node.fields.slugIndex) {
           createPage({
             path: node.fields.slugIndex,
-            component: path.resolve(`./src/templates/blog-post.jsx`),
+            component: path.resolve(
+              `./src/templates/${template}.jsx`
+            ),
             context: {
               // Data passed to context is available in page queries as GraphQL variables.
               slug: node.fields.slug,
