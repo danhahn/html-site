@@ -39,6 +39,14 @@ module.exports = {
           `gatsby-remark-copy-images`,
           `gatsby-remark-copy-linked-files`,
           {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+              fonts: [
+                `Roboto Mono`
+              ]
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
