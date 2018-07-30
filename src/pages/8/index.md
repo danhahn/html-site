@@ -36,7 +36,7 @@ The final is due at 9:30 on August 1, 2018. Please email a zip file to dan@svaht
 
 There are a limited number of colors that are used in the design you can copy the **Hex** color below and use in your css.
 
-### COLOR
+> You can click on a color to copy to your clipboard
 
 - \#c0c0c0
 - \#333333
