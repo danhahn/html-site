@@ -28,7 +28,7 @@ export function testColor(str, p1, c) {
         background-color: ${c};
         ${color.isDark() ? ` color: #ffffff;` : ""}
         ${color.luminosity() > 0.9 ? ` border-color: #c0c0c0` : ""}
-      ' class='icon'>${c.toLowerCase()}</li>\n`;
+      ' class='icon' data-clipboard-text='${c.toLowerCase()}'>${c.toLowerCase()}</li>\n`;
 }
 
 export function testUl(str, c) {

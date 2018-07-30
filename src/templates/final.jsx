@@ -5,36 +5,57 @@ import Banner from "../components/Banner";
 import SideNav from "../components/SideNav";
 import ExtendLayout from "../components/ExtendLayout";
 import Homework from "../components/Homework";
+import Clipboard from 'clipboard';
 
 import { getWeekFormat, testColor, testUl } from "../utils";
 import { H1, BlogPost, Article} from './components'
 
 import styles from "./blog-post.module.scss";
 
-export default ({ data }) => {
-  const { lessons, startDate, noClass } = data.site.siteMetadata;
-  const post = data.markdownRemark;
-  const nav = data.allMarkdownRemark;
-  const weeks = getWeekFormat(lessons, noClass);
-
-  const date = moment(startDate)
-    .add(weeks[post.frontmatter.lessonId - 1], "week")
-    .format("MMMM D, YYYY");
-
-  let downloads = null;
-  if (data.markdownRemark.frontmatter.attachments) {
-    downloads = {
-      files: data.markdownRemark.frontmatter.attachments,
-      labels: data.markdownRemark.frontmatter.labels
-    };
+class Final extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showIsCopied: false,
+      color: null,
+    }
   }
-  const { localcss, title, lesson, homework, localcssEx } = post.frontmatter;
+  componentDidMount() {
+    const clipboard = new Clipboard(".icon");
+    clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
 
-  let formattedHtml = post.html;
-  formattedHtml = formattedHtml.replace(/<ul>\n<li>(#[0-9a-fA-F]*)<\/li>\n/g, testUl);
-  formattedHtml = formattedHtml.replace(/(<li>(#[0-9a-fA-F]*)<\/li>\n)/g, testColor)
-  // console.log(formattedHtml);
-  return <div>
+      // e.clearSelection();
+    });
+  }
+
+  render() {
+    const { data } = this.props;
+    const { lessons, startDate, noClass } = data.site.siteMetadata;
+    const post = data.markdownRemark;
+    const nav = data.allMarkdownRemark;
+    const weeks = getWeekFormat(lessons, noClass);
+
+    const date = moment(startDate)
+      .add(weeks[post.frontmatter.lessonId - 1], "week")
+      .format("MMMM D, YYYY");
+
+    let downloads = null;
+    if (data.markdownRemark.frontmatter.attachments) {
+      downloads = {
+        files: data.markdownRemark.frontmatter.attachments,
+        labels: data.markdownRemark.frontmatter.labels
+      };
+    }
+    const { localcss, title, lesson, homework, localcssEx } = post.frontmatter;
+
+    let formattedHtml = post.html;
+    formattedHtml = formattedHtml.replace(/<ul>\n<li>(#[0-9a-fA-F]*)<\/li>\n/g, testUl);
+    formattedHtml = formattedHtml.replace(/(<li>(#[0-9a-fA-F]*)<\/li>\n)/g, testColor)
+    // console.log(formattedHtml);
+    return (<div>
       <Helmet>
         <title>{`${lesson} - ${title}`}</title>
         {localcss ? <link rel="stylesheet" href={`./${localcss}`} /> : null}
@@ -51,8 +72,11 @@ export default ({ data }) => {
           <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />
         </BlogPost>
       </ExtendLayout>
-    </div>;
+    </div>);
+  }
 };
+
+export default Final;
 
 export const query = graphql`
   query FinalQuery($slug: String!, $title: String!) {
