@@ -12,6 +12,16 @@ import { H1, BlogPost, Article } from './components'
 
 import styles from "./blog-post.module.scss";
 
+const Code = styled.div`
+  .gatsby-highlight {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Roboto Mono", monospace !important;
+      font-size: 1rem;
+    }
+  }
+`;
+
 export default ({ data }) => {
   const { lessons, startDate, noClass } = data.site.siteMetadata;
   const post = data.markdownRemark;
@@ -41,7 +51,7 @@ export default ({ data }) => {
         <BlogPost>
           <Article>
             <H1>{lesson}</H1>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Code dangerouslySetInnerHTML={{ __html: post.html }} />
             {homework ? <Homework lesson={homework.lesson} /> : null}
           </Article>
           <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />

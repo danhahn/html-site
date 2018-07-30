@@ -28,6 +28,15 @@ const Overlay = styled.div`
   }
 `;
 
+const Code = styled.div`
+  .gatsby-highlight {
+    code[class*="language-"],pre[class*="language-"] {
+      font-family: "Roboto Mono", monospace !important;
+      font-size: 1rem;
+    }
+  }
+`;
+
 import { getWeekFormat, testColor, testUl } from "../utils";
 import { H1, BlogPost, Article} from './components'
 
@@ -102,7 +111,7 @@ class Final extends React.Component {
           <BlogPost>
             <Article>
               <H1>{lesson}</H1>
-              <div dangerouslySetInnerHTML={{ __html: formattedHtml }} />
+              <Code dangerouslySetInnerHTML={{ __html: formattedHtml }} />
               {homework ? <Homework lesson={homework.lesson} /> : null}
             </Article>
             <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />
