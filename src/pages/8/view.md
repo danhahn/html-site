@@ -1,9 +1,8 @@
 ---
-title: Lesson 11
+title: Lesson
 author: Dan Hahn
 date: 4/18/2018 15:00
 template: single.jade
-lessonId: 11
 
 nav:
   Final Project: index.html

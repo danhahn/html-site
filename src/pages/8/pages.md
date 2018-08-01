@@ -1,10 +1,10 @@
 ---
-title: Lesson 8
+title: Lesson 11
 lesson: View All Pages
 author: Dan Hahn
 date: 4/18/2018 15:00
 template: final.jade
-lessonId: 8
+lessonId: 11
 order: 3
 
 nav:

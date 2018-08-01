@@ -5,10 +5,10 @@ module.exports = {
       email: "dan@svahtml.com"
     },
     title: `SVA HTML`,
-    semester: `Summer`,
-    startDate: `2018-06-06`,
-    lessons: 8,
-    noClass: [4],
+    semester: `Fall`,
+    startDate: `2018-09-22`,
+    lessons: 12,
+    noClass: [8],
     classFiles:
       "https://drive.google.com/drive/folders/1uf3MIQgjbWCtj2GHcjcF0sEITRvOpAt1?usp=sharing",
     siteTitle: `Coding HTML and CSS - Basic`,

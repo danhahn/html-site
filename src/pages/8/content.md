@@ -1,10 +1,8 @@
 ---
-title: Lesson 11
 lesson: Content for all pages
 author: Dan Hahn
 date: 4/18/2018 15:00
 template: article.jade
-lessonId: 11
 
 nav:
   Final Project: index.html
