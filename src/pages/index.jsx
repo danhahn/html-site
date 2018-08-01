@@ -23,7 +23,7 @@ export default ({ data }) => {
   const year = moment(startDate).format("YYYY");
   const start = moment(startDate).format("MMMM D, YYYY");
   const end = moment(startDate)
-    .add(count, "weeks")
+    .add(count + noClass.length - 1, "weeks")
     .format("MMMM D, YYYY");
 
   const today = moment().format(`MMMM D, YYYY`);
