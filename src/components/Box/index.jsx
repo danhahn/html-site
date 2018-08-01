@@ -12,12 +12,27 @@ const StyledBox = styled.div`
   flex-direction: column;
   background-color: #f4f5f6;
   border: 1px solid #d9dcde;
-  ${props => props.active === true && css`
-    grid-column: 1 / -1;
-    grid-row: 1;
-    font-size: 1.4em;
-    padding: 1em 10em;
-  `}
+  ${props =>
+    props.active === true &&
+    css`
+      grid-row: 1;
+      grid-column: 1 / -1;
+      text-align: center;
+      border-width: 3px;
+      background-color: white;
+      border-radius: 5px;
+      &:before {
+        content: "💥 🎉 Today's Lesson  🎉 💥";
+        color: ${c.primary};
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+      }
+      @media screen and (min-width: 769px) {
+        font-size: 1.4em;
+        padding: 1em 10em;
+      }
+    `};
 `;
 
 const H2 = styled.h2`

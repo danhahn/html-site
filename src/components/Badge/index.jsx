@@ -8,6 +8,7 @@ import styled, { css } from "styled-components";
 const Span = styled.span`
   padding: 0.2em 0.5em 0.2em;
   font-weight: 700;
+  font-size: 1rem;
   line-height: 1;
   color: #fff;
   text-align: center;
