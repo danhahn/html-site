@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Button from "../Button";
 import Badge from "../Badge";
 import { colors as c } from "../../scss/colors";
@@ -12,6 +12,12 @@ const StyledBox = styled.div`
   flex-direction: column;
   background-color: #f4f5f6;
   border: 1px solid #d9dcde;
+  ${props => props.active === true && css`
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: 1.4em;
+    padding: 1em 10em;
+  `}
 `;
 
 const H2 = styled.h2`
@@ -40,9 +46,9 @@ const Ul = styled.ul`
   }
 `;
 
-const Box = ({ title, date, intro, href, badges }) => {
+const Box = ({ title, date, intro, href, badges, active }) => {
   return (
-    <StyledBox>
+    <StyledBox active={active}>
       <Link to={href}>
         <H2>{title}</H2>
       </Link>

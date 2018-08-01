@@ -26,6 +26,9 @@ export default ({ data }) => {
     .add(count, "weeks")
     .format("MMMM D, YYYY");
 
+  const today = moment().format(`MMMM D, YYYY`);
+  console.log(today);
+
   return (
     <div>
       <Banner title={`${semester} ${year}`} date={`${start} – ${end}`} />
@@ -51,6 +54,7 @@ export default ({ data }) => {
                 date={currentWeek}
                 intro={node.htmlAst.children[0].children[0].value}
                 badges={node.frontmatter.badges}
+                active={currentWeek === today}
               />
             );
           })}
