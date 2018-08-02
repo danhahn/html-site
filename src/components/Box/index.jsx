@@ -35,6 +35,10 @@ const StyledBox = styled.div`
     `};
 `;
 
+const A = styled(Link)`
+  color: ${c.primary};
+`;
+
 const H2 = styled.h2`
   margin: 0;
   font-size: 2.5em;
@@ -64,9 +68,9 @@ const Ul = styled.ul`
 const Box = ({ title, date, intro, href, badges, active }) => {
   return (
     <StyledBox active={active}>
-      <Link to={href}>
+      <A to={href}>
         <H2>{title}</H2>
-      </Link>
+      </A>
       <Date>{date}</Date>
       <Intro>{intro}</Intro>
       {badges.length ? (

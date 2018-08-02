@@ -20,11 +20,16 @@ const StyledLink = styled(Link)`
   justify-content: space-between;
   white-space: nowrap;
   padding: 0.5em 1em;
+  color: ${c.primary};
   &:hover {
     background-color: ${c.primary20};
     text-decoration: none;
     color: ${c.white};
   }
+`;
+
+const A = styled(Link)`
+  color: ${c.primary};
 `;
 
 import styles from "./nav.module.scss";
@@ -33,7 +38,7 @@ const Nav = ({
   paths = [],
   classFiles = null,
   active,
-  toggleAtive,
+  toggleActive,
   lessonList,
   dateInfo
 }) => {
@@ -50,7 +55,7 @@ const Nav = ({
                 .format("MMMM D, YYYY");
               return (
                 <li className={styles.dropItem} key={node.id}>
-                  <StyledLink to={node.fields.slug} onClick={toggleAtive}>
+                  <StyledLink to={node.fields.slug} onClick={toggleActive}>
                     {node.frontmatter.title}
                     <Date>{currentWeek}</Date>
                   </StyledLink>
@@ -69,14 +74,14 @@ const Nav = ({
         {paths.length
           ? paths.map(({ node: path }) => (
               <li className={styles.item} key={path.id}>
-                <Link
+                <A
                   className={styles.link}
                   activeClassName={styles.active}
                   to={`/${path.name}/`}
-                  onClick={toggleAtive}
+                  onClick={toggleActive}
                 >
                   {path.name.replace("-", " ")}
-                </Link>
+                </A>
               </li>
             ))
           : null}
