@@ -4,6 +4,20 @@ import moment from "moment";
 import Alert from "../components/Alert";
 import Box from "../components/Box";
 import ExtendLayout from "../components/ExtendLayout";
+import styled from 'styled-components';
+
+const Grid = styled.div`
+  padding: 1em 0;
+  @media all and (max-width: 1199px) {
+    padding: 1em;
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  @media all and (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 import { getWeekFormat } from "../utils";
 
@@ -41,7 +55,7 @@ export default ({ data }) => {
         />
       ) : null}
       <ExtendLayout>
-        <div className={styles.index}>
+        <Grid>
           {lesson.map(({ node }, index) => {
             const currentWeek = moment(startDate)
               .add(weeks[index], "week")
@@ -58,7 +72,7 @@ export default ({ data }) => {
               />
             );
           })}
-        </div>
+        </Grid>
       </ExtendLayout>
     </div>
   );
