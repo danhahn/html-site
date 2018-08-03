@@ -29,7 +29,23 @@ const StyledLink = styled(Link)`
 `;
 
 const A = styled(Link)`
-  color: ${c.primary};
+  color: white;
+  text-transform: capitalize;
+  display: block;
+  padding: calc(1em - 6px) 1em;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  margin: 0;
+  @media all and (min-width: 576px) {
+    &:hover {
+      background-color: #363b47;
+      border-bottom-color: ${c.primary};
+      text-decoration: none;
+      .drop {
+        display: block;
+      }
+    }
+  }
 `;
 
 import styles from "./nav.module.scss";
@@ -75,7 +91,6 @@ const Nav = ({
           ? paths.map(({ node: path }) => (
               <li className={styles.item} key={path.id}>
                 <A
-                  className={styles.link}
                   activeClassName={styles.active}
                   to={`/${path.name}/`}
                   onClick={toggleActive}
