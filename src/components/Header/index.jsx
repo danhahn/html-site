@@ -32,6 +32,10 @@ const Mobile = styled.div`
   }
 `;
 
+const A = styled(Link)`
+  color: ${c.primary};
+`;
+
 class Header extends Component {
   static defaultProps = {
     classFiles: null,
@@ -53,7 +57,10 @@ class Header extends Component {
     window.removeEventListener("resize", this.closeNav);
   }
 
-  toggleAtive = () => {
+  toggleActive = (state) => {
+    if(!state) {
+      return this.setState({ active: false });
+    }
     this.setState({ active: !this.state.active });
   };
 
@@ -68,20 +75,20 @@ class Header extends Component {
       <ExtendLayout bgcolor={c.darker}>
         <StyledHeader>
           <Mobile>
-            <Link
+            <A
               to="/"
               style={{ display: "block", lineHeight: 1 }}
-              onClick={this.toggleAtive}
+              onClick={() => this.toggleActive(false)}
             >
               <Logo width={115} height={35} color={c.white} />
-            </Link>
-            <Burger active={active} toggleAtive={this.toggleAtive} />
+            </A>
+            <Burger active={active} toggleActive={this.toggleActive} />
           </Mobile>
           <Nav
             paths={paths}
             classFiles={classFiles}
             active={active}
-            toggleAtive={this.toggleAtive}
+            toggleActive={this.toggleActive}
             lessonList={lessonList}
             dateInfo={dateInfo}
           />

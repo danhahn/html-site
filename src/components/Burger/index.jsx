@@ -61,9 +61,9 @@ const Line = styled.div`
     `};
 `;
 
-const Burger = ({ active, toggleAtive }) => {
+const Burger = ({ active, toggleActive }) => {
   return (
-    <StyledBurger active={active} onClick={toggleAtive}>
+    <StyledBurger active={active} onClick={toggleActive}>
       <Line first active={active} />
       <Line middle active={active} />
       <Line last active={active} />

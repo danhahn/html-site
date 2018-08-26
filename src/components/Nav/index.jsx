@@ -20,10 +20,31 @@ const StyledLink = styled(Link)`
   justify-content: space-between;
   white-space: nowrap;
   padding: 0.5em 1em;
+  color: ${c.primary};
   &:hover {
     background-color: ${c.primary20};
     text-decoration: none;
     color: ${c.white};
+  }
+`;
+
+const A = styled(Link)`
+  color: white;
+  text-transform: capitalize;
+  display: block;
+  padding: calc(1em - 6px) 1em;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  margin: 0;
+  @media all and (min-width: 576px) {
+    &:hover {
+      background-color: #363b47;
+      border-bottom-color: ${c.primary};
+      text-decoration: none;
+      .drop {
+        display: block;
+      }
+    }
   }
 `;
 
@@ -33,7 +54,7 @@ const Nav = ({
   paths = [],
   classFiles = null,
   active,
-  toggleAtive,
+  toggleActive,
   lessonList,
   dateInfo
 }) => {
@@ -50,7 +71,7 @@ const Nav = ({
                 .format("MMMM D, YYYY");
               return (
                 <li className={styles.dropItem} key={node.id}>
-                  <StyledLink to={node.fields.slug} onClick={toggleAtive}>
+                  <StyledLink to={node.fields.slug} onClick={toggleActive}>
                     {node.frontmatter.title}
                     <Date>{currentWeek}</Date>
                   </StyledLink>
@@ -69,14 +90,13 @@ const Nav = ({
         {paths.length
           ? paths.map(({ node: path }) => (
               <li className={styles.item} key={path.id}>
-                <Link
-                  className={styles.link}
+                <A
                   activeClassName={styles.active}
                   to={`/${path.name}/`}
-                  onClick={toggleAtive}
+                  onClick={toggleActive}
                 >
                   {path.name.replace("-", " ")}
-                </Link>
+                </A>
               </li>
             ))
           : null}

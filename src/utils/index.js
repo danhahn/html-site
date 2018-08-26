@@ -1,6 +1,7 @@
 import React from 'react';
 import Color from "color";
 
+
 export function getWeekFormat(count = 8, noClass = []) {
   let weeks = [0];
   for (let i = 1; i < count; i++) {
