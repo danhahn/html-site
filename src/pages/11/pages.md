@@ -1,5 +1,5 @@
 ---
-title: Lesson 8
+title: Week 8
 lesson: View All Pages
 author: Dan Hahn
 date: 4/18/2018 15:00

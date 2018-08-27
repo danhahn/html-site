@@ -1,5 +1,5 @@
 ---
-title: Lesson 5
+title: Week 5
 lesson: Google Fonts
 lessonId: 5
 order: 3

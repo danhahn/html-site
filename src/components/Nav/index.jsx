@@ -63,7 +63,7 @@ const Nav = ({
     <nav className={styles.headerNav} style={active ? { maxHeight: 500 } : {}}>
       <ul className={styles.nav}>
         <li className={styles.link}>
-          Lessons
+          Weeks
           <ul className={styles.drop}>
             {lessonList.map(({ node }, index) => {
               const currentWeek = moment(startDate)

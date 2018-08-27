@@ -1,5 +1,5 @@
 ---
-title: Lesson 1
+title: Week 1
 index: true
 lesson: Introduction
 author: the-wintersmith

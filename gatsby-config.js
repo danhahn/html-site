@@ -6,7 +6,7 @@ module.exports = {
     },
     title: `SVA HTML`,
     semester: `Fall`,
-    startDate: `2018-09-22`,
+    startDate: `2018-09-26`,
     lessons: 12,
     noClass: [8],
     classFiles:

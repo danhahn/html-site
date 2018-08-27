@@ -1,5 +1,5 @@
 ---
-title: Lesson 2
+title: Week 2
 index: true
 lesson: Anchor Tag
 author: Dan Hahn

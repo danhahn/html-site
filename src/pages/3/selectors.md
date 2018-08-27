@@ -1,5 +1,5 @@
 ---
-title: Lesson 3
+title: Week 3
 lesson: CSS Selectors
 author: Dan Hahn
 date: 2/7/2018 15:00

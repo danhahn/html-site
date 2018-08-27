@@ -1,5 +1,5 @@
 ---
-title: Lesson 7
+title: Week 7
 lesson: Responsive Layouts
 author: Dan Hahn
 date: 2/28/2018 15:00

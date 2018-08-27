@@ -1,5 +1,5 @@
 ---
-title: Lesson 6
+title: Week 6
 index: true
 lesson: Flex Layout
 author: Dan Hahn

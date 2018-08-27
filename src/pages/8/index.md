@@ -1,5 +1,5 @@
 ---
-title: Lesson 8
+title: Week 8
 
 index: true
 author: Dan Hahn

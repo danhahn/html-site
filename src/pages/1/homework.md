@@ -1,5 +1,5 @@
 ---
-title: Lesson 1
+title: Week 1
 lesson: Homework
 date: 1/24/2018 15:00
 template: article.jade

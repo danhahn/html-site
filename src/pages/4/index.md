@@ -1,5 +1,5 @@
 ---
-title: Lesson 4
+title: Week 4
 index: true
 lesson: Basic Style Properties
 author: Dan Hahn

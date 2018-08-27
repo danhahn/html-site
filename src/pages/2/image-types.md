@@ -1,5 +1,5 @@
 ---
-title: Lesson 2
+title: Week 2
 lesson: Image Types
 author: Dan Hahn
 date: 1/31/2018 15:00

@@ -1,5 +1,5 @@
 ---
-title: Lesson 6
+title: Week 6
 lesson: Homework
 author: Dan Hahn
 date: 2/28/2018 15:00

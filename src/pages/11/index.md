@@ -1,5 +1,5 @@
 ---
-title: Lesson 11
+title: Week 11
 index: true
 lesson: Introduction
 lessonId: 11

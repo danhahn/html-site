@@ -1,5 +1,5 @@
 ---
-title: Lesson 7
+title: Week 7
 index: true
 lesson: Understanding the Index.html
 date: 4/11/2018 15:00

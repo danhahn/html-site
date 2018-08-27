@@ -1,5 +1,5 @@
 ---
-title: Lesson 7
+title: Week 7
 lesson: Picture Tag
 author: Dan Hahn
 date: 3/28/2018 15:00

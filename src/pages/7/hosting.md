@@ -1,5 +1,5 @@
 ---
-title: Lesson 7
+title: Week 7
 lesson: Setting up your own website
 author: Dan Hahn
 date: 4/11/2018 15:00
