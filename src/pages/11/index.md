@@ -1,16 +1,22 @@
 ---
 title: Week 11
+
 index: true
-lesson: Introduction
-lessonId: 11
-order: 1
-badges: [html, css]
+author: Dan Hahn
+lesson: Final Project
+date: 4/18/2018 15:00
 template: final.jade
 localcssEx: //fonts.googleapis.com/css?family=Homemade+Apple|Montserrat|Roboto+Mono
+lessonId: 11
+order: 1
 
+nav:
+  Final Project: index.html
+  Pages: pages.html
+badges: [html,css]
 ---
 
-his week we work on the in class final.
+This week we work on the in class final.
 
 <span class="more"></span>
 

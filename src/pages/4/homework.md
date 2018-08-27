@@ -1,19 +1,9 @@
 ---
 title: Week 4
 lesson: Homework
-author: Dan Hahn
-date: 2/14/2018 15:00
 template: article.jade
 lessonId: 4
 order: 6
-
-nav:
-  Font Properties: index.html
-  Text Properties: text.html
-  Include CSS File: include.html
-  Borders: borders.html
-  Padding and Margin: padding-margin.html
-  Homework: homework.html
 homework:
   lesson: lesson4
 labels: [Homework Files]

@@ -2,8 +2,6 @@
 title: Week 1
 index: true
 lesson: Introduction
-author: the-wintersmith
-date: 1/24/2018 15:00
 template: article.jade
 tags:
   html:
