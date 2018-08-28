@@ -12,23 +12,58 @@ attachments:
 badges: [css]
 ---
 
-This week we will be talking about the CSS Box Model, Psedudo Classes, Google Fonts and Flex Box.
+This week we will be talking about the CSS Box Model, Pseudo Classes, Google Fonts and CSS Transitions.
 
 <span class="more"></span>
 
-Since Everything on in web design is a rectangular box we need to know how to size that box. The way that CSS calculates the size of a box is not what you expect. Rather than set the size of the box based on the outer most elements `border` or `padding` the width is set baed on the content.
+There are now two ways we can calculate the size of a box.  The original way a box was sized was based on the "content" of the box.  This is what is referred as the "CSS box model".
 
-### Setting a width
+Lets say you have box and it can only take up `400px`.  If you add a `width: 400px;` to the element and measure the element it would be `400px`.  At this point the box does not have a border or padding so the content will go the edge of the element.
 
-To set the width of an element you take the desired width and subtract the `padding-left`, `padding-right`, `border-left-width` and `border-right-width`. If you need to maintain the `margin` you will need to subtract the `margin-left` and `margin-right`.
+When you add `padding` to the box to move the content from the edge of the box the box model starts to show up.
 
-### Example
-
-If we have an element that needs to fit in to a space that is `400px` and it has `padding: 20px` and `border: 5px solid black` the calculation to find the size would look like this.
-
-```html
-400px - 20px -20px - 5px - 5px = 350px
+```css
+.box {
+  width: 400px;
+  padding: 20px;
+}
 ```
+Now if we were to measure the size of the box it would be `440px`.  Where did the `40px` extra come from?  We adding `padding: 20px` so that will add padding on all 4 sides of `20px` in other words we now have `40px` of adding from the left and right. The box model says that extra space should be add to the base width so we get `440px`.  What if the box can only take up the `400px` we need to do some math.
+
+```css
+.box {
+  width: 360px;
+  padding: 20px;
+}
+```
+
+We need to subtract the left and right padding form the width defined in this case giving a new width of `360px`.
+
+The same thing will happen with a border.  Lets add a border of `10px solid black` to the same box we had defined above.
+
+```css
+.box {
+  width: 360px;
+  padding: 20px;
+  border: 10px solid black;
+}
+```
+
+If we measure the box size now we will see it is `420px`.  We added a border of 10 on all sides of the box so an extra `20px` are added to the width.
+
+```css
+.box {
+  width: 340px;
+  padding: 20px;
+  border: 10px solid black;
+}
+```
+
+So lets look at we did here.  We started with a width of `400px` and added padding of `20px` on the left and right lastly added a border of `10px` on the left and right. to give us this calculation.
+
+`400 - (20 + 20) - (10 + 10) = 340`
+
+While this works its a lot of work to keep track and recalculate for every change.  The other problem and it might be bigger is that this does not work easily with an `em` value since they are relative.
 
 ### Example
 
@@ -37,9 +72,12 @@ If we have an element that needs to fit in to a space that is `400px` and it has
 
 ## Box Sizing
 
-In CSS, by default, the width and height you assign to an element is applied only to the element's content box. If the element has any border or padding, this is then added to the width and height to arrive at the size of the box that's rendered on the screen. This means that when you set width and height you have to adjust the value you give to allow for any border or padding that may be added. This is especially tricky when implementing a responsive design.
+In later version of CSS a new property was added to address this issue.  By default the size of the box is calculated based on the "content" of the box.  The `box-sizing` property allows you to define how you want to size a box.
 
-The `box-sizing`property can be used to adjust this behavior:
+The box-sizing property can be used to adjust this behavior:
+
+* `content-box` - **default** gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.
+* `border-box` tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
 
 ```css
 .example {
@@ -47,10 +85,9 @@ The `box-sizing`property can be used to adjust this behavior:
 }
 ```
 
-- `content-box` is the default, and gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width.
-- `border-box` tells the browser to account for any border and padding in the value you specify for width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
-
 ## Apply to all elements
+
+Since this can be so helpful we may want to apply it to all elements on the page at once.
 
 The `*` selector will apply a style to all elements. `box-sizing` is a great example of time to use it.
 

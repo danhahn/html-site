@@ -1,8 +1,8 @@
 ---
-title: Week 5
+title: Week 6
 lesson: Flex Box
-lessonId: 5
-order: 4
+lessonId: 6
+order: 10
 ---
 
 ## History of Flex Box
