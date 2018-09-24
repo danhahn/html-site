@@ -10,9 +10,9 @@ module.exports = {
     lessons: 12,
     noClass: [8],
     classFiles:
-      "https://drive.google.com/drive/folders/1uf3MIQgjbWCtj2GHcjcF0sEITRvOpAt1?usp=sharing",
+      "https://drive.google.com/drive/folders/1fwZbO_-FP6pQD--7fPtn-gof2TXKTKsS?usp=sharing",
     siteTitle: `Coding HTML and CSS - Basic`,
-    signUpLink: ``
+    signUpLink: `https://goo.gl/forms/CRuKT0YREfpVSBFe2`
   },
   plugins: [
     {
@@ -41,9 +41,7 @@ module.exports = {
           {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
-              fonts: [
-                `Roboto Mono`
-              ]
+              fonts: [`Roboto Mono`]
             }
           },
           {

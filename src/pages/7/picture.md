@@ -1,18 +1,9 @@
 ---
 title: Week 7
 lesson: Picture Tag
-author: Dan Hahn
-date: 3/28/2018 15:00
 template: article.jade
 lessonId: 7
-order: 3
-
-nav:
-  Web Fonts: index.html
-  Google Fonts: google-fonts.html
-  Responsive: responsive.html
-  Picture Tag: picture.html
-  Classwork: classwork.html
+order: 2
 ---
 
 ## HTML `<picture>` Tag
