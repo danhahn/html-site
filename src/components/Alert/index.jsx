@@ -9,7 +9,7 @@ const StyledAlert = styled.div`
   background-color: ${c.primary};
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3) inset;
   padding: 1em;
-  color: $white;
+  color: ${c.white};
   @media all and (max-width: 1199px) {
     padding: 1em;
   }

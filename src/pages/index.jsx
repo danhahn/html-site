@@ -51,7 +51,7 @@ export default ({ data }) => {
           title="Getting Started"
           message="Before you get started please fill out this form.  I need will collect your contact info to beable to keep in touch."
           url={signUpLink}
-          urlMessage="Click Fere and Fill Out Form"
+          urlMessage="Click Here and Fill Out Form"
         />
       ) : null}
       <ExtendLayout>
