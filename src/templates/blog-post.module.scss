@@ -38,6 +38,9 @@
 pre[class*="language-"] {
   background: #2d2d2d;
   border-radius: 10px;
+  code {
+    padding: 0;
+  }
 }
 
 /*

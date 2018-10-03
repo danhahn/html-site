@@ -6,6 +6,7 @@ export default class Colors {
     this.primaryDark = darken(0.05, this.primary);
     this.primary5 = lighten(0.05, this.primary);
     this.primary20 = lighten(0.2, this.primary);
+    this.primary40 = lighten(0.4, this.primary);
     this.white = "#fff";
     this.darker = "#20232a";
     this.light = "#bdc3c7";

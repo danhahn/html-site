@@ -1,147 +1,74 @@
 ---
 title: Week 2
-index: true
-lesson: Anchor Tag
-author: Dan Hahn
-date: 1/31/2018 15:00
+lesson: Inline Elements
 template: article.jade
 lessonId: 2
 order: 1
-
-tags:
-  html:
-    label: html
-    icon: fa fa-html5
-    data : [strong, em, a, img]
+index: true
 
 labels: [Download Stater File]
 attachments:
   - "./week2.zip"
-
-nav:
-  Link Tag: index.html
-  Inline: inline.html
-  Folder: folders.html
-  Images: images.html
-  Image Types: image-types.html
-  Embed: embed.html
-  Homework: homework.html
 badges: [html]
+
+tags:
+  'html':
+    'label': 'html'
+    'icon': 'fa fa-html5'
+    'data' : ['strong', 'em', 'span', 'code']
 ---
 
 This week we will talk about how to create links and embed images.
 
 <span class="more"></span>
 
-The `<a>` tag defines a hyperlink, which is used to link from one page to another.
+An inline element is an element that when the content is wrapped with that tag does not display on its own line.
 
-The most important attribute of the `<a>` element is the href attribute, which indicates the link's destination.
+Inline elements must be wrapped with a block element or can not be a child of another inline elements.
 
-By default, links will appear as follows in all browsers:
+<iframe height='265' scrolling='no' title='Inline' src='//codepen.io/danhahn/embed/ZybGpX/?height=265&theme-id=light&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/danhahn/pen/ZybGpX/'>Inline</a> by Dan Hahn (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-* An unvisited link is underlined and blue
-* A visited link is underlined and purple
-* An active link is underlined and red
+## strong
 
-### Description
-
-Attribute | Value | Description
----|---|---
-`download` | filename | Specifies that the target will be downloaded when a user clicks on the hyperlink
-`href` | URL | Specifies the URL of the page the link goes to
-`target` | `_blank`<br>`_parent`<br>`_self`<br>`_top` | Specifies where to open the linked document
-
-
-## Parts of a link
-
-There are two parts to create a link
-
-1.  The text or content the user can click on
-2.  The location of the page the user will have the page replace.
+The HTML Strong Element `<strong>` gives text strong importance, and is typically displayed in bold.
 
 ### Example
 
 ```html
-<a href="location/of/file.html">Clickable text</a>
+<p>A <strong>polar vortex</strong> also known as a polar cyclone, polar low, or a circumpolar whirl.</p>
 ```
 
-#### Breaking it down
+<p>A <strong>polar vortex</strong> also known as a polar cyclone, polar low, or a circumpolar whirl.</p>
 
-Lets start with the `<a>` which is added to create the anchor. Next we need to add the `href` **attribute** to make the anchor act as a _link_. Then we wrap the text we want the user to click on with the `<a>`. Last we add the location of the page we want to link to.
+## em
 
-If we had the text **HTML at SVA** and wanted to link to the web page _http://www.svahtml.com_ the link would look like this.
-
-```html
-<a href="http://www.svahtml.com">HTML at SVA</a>
-```
-
-Keep in mind that the `<a>` is an inline element so it can be placed next to other text.
-
-If you want a link to be on its own line it would need to wrapped with a Block-Level element like a `<p>`.
-
-## Linking to a file in the same folder
-
-When you link to a file that is in the same folder just add the file name to the HREF attribute.
-
-```html
-<a href="filename.html">Link Text</a>
-```
-
-## Linking to a file in a sub folder
-
-When linking to a file in a sub folder you need to declare what folder you are navigating to then add the file.
-
-```html
-<a href="folder/filename.html">Link Text</a>
-```
-
-## Linking to a file in a parent folder
-
-When linking a file in a parent folder you need to add `"../"` for each folder you want to navigate up. You do not need the folder name when navigating up.
-
-```html
-<a href="../filename.html">Link Text</a>
-```
-
-## Linking to an outside site
-
-When linking to an outside site you need to add the full URL including the `http://`.
-
-```html
-<a href="http://www.svahtml.com">Link Text</a>
-```
-
-## Linking to a point with a page.
-
-The link add the "#" that says look on the page for a A tag with a name that matches the text after the #.
-
-```html
-<a href="#sectionName">Link to section</a>
-```
-
-The point on the page you are linking to.
-
-```html
-<a name="sectionName"></a>
-```
-
-## Images as a link
+The HTML element emphasis `<em>` marks text that has stress emphasis.
 
 ### Example
 
 ```html
-<a href=”http://www.cnn.com”><img src=”/images/cnnlogo.png” alt=”link to cnn” border=”0”/></a>
+<p>In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.</p>
 ```
 
-## Adding Target
+<p>In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.</p>
 
-There will be time what you want open a page in a new window. By adding the `target="_blank"` attribute it will force that page to open in a new window or tab.
+## code
 
-**Note:** How the page open can not be controlled it is a setting of the browser. In most cases it will open in a new tab.
+The HTML Code Element (`<code>`) represents a fragment of computer code. By default, it is displayed in the browser's default monospace font.
 
-[Read More](http://css-tricks.com/use-target_blank/) about when you should use `target`
+```html
+<p>This is how we would show an <code>&lt;html&gt;</code> tag to a reader of this article.</p>
+```
 
-<style>
-table tr td:nth-child(1){width:20%;}
-table tr td{vertical-align: top}
-</style>
+<p>This is how we would show an <code>&lt;html&gt;</code> tag to a reader of this article.</p>
+
+## span
+
+The HTML `<span>` element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. `<span>` is very much like a `<div>` element, but `<div>` is a block-level element whereas a `<span>` is an inline element.
+
+```html
+<p>We can use a <span>span to wrap</span> text</p>
+```
+
+<p>We can use a <span>span to wrap</span> text</p>

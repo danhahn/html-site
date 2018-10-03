@@ -5,16 +5,8 @@ author: Dan Hahn
 date: 1/31/2018 15:00
 template: article.jade
 lessonId: 2
-order: 3
+order: 2
 
-nav:
-  Link Tag: index.html
-  Inline: inline.html
-  Folder: folders.html
-  Images: images.html
-  Image Types: image-types.html
-  Embed: embed.html
-  Homework: homework.html
 ---
 
 ## Linking to a file in the same folder
@@ -25,8 +17,10 @@ If the two files are in the same folder than file 1 can call file 2 by the file 
 
 ### Example
 
-`<a href=”file2.html”>link</a>`
-`<img src=”file2.gif” alt=””>`
+```html
+<a href=”file2.html”>link</a>
+<img src=”file2.gif” alt=””>
+```
 
 ## Linking to a file in a sub folder
 
@@ -38,8 +32,10 @@ When linking to a file in a sub folder you need to know the folder name. Because
 
 ### Example
 
-`<a href=”subFolder/file2.html”>link</a>`
-`<img src=”subFolder/file2.gif” alt=””>`
+```html
+<a href=”subFolder/file2.html”>link</a>
+<img src=”subFolder/file2.gif” alt=””>
+```
 
 ## Linking to a file in a parent folder
 
@@ -49,5 +45,9 @@ When linking to a file that is in a parent folder (up a directory) you need to i
 
 ### Example
 
-`<a href=”../file2.html”>link</a>`
-`<img src=”../file2.gif” alt=””>`
+```html
+<a href=”../file2.html”>link</a>
+<img src=”../file2.gif” alt=””>
+````
+
+**Note:** all the examples here are relative paths.

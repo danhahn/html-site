@@ -6,6 +6,7 @@ import SideNav from "../components/SideNav";
 import ExtendLayout from "../components/ExtendLayout";
 import Homework from "../components/Homework";
 import styled from "styled-components";
+import { colors as c } from "../scss/colors";
 
 import { getWeekFormat } from "../utils";
 import { H1, BlogPost, Article } from './components'
@@ -20,11 +21,17 @@ const Code = styled.div`
       font-size: 1rem;
     }
   }
+  .note {
+    background-color: ${c.primary40};
+    padding: .5em 1em;
+    border-radius: 5px;
+  }
 `;
 
 export default ({ data }) => {
   const { lessons, startDate, noClass } = data.site.siteMetadata;
   const post = data.markdownRemark;
+  const { html } = post;
   const nav = data.allMarkdownRemark;
   const weeks = getWeekFormat(lessons, noClass);
 
@@ -40,6 +47,8 @@ export default ({ data }) => {
     };
   }
   const { localcss, title, lesson, homework, localcssEx } = post.frontmatter;
+  const postWithNotes = html.replace(/<p><strong>note:/gi, "<p class=\"note\"><strong>Note:");
+
   return <div>
       <Helmet>
         <title>{`${lesson} - ${title}`}</title>
@@ -51,7 +60,7 @@ export default ({ data }) => {
         <BlogPost>
           <Article>
             <H1>{lesson}</H1>
-            <Code dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Code dangerouslySetInnerHTML={{ __html: postWithNotes }} />
             {homework ? <Homework lesson={homework.lesson} /> : null}
           </Article>
           <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />

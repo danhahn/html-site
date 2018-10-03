@@ -1,20 +1,12 @@
 ---
 title: Week 2
-lesson: Images
+lesson: Image Tag
 author: Dan Hahn
 date: 1/31/2018 15:00
 template: article.jade
 lessonId: 2
 order: 4
 
-nav:
-  Link Tag: index.html
-  Inline: inline.html
-  Folder: folders.html
-  Images: images.html
-  Image Types: image-types.html
-  Embed: embed.html
-  Homework: homework.html
 ---
 
 The image tag or `<img>` is used to embed an image within an `HTML` document. At the time the page is rendered the browser will set aside a space on the page for an image to load. The browser then need to find and load the image in that space. If the iamge can't be found than it will not show up. There are two required attribute.
