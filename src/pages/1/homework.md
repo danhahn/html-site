@@ -4,7 +4,7 @@ lesson: Homework
 date: 1/24/2018 15:00
 template: article.jade
 lessonId: 1
-order: 6
+order: 5
 
 nav:
   Introduction: index.html

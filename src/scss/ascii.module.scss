@@ -1,6 +1,16 @@
+@import './vars.scss';
+
 .ascii {
   padding: 1em 0;
   @media all and (max-width: 1199px) {
     padding: 1em;
   }
+}
+
+code {
+  color: $primary;
+  background-color: $primary40;
+  padding: 1px 5px;
+  font-size: 0.9em;
+  border-radius: 0.2em;
 }
