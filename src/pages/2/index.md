@@ -33,32 +33,24 @@ This week we will talk about how to create links and embed images.
 
 <span class="more"></span>
 
-The anchor tag or the `<a>` tag is most commonly used to create a link to an other file or page. The anchor tag by default will not act as a link without the `href` attribute.
+The `<a>` tag defines a hyperlink, which is used to link from one page to another.
 
-The anchor tag can also be used to set a point on a page where the page can be linked to. You might see this on an FAQ page where you have a list of questions at the top and the answers at the bottom.
+The most important attribute of the `<a>` element is the href attribute, which indicates the link's destination.
 
-Please note there is not a link tag. If someone askes you to create a link they are talking about the anchor tag.
+By default, links will appear as follows in all browsers:
 
-## Example
-
-```html
-<a href=”http://www.sva.edu”>http://www.sva.edu</a>
-```
-
-**or**
-
-```html
-<a name="pointname">Page Content</a>
-```
+* An unvisited link is underlined and blue
+* A visited link is underlined and purple
+* An active link is underlined and red
 
 ### Description
 
-| Attributes | Value    | Description                                                                       |
-| ---------- | -------- | --------------------------------------------------------------------------------- |
-| `href=""`  | URL      | The target URL of the link                                                        |
-| `target`   | `_blank` | Where to open the target URL. `_blank` - the target URL will open in a new window |
+Attribute | Value | Description
+---|---|---
+`download` | filename | Specifies that the target will be downloaded when a user clicks on the hyperlink
+`href` | URL | Specifies the URL of the page the link goes to
+`target` | `_blank`<br>`_parent`<br>`_self`<br>`_top` | Specifies where to open the linked document
 
----
 
 ## Parts of a link
 
@@ -86,8 +78,6 @@ If we had the text **HTML at SVA** and wanted to link to the web page _http://ww
 Keep in mind that the `<a>` is an inline element so it can be placed next to other text.
 
 If you want a link to be on its own line it would need to wrapped with a Block-Level element like a `<p>`.
-
----
 
 ## Linking to a file in the same folder
 
@@ -152,5 +142,6 @@ There will be time what you want open a page in a new window. By adding the `tar
 [Read More](http://css-tricks.com/use-target_blank/) about when you should use `target`
 
 <style>
-table tr td:nth-child(1){width:20%}
+table tr td:nth-child(1){width:20%;}
+table tr td{vertical-align: top}
 </style>

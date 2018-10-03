@@ -12,7 +12,7 @@ module.exports = {
     classFiles:
       "https://drive.google.com/drive/folders/1fwZbO_-FP6pQD--7fPtn-gof2TXKTKsS?usp=sharing",
     siteTitle: `Coding HTML and CSS - Basic`,
-    signUpLink: `https://goo.gl/forms/CRuKT0YREfpVSBFe2`
+    signUpLink: ``
   },
   plugins: [
     {

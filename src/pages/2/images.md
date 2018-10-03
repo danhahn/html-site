@@ -19,11 +19,15 @@ nav:
 
 The image tag or `<img>` is used to embed an image within an `HTML` document. At the time the page is rendered the browser will set aside a space on the page for an image to load. The browser then need to find and load the image in that space. If the iamge can't be found than it will not show up. There are two required attribute.
 
-| Attributes              | Values                                                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Attributes | Values |
+| --- | --- |
 | `src=""` **\*required** | The source of the image that you want to place on the page.                                                                          |
 | `alt=""` **\*required** | The alt tag is where you can put text that will show up when the image is loading or when the user hovers the mouse over that image. |
 | `title=""`              | Displays the value of the attribute in a small box over the image when the mouse hovers over the image.                              |
+
+<iframe height='265' scrolling='no' title='Embed an image' src='//codepen.io/danhahn/embed/LgGXYo/?height=265&theme-id=light&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/danhahn/pen/LgGXYo/'>Embed an image</a> by Dan Hahn (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 
 ## Example
 
@@ -44,25 +48,6 @@ HTML **requires** that you add an alt attribute to all images tags. This attribu
 ```html
 <img src="image.png" alt="">
 ```
-
-## Formats
-
-There are **3 image types** that are supported by current browsers.
-
-* GIF – Limited to 256 Colors but one color can be transparent. (Used for Text based images ie Logos or headers)
-* JPG – Allows for Millions of colors compressed. (Most commonly used for photos)
-* PNG – Like the JPG but allows for opacities. (Supported by all newer browsers after IE 6)
-
-## Transparency
-
-Transparency is an important for two reasons. They allow for complex designs by layers images. They also allow for non-rectangular designs.
-
-The only image type that support transparency are GIF and PNG.
-
-## Animation
-
-GIF are able to display multiple images with in the same saved files.
-
 <style>
 table tr td:nth-child(1){white-space: nowrap}
 </style>
