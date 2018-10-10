@@ -26,11 +26,6 @@ labels: [Download Stater File]
 attachments:
   - "./week3.zip"
 
-nav:
-  Intro to CSS: index.html
-  Selectors: selectors.html
-  CSS3 Reference: css.html
-  Homework: homework.html
 badges: [html, css]
 ---
 
@@ -103,6 +98,8 @@ Like the class selectors ID selector are applied to an element within the docume
 - An ID name can be used only once per document.
 - An ID attribute must be added to an HTML element `id=”idName”`
 - ID names are case sensitive
+
+**note:** It is recommended that you don't use ID selectors [read more why here](https://dev.to/claireparker/reasons-not-to-use-ids-in-css-4ni4)!
 
 ## Weight of selectors
 
