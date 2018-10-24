@@ -2,7 +2,7 @@
 title: Week 5
 lesson: Homework
 lessonId: 5
-order: 5
+order: 6
 
 homework:
   lesson: lesson5
