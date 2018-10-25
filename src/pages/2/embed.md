@@ -1,5 +1,5 @@
 ---
-title: Week 2
+title: Lesson 2
 lesson: Embedding Content
 author: Dan Hahn
 date: 1/31/2018 15:00

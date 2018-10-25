@@ -1,5 +1,5 @@
 ---
-title: Week 1
+title: Lesson 1
 lesson: HTML Editors
 date: 1/24/2018 15:00
 template: article.jade

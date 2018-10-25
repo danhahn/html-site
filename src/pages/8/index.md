@@ -1,5 +1,5 @@
 ---
-title: Week 8
+title: Lesson 8
 index: true
 lesson: JavaScript
 template: article.jade

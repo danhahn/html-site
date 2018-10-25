@@ -1,5 +1,5 @@
 ---
-title: Week 11
+title: Lesson 11
 
 index: true
 author: Dan Hahn

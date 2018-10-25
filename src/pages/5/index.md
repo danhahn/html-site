@@ -1,5 +1,5 @@
 ---
-title: Week 5
+title: Lesson 5
 index: true
 lesson: CSS Box Model
 lessonId: 5

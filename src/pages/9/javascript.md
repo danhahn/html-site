@@ -1,5 +1,5 @@
 ---
-title: Week 9
+title: Lesson 9
 lesson: Javascript
 author: Dan Hahn
 date: 4/04/2018 15:00

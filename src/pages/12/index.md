@@ -1,5 +1,5 @@
 ---
-title: Week 12
+title: Lesson 12
 index: true
 author: Dan Hahn
 lesson: Final Project

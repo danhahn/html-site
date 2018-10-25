@@ -1,5 +1,5 @@
 ---
-title: Week 2
+title: Lesson 2
 lesson: Anchor Tag
 template: article.jade
 lessonId: 2

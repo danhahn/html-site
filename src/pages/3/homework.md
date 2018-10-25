@@ -1,5 +1,5 @@
 ---
-title: Week 3
+title: Lesson 3
 lesson: Homework
 author: Dan Hahn
 date: 2/7/2018 15:00

@@ -1,5 +1,5 @@
 ---
-title: Week 4
+title: Lesson 4
 lesson: CSS Includes
 author: Dan Hahn
 template: article.jade

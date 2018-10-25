@@ -1,5 +1,5 @@
 ---
-title: Week 4
+title: Lesson 4
 index: true
 lesson: Font Properties
 template: article.jade

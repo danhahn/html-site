@@ -1,5 +1,5 @@
 ---
-title: Week 1
+title: Lesson 1
 index: true
 lesson: Introduction
 template: article.jade

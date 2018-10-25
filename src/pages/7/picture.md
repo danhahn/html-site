@@ -1,5 +1,5 @@
 ---
-title: Week 7
+title: Lesson 7
 lesson: Picture Tag
 template: article.jade
 lessonId: 7

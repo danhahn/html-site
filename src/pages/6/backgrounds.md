@@ -1,5 +1,5 @@
 ---
-title: Week 6
+title: Lesson 6
 lesson: CSS Backgrounds
 author: Dan Hahn
 date: 3/14/2018 15:00

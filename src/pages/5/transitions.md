@@ -1,5 +1,5 @@
 ---
-title: Week 5
+title: Lesson 5
 lesson: CSS Transitions
 lessonId: 5
 order: 4

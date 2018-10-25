@@ -1,5 +1,5 @@
 ---
-title: Week 7
+title: Lesson 7
 index: true
 lesson: Media Queries
 date: 4/11/2018 15:00

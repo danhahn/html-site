@@ -1,5 +1,5 @@
 ---
-title: Week 11
+title: Lesson 11
 lesson: Images for all pages
 author: Dan Hahn
 date: 4/18/2018 15:00

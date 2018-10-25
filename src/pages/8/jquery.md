@@ -1,5 +1,5 @@
 ---
-title: Week 8
+title: Lesson 8
 lesson: jQuery
 template: article.jade
 lessonId: 8

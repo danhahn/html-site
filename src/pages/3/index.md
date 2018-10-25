@@ -1,5 +1,5 @@
 ---
-title: Week 3
+title: Lesson 3
 index: true
 lesson: Introduction to CSS
 author: Dan Hahn

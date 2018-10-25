@@ -1,5 +1,5 @@
 ---
-title: Week 4
+title: Lesson 4
 lesson: Homework
 template: article.jade
 lessonId: 4

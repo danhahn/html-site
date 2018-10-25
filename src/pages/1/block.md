@@ -1,5 +1,5 @@
 ---
-title: Week 1
+title: Lesson 1
 lessonId: 1
 order: 4
 lesson: Block Elements
