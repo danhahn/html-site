@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./layout.module.css";
-import { getWeekFormat } from "../utils";
+import { getWeekDateList } from "../utils";
 
 import "./styles.scss";
 
@@ -14,9 +14,10 @@ export default ({ children, data }) => {
     classFiles,
     startDate,
     lessons: count,
-    noClass
+    noClass,
+    extraClass
   } = data.site.siteMetadata;
-  const weeks = getWeekFormat(count, noClass);
+  const weeks = getWeekDateList(startDate, count, noClass, extraClass);
   const dateInfo = {
     weeks,
     startDate
@@ -60,6 +61,7 @@ export const query = graphql`
         lessons
         startDate
         noClass
+        extraClass
       }
     }
     allFile(filter: { extension: { eq: "jsx" } }) {

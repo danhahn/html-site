@@ -5,8 +5,8 @@ import Banner from "../components/Banner";
 import SideNav from "../components/SideNav";
 import ExtendLayout from "../components/ExtendLayout";
 import Homework from "../components/Homework";
-import Clipboard from 'clipboard';
-import styled from 'styled-components';
+import Clipboard from "clipboard";
+import styled from "styled-components";
 
 const Overlay = styled.div`
   position: fixed;
@@ -30,15 +30,16 @@ const Overlay = styled.div`
 
 const Code = styled.div`
   .gatsby-highlight {
-    code[class*="language-"],pre[class*="language-"] {
+    code[class*="language-"],
+    pre[class*="language-"] {
       font-family: "Roboto Mono", monospace !important;
       font-size: 1rem;
     }
   }
 `;
 
-import { getWeekFormat, testColor, testUl } from "../utils";
-import { H1, BlogPost, Article} from './components'
+import { getWeekDateList, testColor, testUl } from "../utils";
+import { H1, BlogPost, Article } from "./components";
 
 import styles from "./blog-post.module.scss";
 
@@ -52,40 +53,44 @@ class Final extends React.Component {
       color: null,
       active: false,
       show: false
-    }
+    };
   }
   componentDidMount() {
     const clipboard = new Clipboard(".icon");
     clipboard.on("success", this.setCopyColor);
   }
 
-  setCopyColor({text}) {
-    this.setState({show: true, color: text}, () => {
+  setCopyColor({ text }) {
+    this.setState({ show: true, color: text }, () => {
       setTimeout(() => {
-        this.setState({active: true});
+        this.setState({ active: true });
         setTimeout(this.clearCopyColor, 2000);
       }, 1);
     });
   }
 
   clearCopyColor() {
-    this.setState({active: false}, ()=> {
+    this.setState({ active: false }, () => {
       setTimeout(() => {
-        this.setState({ show: false, color: null })
+        this.setState({ show: false, color: null });
       }, 200);
-    })
+    });
   }
 
   render() {
     const { data } = this.props;
-    const { lessons, startDate, noClass } = data.site.siteMetadata;
+
+    const {
+      startDate,
+      lessons: count,
+      noClass,
+      extraClass
+    } = data.site.siteMetadata;
     const post = data.markdownRemark;
     const nav = data.allMarkdownRemark;
-    const weeks = getWeekFormat(lessons, noClass);
+    const weeks = getWeekDateList(startDate, count, noClass, extraClass);
 
-    const date = moment(startDate)
-      .add(weeks[post.frontmatter.lessonId - 1], "week")
-      .format("MMMM D, YYYY");
+    const date = weeks[post.frontmatter.lessonId - 1];
 
     let downloads = null;
     if (data.markdownRemark.frontmatter.attachments) {
@@ -97,10 +102,17 @@ class Final extends React.Component {
     const { localcss, title, lesson, homework, localcssEx } = post.frontmatter;
 
     let formattedHtml = post.html;
-    formattedHtml = formattedHtml.replace(/<ul>\n<li>(#[0-9a-fA-F]*)<\/li>\n/g, testUl);
-    formattedHtml = formattedHtml.replace(/(<li>(#[0-9a-fA-F]*)<\/li>\n)/g, testColor)
+    formattedHtml = formattedHtml.replace(
+      /<ul>\n<li>(#[0-9a-fA-F]*)<\/li>\n/g,
+      testUl
+    );
+    formattedHtml = formattedHtml.replace(
+      /(<li>(#[0-9a-fA-F]*)<\/li>\n)/g,
+      testColor
+    );
     // console.log(formattedHtml);
-    return <div>
+    return (
+      <div>
         <Helmet>
           <title>{`${lesson} - ${title}`}</title>
           {localcss ? <link rel="stylesheet" href={`./${localcss}`} /> : null}
@@ -114,15 +126,22 @@ class Final extends React.Component {
               <Code dangerouslySetInnerHTML={{ __html: formattedHtml }} />
               {homework ? <Homework lesson={homework.lesson} /> : null}
             </Article>
-            <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />
+            <SideNav
+              nav={nav.edges}
+              passedClassName={styles.sidebar}
+              downloads={downloads || post.frontmatter.downloads}
+            />
           </BlogPost>
         </ExtendLayout>
-        {this.state.show ? <Overlay id="overlay" active={this.state.active}>
-          <h2>{this.state.color}</h2> was copied to your clipboard
-        </Overlay> : null}
-      </div>;
+        {this.state.show ? (
+          <Overlay id="overlay" active={this.state.active}>
+            <h2>{this.state.color}</h2> was copied to your clipboard
+          </Overlay>
+        ) : null}
+      </div>
+    );
   }
-};
+}
 
 export default Final;
 
@@ -140,6 +159,7 @@ export const query = graphql`
         startDate
         lessons
         noClass
+        extraClass
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

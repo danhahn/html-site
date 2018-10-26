@@ -63,7 +63,7 @@ const Nav = ({
     <nav className={styles.headerNav} style={active ? { maxHeight: 500 } : {}}>
       <ul className={styles.nav}>
         <li className={styles.link}>
-          Weeks
+          Lessons
           <ul className={styles.drop}>
             {lessonList.map(({ node }, index) => {
               const currentWeek = moment(startDate)
@@ -73,7 +73,7 @@ const Nav = ({
                 <li className={styles.dropItem} key={node.id}>
                   <StyledLink to={node.fields.slug} onClick={toggleActive}>
                     {node.frontmatter.title}
-                    <Date>{currentWeek}</Date>
+                    <Date>{weeks[index]}</Date>
                   </StyledLink>
                 </li>
               );

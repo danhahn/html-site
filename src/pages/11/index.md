@@ -4,7 +4,6 @@ title: Lesson 11
 index: true
 author: Dan Hahn
 lesson: Final Project
-date: 4/18/2018 15:00
 template: final.jade
 localcssEx: //fonts.googleapis.com/css?family=Homemade+Apple|Montserrat|Roboto+Mono
 lessonId: 11

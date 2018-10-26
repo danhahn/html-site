@@ -8,6 +8,7 @@ template: article.jade
 nav:
   Final Project: index.html
 badges: [html,css]
+lessonId: 12
 ---
 
 This week we work on the in class final.

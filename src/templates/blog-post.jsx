@@ -8,8 +8,8 @@ import Homework from "../components/Homework";
 import styled from "styled-components";
 import { colors as c } from "../scss/colors";
 
-import { getWeekFormat } from "../utils";
-import { H1, BlogPost, Article } from './components'
+import { getWeekDateList } from "../utils";
+import { H1, BlogPost, Article } from "./components";
 
 import styles from "./blog-post.module.scss";
 
@@ -23,21 +23,24 @@ const Code = styled.div`
   }
   .note {
     background-color: ${c.primary40};
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     border-radius: 5px;
   }
 `;
 
 export default ({ data }) => {
-  const { lessons, startDate, noClass } = data.site.siteMetadata;
+  const {
+    startDate,
+    lessons: count,
+    noClass,
+    extraClass
+  } = data.site.siteMetadata;
   const post = data.markdownRemark;
   const { html } = post;
   const nav = data.allMarkdownRemark;
-  const weeks = getWeekFormat(lessons, noClass);
+  const weeks = getWeekDateList(startDate, count, noClass, extraClass);
 
-  const date = moment(startDate)
-    .add(weeks[post.frontmatter.lessonId - 1], "week")
-    .format("MMMM D, YYYY");
+  const date = weeks[post.frontmatter.lessonId - 1];
 
   let downloads = null;
   if (data.markdownRemark.frontmatter.attachments) {
@@ -47,9 +50,13 @@ export default ({ data }) => {
     };
   }
   const { localcss, title, lesson, homework, localcssEx } = post.frontmatter;
-  const postWithNotes = html.replace(/<p><strong>note:/gi, "<p class=\"note\"><strong>Note:");
+  const postWithNotes = html.replace(
+    /<p><strong>note:/gi,
+    '<p class="note"><strong>Note:'
+  );
 
-  return <div>
+  return (
+    <div>
       <Helmet>
         <title>{`${lesson} - ${title}`}</title>
         {localcss ? <link rel="stylesheet" href={`./${localcss}`} /> : null}
@@ -63,10 +70,15 @@ export default ({ data }) => {
             <Code dangerouslySetInnerHTML={{ __html: postWithNotes }} />
             {homework ? <Homework lesson={homework.lesson} /> : null}
           </Article>
-          <SideNav nav={nav.edges} passedClassName={styles.sidebar} downloads={downloads || post.frontmatter.downloads} />
+          <SideNav
+            nav={nav.edges}
+            passedClassName={styles.sidebar}
+            downloads={downloads || post.frontmatter.downloads}
+          />
         </BlogPost>
       </ExtendLayout>
-    </div>;
+    </div>
+  );
 };
 
 export const query = graphql`
@@ -83,6 +95,7 @@ export const query = graphql`
         startDate
         lessons
         noClass
+        extraClass
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

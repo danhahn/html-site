@@ -4,7 +4,7 @@ import moment from "moment";
 import Alert from "../components/Alert";
 import Box from "../components/Box";
 import ExtendLayout from "../components/ExtendLayout";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Grid = styled.div`
   padding: 1em 0;
@@ -19,29 +19,25 @@ const Grid = styled.div`
   }
 `;
 
-import { getWeekFormat } from "../utils";
-
-import styles from "../scss/index.module.scss";
+import { getWeekDateList } from "../utils";
 
 export default ({ data }) => {
   const {
     startDate,
     lessons: count,
     noClass,
+    extraClass,
     semester,
     signUpLink
   } = data.site.siteMetadata;
   const { edges } = data.allMarkdownRemark;
   const lesson = edges.slice(0, count);
-  const weeks = getWeekFormat(count, noClass);
+  const weeks = getWeekDateList(startDate, count, noClass, extraClass);
   const year = moment(startDate).format("YYYY");
-  const start = moment(startDate).format("MMMM D, YYYY");
-  const end = moment(startDate)
-    .add(count + noClass.length - 1, "weeks")
-    .format("MMMM D, YYYY");
+  const [start] = weeks;
+  const end = weeks[weeks.length -1];
 
   const today = moment().format(`MMMM D, YYYY`);
-  console.log(today);
 
   return (
     <div>
@@ -57,18 +53,15 @@ export default ({ data }) => {
       <ExtendLayout>
         <Grid>
           {lesson.map(({ node }, index) => {
-            const currentWeek = moment(startDate)
-              .add(weeks[index], "week")
-              .format("MMMM D, YYYY");
             return (
               <Box
                 key={node.fields.slug}
                 title={node.frontmatter.title}
                 href={node.fields.slug}
-                date={currentWeek}
+                date={weeks[index]}
                 intro={node.htmlAst.children[0].children[0].value}
                 badges={node.frontmatter.badges}
-                active={currentWeek === today}
+                active={weeks[index] === today}
               />
             );
           })}
@@ -85,6 +78,7 @@ export const query = graphql`
         startDate
         lessons
         noClass
+        extraClass
         semester
         signUpLink
       }
