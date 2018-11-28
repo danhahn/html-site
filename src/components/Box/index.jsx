@@ -82,8 +82,8 @@ const Box = ({ title, date, intro, href, badges, active }) => {
           ))}
         </Ul>
       ) : null}
-      <Button kind="primary">
-        <Link to={href}>Explore Lesson</Link>
+      <Button kind="primary" to={href}>
+        Explore Lesson
       </Button>
     </StyledBox>
   );
