@@ -186,6 +186,7 @@ const StyledLink = styled(Link)`
   &:hover {
     background-color: ${c.primary};
     color: ${c.white};
+    text-decoration: none;
     a {
       color: ${c.white};
     }
