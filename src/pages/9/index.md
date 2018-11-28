@@ -2,17 +2,14 @@
 title: Lesson 9
 index: true
 lesson: Forms
-author: Dan Hahn
-date: 4/04/2018 15:00
 template: article.jade
 lessonId: 9
+order: 1
 
-downloads:
-  labels: [Download Stater File]
-  files: ['./week9.zip']
-nav:
-  Forms: index.html
-  Javascript: javascript.html
+labels: [Download Stater File]
+attachments:
+  - "./week9.zip"
+
 badges: [html, js]
 ---
 
