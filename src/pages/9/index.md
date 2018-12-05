@@ -10,7 +10,7 @@ labels: [Download Stater File]
 attachments:
   - "./week9.zip"
 
-badges: [html, js]
+badges: [html, javascript]
 ---
 
 This week we will be talking about forms and JavaScript.
