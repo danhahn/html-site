@@ -16,7 +16,7 @@
 	<article class="content">
 
 		<figure class="hero-image">
-			<img src="http://www.svahtml.com/images/nys.jpg" alt="" />
+			<img src="https://www.svahtml.com/images/nys.jpg" alt="" />
 		</figure>
 
 		<h2>Climate</h2>
