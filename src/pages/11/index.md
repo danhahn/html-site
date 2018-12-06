@@ -1,8 +1,6 @@
 ---
 title: Lesson 11
-
 index: true
-author: Dan Hahn
 lesson: Final Project
 template: final.jade
 localcssEx: //fonts.googleapis.com/css?family=Homemade+Apple|Montserrat|Roboto+Mono
@@ -19,13 +17,23 @@ This week we work on the in class final.
 
 <span class="more"></span>
 
-## Getting Started
+Welcome to the final for Fall 2018.  The idea of this final is to reinforce everything that we have learned this semester.  I think the final project is fair, not easy but fair.  Everything that is on the final we have covered in class.  This is a project not a test.  Try to keep that in perspective as you work on it.  You are free to use all your notes, examples and any other tools that you need to complete the project.
 
-The final project is open book, meaning you can use any resource you need to finish the project including asking any questions you have. The final is a multipage microsite.
+Since this is a project and not a test I try to set it up as if I am your client.  As you might know clients sometimes do not give you everything that you need.  While I did my best to give you all the parts that you need I do not give you every little detail.  I will try to give you an idea how to fill the gaps when this happens.
 
-The final is due at 9:30 on August 1, 2018. Please email a zip file to dan@svahtml.com.
+I will give a PSD and flat images for the pages that need to be coded but I might not give you examples for each page.  This is often the case, you might be a design for one type of page i.e. a page with a table but not a design for every page that has a table.
 
-**You are required to only code the desktop version** however if you have time or want a challenge you the is a mobile version.
+### Timeline
+
+You will have two full classes to complete the final project plus the time between the two classes.  I would highly recommend that you do some work between classes to ensure you finish on time.  Please email me a zip file with your final project in it by the end of the last class.
+
+### Source of truth
+
+This file is the source of truth for all content.  Any PSD or JPG is only there to provide a visual guide on how things should look.  Your project may not match the designs exactly.
+
+### Final thought
+
+Do your best.  Have fun.  Try not to stress to much and let me know if you have any questions.
 
 ### PSD
 
@@ -59,11 +67,11 @@ The Empire State
 <pre class="text-content">
 Home => index.html
 History => history/index.html
-Geography => #
-Major cities => #
-Demographics => #
-Transportation => #
-Sports => #
+Geography => geography/index.html
+Major cities => cities/index.html
+Demographics => demographics/index.html
+Transportation => transportation/index.html
+Sports => sports/index.html
 </pre>
 
 ## Sizes
@@ -122,7 +130,7 @@ The copy for the final project can be found in the PDF. Note the copy in the PDF
 
 ### PDF
 
-- [Copy for final](./final/final-content.pdf)
+- [Copy for final](./final/fall-2018.pdf)
 
 ## Images
 
