@@ -38,7 +38,7 @@ const Code = styled.div`
   }
 `;
 
-import { getWeekDateList, testColor, testUl } from "../utils";
+import { getWeekDateList, testColor, testUl, addTarget } from "../utils";
 import { H1, BlogPost, Article } from "./components";
 
 import styles from "./blog-post.module.scss";

@@ -37,7 +37,7 @@ Do your best.  Have fun.  Try not to stress to much and let me know if you have 
 
 ### PSD
 
-[![](summer.png)](summer.psd)
+[![](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_300/v1544624968/SVA_HTML_-_Summer_2018.png)](fall-2018.psd)
 
 ## Colors
 

@@ -12,13 +12,13 @@ nav:
 
 ## PAGES
 
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/index.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/index.html.png) Index
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/history.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/history.html.png) history
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/geography.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/geography.html.png) geography
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/cities.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/cities.html.png) major cities
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/demographics.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/demographics.html.png) demographics
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/transportation.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/transportation.html.png) transportation
-* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/sports.html.png)](https://res.cloudinary.com/svahtml/image/upload/v1544119160/sports.html.png) sports
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/index.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/index.html.png) Index
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/history.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/history.html.png) history
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/geography.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/geography.html.png) geography
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/cities.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/cities.html.png) major cities
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/demographics.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/demographics.html.png) demographics
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/transportation.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/transportation.html.png) transportation
+* [![](https://res.cloudinary.com/svahtml/image/upload/ar_1:1,c_fill,g_auto/v1544119160/sports.html.png)](https://res.cloudinary.com/svahtml/image/upload/c_scale,w_1200/v1544119160/sports.html.png) sports
 
 
 <style>
