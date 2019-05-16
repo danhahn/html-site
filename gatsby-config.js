@@ -5,15 +5,15 @@ module.exports = {
       email: "dan@svahtml.com"
     },
     title: `SVA HTML`,
-    semester: `Fall`,
-    startDate: `2018-09-26`,
-    lessons: 12,
-    noClass: [5, 8],
-    extraClass: [9],
+    semester: `Summer`,
+    startDate: `2019-06-05`,
+    lessons: 8,
+    noClass: [4, 9],
+    extraClass: [11],
     classFiles:
-      "https://drive.google.com/drive/folders/1fwZbO_-FP6pQD--7fPtn-gof2TXKTKsS?usp=sharing",
+      "https://drive.google.com/drive/folders/1pQ9GrYoZJ58Z6z82MBnR8DhD6_v_MfQT?usp=sharing",
     siteTitle: `Coding HTML and CSS - Basic`,
-    signUpLink: ``
+    signUpLink: `https://forms.gle/oaQ6Ex7x173d28wt5`
   },
   plugins: [
     {
