@@ -8,8 +8,8 @@ module.exports = {
     semester: `Summer`,
     startDate: `2019-06-05`,
     lessons: 8,
-    noClass: [4, 9],
-    extraClass: [13],
+    noClass: [3, 4],
+    extraClass: [7],
     classFiles:
       "https://drive.google.com/drive/folders/1pQ9GrYoZJ58Z6z82MBnR8DhD6_v_MfQT?usp=sharing",
     siteTitle: `Coding HTML and CSS - Basic`,
