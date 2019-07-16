@@ -9,7 +9,7 @@ module.exports = {
     startDate: `2019-06-05`,
     lessons: 8,
     noClass: [3, 4],
-    extraClass: [7],
+    extraClass: [6],
     classFiles:
       "https://drive.google.com/drive/folders/1pQ9GrYoZJ58Z6z82MBnR8DhD6_v_MfQT?usp=sharing",
     siteTitle: `Coding HTML and CSS - Basic`,

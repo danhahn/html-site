@@ -20,8 +20,8 @@ export function getWeekFormat(count = 8, noClass = []) {
 export function getWeekDateList(
   startDate = "2018-09-26",
   count = 12,
-  noClass = []
-  // extraClasses = []
+  noClass = [],
+  extraClasses = []
 ) {
   let weekList = [];
   let i = 0;
@@ -29,7 +29,7 @@ export function getWeekDateList(
   while (i < total) {
     const thisWeek = moment(startDate);
     const shouldSkip = noClass.includes(i);
-    // const isExtraWeek = extraClasses.includes(i);
+    const isExtraWeek = extraClasses.includes(i);
     if (shouldSkip) {
       total = total + 1;
       weekList = [...weekList, null];
@@ -37,14 +37,14 @@ export function getWeekDateList(
       const thisWeek = moment(startDate).add(i, "week");
       weekList = [...weekList, thisWeek];
     }
-    // if (isExtraWeek) {
-    //   const extraDate = moment(weekList[i]).add(2, "days");
-    //   weekList = [
-    //     ...weekList.slice(0, i + 1),
-    //     extraDate,
-    //     ...weekList.slice(i + 1)
-    //   ];
-    // }
+    if (isExtraWeek) {
+      const extraDate = moment(weekList[i]).add(5, "days");
+      weekList = [
+        ...weekList.slice(0, i + 1),
+        extraDate,
+        ...weekList.slice(i + 1)
+      ];
+    }
     i++;
   }
   weekList = weekList
