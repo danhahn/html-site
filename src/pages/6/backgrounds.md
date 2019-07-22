@@ -5,7 +5,7 @@ author: Dan Hahn
 date: 3/14/2018 15:00
 template: article.jade
 lessonId: 6
-order: 2
+order: 3
 
 nav:
   Background: index.html
@@ -15,9 +15,17 @@ nav:
 badges: [html, css]
 ---
 
-## Building a full site
-
 Backgrounds are a way to add colors and images to elements on the page.
+
+| Property                | Description                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| `background`            | Sets all the background properties in one declaration                         |
+| `background-attachment` | Sets whether a background image is fixed or scrolls with the rest of the page |
+| `background-color`      | Sets the background color of an element                                       |
+| `background-image`      | Sets the background image for an element                                      |
+| `background-position`   | Sets the starting position of a background image                              |
+| `background-repeat`     | Sets how a background image will be repeated                                  |
+| `background-size`       | Specifies the size of the background image(s)                                 |
 
 ## Background Color
 
@@ -27,8 +35,10 @@ background-color: color name | RGB Value | Hex Value;
 
 Background color can be added any element on the page including both block and inline elements. Block level elements will display the full width of the element where inline will only display in the space the content needs. You can use padding to expose more of the background.
 
-<p data-height="200" data-theme-id="light" data-slug-hash="YWaZzb" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/YWaZzb/">background-color</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="background-color" src="//codepen.io/danhahn/embed/YWaZzb/?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/danhahn/pen/YWaZzb/'>background-color</a> by Dan Hahn
+  (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Background Image
 
@@ -38,8 +48,10 @@ background-image: url(<imagepath>);
 
 Background images can be applied to any element on the page including both block and inline elements. If a background color and image are applied at the same time to the same element the image will overlay the color. By default a background image will tile in all directions starting in the top left corner.
 
-<p data-height="400" data-theme-id="light" data-slug-hash="yJKvov" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/yJKvov/">yJKvov</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="yJKvov" src="//codepen.io/danhahn/embed/yJKvov/?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/danhahn/pen/yJKvov/'>yJKvov</a> by Dan Hahn
+  (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Background Repeat
 
@@ -58,8 +70,10 @@ You can control the way the image will tile by using `background-repeat`.
 | repeat-x         | repeat along the x axis         |
 | repeat-y         | repeat along the x axis         |
 
-<p data-height="400" data-theme-id="light" data-slug-hash="bZvLoq" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/bZvLoq/">background-repeat</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="background-repeat" src="//codepen.io/danhahn/embed/bZvLoq/?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/danhahn/pen/bZvLoq/'>background-repeat</a> by Dan Hahn
+  (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ##Background Attachment
 
@@ -90,8 +104,10 @@ background-position: 100px 300px;
 background-position: 50% 80%;
 ```
 
-<p data-height="400" data-theme-id="light" data-slug-hash="mExXpV" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/mExXpV/">background-position</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="background-position" src="//codepen.io/danhahn/embed/mExXpV/?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/danhahn/pen/mExXpV/'>background-position</a> by Dan Hahn
+  (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Background Shorthand
 
@@ -105,8 +121,10 @@ Like many CSS properties there is a shorthand way to define a background. Like w
 background: #fff url(images/side-bar.png) repeat-y right top;
 ```
 
-<p data-height="400" data-theme-id="light" data-slug-hash="ZOxAxr" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/ZOxAxr/">background</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="background" src="//codepen.io/danhahn/embed/ZOxAxr/?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/danhahn/pen/ZOxAxr/'>background</a> by Dan Hahn
+  (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 In this example attachment is not defined so it will be set to the default which in this case is scroll.
 
@@ -118,5 +136,7 @@ background: none;
 
 You are setting the `background-image` to none and by default setting the `background-color` to transparent.
 
-<p data-height="265" data-theme-id="light" data-slug-hash="jAzkjx" data-default-tab="result" data-user="danhahn" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/danhahn/pen/jAzkjx/">background: none</a> by Dan Hahn (<a href="http://codepen.io/danhahn">@danhahn</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="background: none" src="//codepen.io/danhahn/embed/jAzkjx/?height=265&theme-id=light&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/danhahn/pen/jAzkjx/'>background: none</a> by Dan Hahn
+  (<a href='https://codepen.io/danhahn'>@danhahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
