@@ -7,17 +7,9 @@ template: article.jade
 lessonId: 6
 order: 5
 
-nav:
-  Float Layout: index.html
-  Clear Fix: clear-fix.html
-  Flex Box: flex.html
-  Flex Layout: flex-layout.html
-  Homework: homework.html
-homework:
-  lesson: lesson6
-downloads:
-  labels: [Homework Files]
-  files: ['./homework6_yourname.zip']
+labels: [Homework Files]
+attachments:
+  - "./homework6_yourname.zip"
 ---
 
 The point of this homework is to work with flexbox and how to layout columns using it.

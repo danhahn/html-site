@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #c6cbcc;
+  font: 16px arial;
+  margin: 1em;
+}
+
+h1, h2, h3, h4, p, ul, figure {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1em;
+  background-color: #fff;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
+
+.logo img {
+  display: block;
+}
+
+.global-nav {
+  background-color: #231f20;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.global-nav ul {
+
+}
+
+.global-nav ul li a {
+  padding: .5em 1em;
+  color: white;
+  text-decoration: none;
+  display: block;
+  background-color: #080707;
+  margin-right: .5em;
+}
+
+.global-nav ul li a:hover {
+  background-color: #594f51;
+}
+
+.hero {
+  margin-bottom: 1em;
+}
+
+.hero img {
+
+  display: block;
+}
+
+.hero figcaption {
+  background-color: #ead98b;
+  padding: 1em;
+}
+
+.promos ul {
+
+}
+
+.promos li {
+  padding-bottom: 3em;
+  margin-right: 1em;
+}
+
+.promos img {
+
+}
+
+.promos li:last-child {
+
+}
+
+.promos h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.promos p {
+  line-height: 1.8em;
+}
+
+
+.more-content li {
+  flex: 1;
+  margin-right: 1em;
+  font-size: 12px;
+  border: 1px solid silver;
+  padding: .5em;
+}
+
+.more-content li img {
+
+}
+
+.more-content li:last-child {
+
+}
+
+.more-content li p {
+  line-height: 1.5em;
+  padding: .5em;
+}
+
+.more-content li p a {
+  color: #955251;
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+.global-footer {
+  margin-top: 1em;
+  background-color: #414042;
+}
+
+
+
+.global-footer li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: #ffffff;
+}
