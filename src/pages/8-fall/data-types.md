@@ -1,23 +1,24 @@
 ---
-title: Lesson 8
+title: Lesson 11
 lesson: Data Types
 template: article.jade
-lessonId: 8
+lessonId: 11
 order: 2
 ---
 
 ## Dynamic typingSection
+
 JavaScript is a loosely typed or a dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
 
 ```javascript
-var foo = 42;    // foo is now a number
-foo = 'bar'; // foo is now a string
-foo = true;  // foo is now a boolean
+var foo = 42; // foo is now a number
+foo = "bar"; // foo is now a string
+foo = true; // foo is now a boolean
 ```
 
 ## Variable
 
-JavaScript variables are containers for storing data values.  They can be named anything as long as they start with a letter and do not have a space.
+JavaScript variables are containers for storing data values. They can be named anything as long as they start with a letter and do not have a space.
 
 ```javascript
 var type;
@@ -40,7 +41,7 @@ var type = "shoes";
 
 ### const and let
 
-the `var` declaration is a relic of older version of JavaScript and there are some issues with like you can reset a value.  Because of this ES6 introduced two new way to declare a variable.
+the `var` declaration is a relic of older version of JavaScript and there are some issues with like you can reset a value. Because of this ES6 introduced two new way to declare a variable.
 
 `let` is like a `var` in that the value can change over time but is block scoped.
 
@@ -54,16 +55,16 @@ You will notice that at the end of each line there is a semicolon `;` like with 
 
 primitives:
 
-* Boolean - a true or false value
-* Null - a value of null
-* Undefined - a value that has not been defined
-* Number - a number include decimals
-* String - any text in side single `'` or double quotes `"`
+- Boolean - a true or false value
+- Null - a value of null
+- Undefined - a value that has not been defined
+- Number - a number include decimals
+- String - any text in side single `'` or double quotes `"`
 
 ## Complex data types
 
-* Object - An object is a collection of properties, and a property is an association between a name (or key) and a value.
-* Array - An array is a numbered collection of properties.
+- Object - An object is a collection of properties, and a property is an association between a name (or key) and a value.
+- Array - An array is a numbered collection of properties.
 
 **Note:** An array is really an object but for now we can think of them as two different types.
 
@@ -114,15 +115,15 @@ console.log(total); // 30
 
 ### Math operators
 
-Operator | Description
----|---
-`+` | Addition
-`-` | Subtraction
-`*` | Multiplication
-`/` | Division
-`%` | Modulus (Division Remainder)
-`++` | Increment
-`--` | Decrement
+| Operator | Description                  |
+| -------- | ---------------------------- |
+| `+`      | Addition                     |
+| `-`      | Subtraction                  |
+| `*`      | Multiplication               |
+| `/`      | Division                     |
+| `%`      | Modulus (Division Remainder) |
+| `++`     | Increment                    |
+| `--`     | Decrement                    |
 
 ```javascript
 // Addition
@@ -139,7 +140,7 @@ var divide = 10 / 2;
 console.log(divide); // 5
 ```
 
-**Note:** JavaScript as many functions on the `Math` object like `Math.random()`.  For more [see here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math8) .
+**Note:** JavaScript as many functions on the `Math` object like `Math.random()`. For more [see here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math8) .
 
 ## String
 
@@ -170,6 +171,5 @@ const name = "Dan Hahn";
 console.log(name.length); // 8
 console.log(name.charAt(1)); // a
 console.log(name.toLowerCase()); // dan hahn
-console.log(name.link('http://www.svahtml.com')); //<a href="http://www.google.com">Dan Hahn</a>
+console.log(name.link("http://www.svahtml.com")); //<a href="http://www.google.com">Dan Hahn</a>
 ```
-

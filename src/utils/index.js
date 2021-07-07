@@ -38,7 +38,7 @@ export function getWeekDateList(
       weekList = [...weekList, thisWeek];
     }
     if (isExtraWeek) {
-      const extraDate = moment(weekList[i]).add(2, "days");
+      const extraDate = moment(weekList[i]).add(5, "days");
       weekList = [
         ...weekList.slice(0, i + 1),
         extraDate,
@@ -50,7 +50,8 @@ export function getWeekDateList(
   weekList = weekList
     .filter(Boolean)
     .map(week => moment(week).format("MMMM D, YYYY"));
-  const totalItems = weekList.length - extraClasses.length;
+  const totalItems = weekList.length;
+  // const totalItems = weekList.length - extraClasses.length;
   weekList = weekList.slice(0, totalItems);
   return weekList;
 }

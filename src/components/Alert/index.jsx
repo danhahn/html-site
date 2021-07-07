@@ -29,7 +29,9 @@ const Alert = ({ message, url, urlMessage, title }) => {
         {message ? <p>{message}</p> : null}
         {url ? (
           <Button kind="dark">
-            <a href={url}>{urlMessage}</a>
+            <a href={url} target="_blank">
+              {urlMessage}
+            </a>
           </Button>
         ) : null}
       </StyledAlert>
