@@ -27,7 +27,7 @@
     "gatsby-remark-prismjs": "^2.0.3",
     "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-remark": "^1.7.41",
-    "moment": "^2.22.1",
+    "moment": "^2.29.2",
     "object.entries": "^1.0.4",
     "polished": "^1.9.2",
     "primer-tooltips": "^1.5.7",
