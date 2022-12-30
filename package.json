@@ -12,7 +12,7 @@
     "classnames": "^2.2.6",
     "clipboard": "^2.0.1",
     "color": "^3.0.0",
-    "gatsby": "^1.9.250",
+    "gatsby": "^5.3.3",
     "gatsby-cli": "^1.1.58",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-favicon": "^2.1.1",
