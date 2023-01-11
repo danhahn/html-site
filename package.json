@@ -26,7 +26,7 @@
     "gatsby-remark-copy-linked-files": "^1.5.35",
     "gatsby-remark-prismjs": "^2.0.3",
     "gatsby-source-filesystem": "^1.5.36",
-    "gatsby-transformer-remark": "^1.7.41",
+    "gatsby-transformer-remark": "^5.25.1",
     "moment": "^2.22.1",
     "object.entries": "^1.0.4",
     "polished": "^1.9.2",
